@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DoAn.View.LoginPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="FillAndExpand">
+            <Label Text="Mtodo Logo" FontSize="20" Padding="20" FontAttributes="Bold" TextColor=" 
+#9BA3EB"></Label>
+            <Image Source="todoIcon.png" HeightRequest="200"></Image>
+            <StackLayout Padding="20" BackgroundColor="White">
+                <Label Text="Hello Again!" FontSize="22" FontAttributes="Bold" TextColor="#1C375C" HorizontalOptions="CenterAndExpand"></Label>
+                        <Label 
+                            Text="Welcome back"
+                            HorizontalOptions="Center"
+                            FontSize="Large"/>
+                        <Entry  
+                            Placeholder="Enter your email" x:Name="TxtEmail" 
+                   
+                            ></Entry>
+                        <Entry   
+                            Placeholder="Enter password"
+                            IsPassword="True"
+           
+                            x:Name="TxtPassword"
+                            />
+                        <Button 
+                            Text="Sign In"
+                            TextColor="White"
+                            FontSize="19"
+                            FontAttributes="Bold"
+                            x:Name="BtnSignIn"
+                            CornerRadius="15"
+                            Clicked="BtnSignIn_Clicked"
+                            BackgroundColor="#646FD4"></Button>
+                        
+                        <Label Text="Forgot"
+                       
+                           Grid.Column="1"
+                           TextColor="Blue"
+                           HorizontalOptions="Center"
+                           FontSize="Medium">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="ForgotTap"
+                                                  Tapped="ForgotTap_Tapped"></TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+                <Label 
+                               Text="Register"
+                    
+                               Grid.Column="0"
+                               TextColor="Blue"
+                               HorizontalOptions="Center"
+                               FontSize="Medium"
+                               x:Name="LblRegister"
+                          >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="RegisterTap"
+                                                  Tapped="RegisterTap_Tapped"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+    </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
