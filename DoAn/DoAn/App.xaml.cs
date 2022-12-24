@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using DoAn.View;
+using DoAn.OriginalPage;
 namespace DoAn
 {
     public partial class App : Application
@@ -10,7 +11,7 @@ namespace DoAn
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new TabbedPage1());
         }
 
         protected override void OnStart()

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" 
+             x:Class="DoAn.View.BeginningPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <forms:AnimationView
+                    x:Name="animationView"
+                    Animation="working.json"
+                    HeightRequest="400"
+                    AutoPlay="True"
+                    RepeatCount="5"
+                    RepeatMode="Infinite"
+            />
+            <Label Text="Manage your task" HorizontalOptions="Center" FontSize="24" TextColor="#363636"></Label>
+            <Label Text="Organize, plan and collaborate on tasks with me. Your busy life deserve this you can mangage this checklist and your goal"
+            HorizontalOptions="EndAndExpand"
+            Margin="30,0,30,0"
+            TextColor="Gray"></Label>
+            <Button x:Name="button_start" Text="Get Started" Clicked="button_start_Clicked" Margin="20,90,20,20"
+            BackgroundColor="#9BA3EB"
+            HeightRequest="60"
+            CornerRadius="20"
+            TextColor="White"
+            FontSize="21"
+                
+            ></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

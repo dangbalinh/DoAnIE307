@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
              x:Class="DoAn.View.LoginPage"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="White">
@@ -8,24 +9,31 @@
         <StackLayout HorizontalOptions="FillAndExpand">
             <Label Text="Mtodo Logo" FontSize="20" Padding="20" FontAttributes="Bold" TextColor=" 
 #9BA3EB"></Label>
-            <Image Source="todoIcon.png" HeightRequest="200"></Image>
-            <StackLayout Padding="20" BackgroundColor="White">
-                <Label Text="Hello Again!" FontSize="22" FontAttributes="Bold" TextColor="#1C375C" HorizontalOptions="CenterAndExpand"></Label>
-                        <Label 
+            <!--<Image Source="todoIcon.png" HeightRequest="200"></Image>-->
+            <Label Text="Hello Again!" FontSize="22" FontAttributes="Bold" TextColor="#646FDE" HorizontalOptions="CenterAndExpand"></Label>
+            <Label 
                             Text="Welcome back"
                             HorizontalOptions="Center"
                             FontSize="Large"/>
-                        <Entry  
-                            Placeholder="Enter your email" x:Name="TxtEmail" 
-                   
-                            ></Entry>
-                        <Entry   
-                            Placeholder="Enter password"
-                            IsPassword="True"
-           
-                            x:Name="TxtPassword"
-                            />
-                        <Button 
+            <StackLayout Padding="0"  Margin="20,150,20,0">
+                <Frame CornerRadius="20" HeightRequest="60" Padding="10,0,10,0" Margin="0,0,0,20" IsClippedToBounds="true" BorderColor="Gray" HasShadow="True">
+                    <Entry  
+                                Placeholder="Enter your email" 
+                                x:Name="TxtEmail" 
+                                FontSize="15" 
+                                >
+                    </Entry>
+                </Frame>
+                <Frame CornerRadius="20" HeightRequest="60" Padding="10,0,10,0" Margin="0,0,0,20" IsClippedToBounds="true" BorderColor="Gray">
+                    <Entry   
+                         Placeholder="Enter your password"
+                         IsPassword="True"
+                         FontSize="15"
+                         x:Name="TxtPassword"
+                    />
+                </Frame>
+
+                <Button 
                             Text="Sign In"
                             TextColor="White"
                             FontSize="19"
@@ -33,11 +41,11 @@
                             x:Name="BtnSignIn"
                             CornerRadius="15"
                             Clicked="BtnSignIn_Clicked"
-                            BackgroundColor="#646FD4"></Button>
-                        
+                            BackgroundColor="#646FD4"
+                            HeightRequest="50"></Button>
+
+                        <Label Text="Your problem?" TextColor="Gray" HorizontalOptions="Center"></Label>
                         <Label Text="Forgot"
-                       
-                           Grid.Column="1"
                            TextColor="Blue"
                            HorizontalOptions="Center"
                            FontSize="Medium">
@@ -46,10 +54,8 @@
                                                   Tapped="ForgotTap_Tapped"></TapGestureRecognizer>
                             </Label.GestureRecognizers>
                         </Label>
-                <Label 
+                        <Label 
                                Text="Register"
-                    
-                               Grid.Column="0"
                                TextColor="Blue"
                                HorizontalOptions="Center"
                                FontSize="Medium"
@@ -61,7 +67,8 @@
                     </Label.GestureRecognizers>
                 </Label>
             </StackLayout>
-    </StackLayout>
+        
+        </StackLayout>
 
     </ContentPage.Content>
 </ContentPage>

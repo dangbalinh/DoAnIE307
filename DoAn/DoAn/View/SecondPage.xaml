@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" 
+             x:Class="DoAn.View.SecondPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Margin="20,0,20,0">
+            <forms:AnimationView
+                    x:Name="animationView"
+                    Animation="login.json"
+                    HeightRequest="450"
+                    AutoPlay="True"
+                    RepeatCount="5"
+                    RepeatMode="Infinite"
+            />
+            <Label Text="Start manage your task with" FontSize="22" HorizontalOptions="Center" 
+            TextColor="#363636"></Label>
+            <Label Text="Mtodo" FontSize="25" HorizontalOptions="Center" TextColor="#9BA3EB"></Label>
+            <Button x:Name="signUpButton" Text="Sign Up" 
+                    BackgroundColor="#9BA3EB" 
+                    Margin="20,60,20,0"
+                    CornerRadius="20"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    Clicked="signUpButton_Clicked" ></Button>
+            <Grid Margin="40,10,0,10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="177"></ColumnDefinition>
+                    <ColumnDefinition Width="80"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" Text="Already have an account? "></Label>
+                <Label Grid.Column="1" FontAttributes="Bold" TextColor="#646FD4" Text="LOG IN" TextDecorations="Underline">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="LoginTap"
+                                              Tapped="LoginTap_Tapped"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

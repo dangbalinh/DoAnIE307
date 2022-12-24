@@ -18,6 +18,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="OriginalPage\Page1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="OriginalPage\TabbedPage1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\BeginningPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\ChangePassword.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
@@ -32,6 +41,9 @@
     </EmbeddedResource>
     <EmbeddedResource Update="View\RegisterUser.xaml">
       <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\SecondPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
 </Project>
