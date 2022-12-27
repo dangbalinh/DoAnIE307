@@ -26,7 +26,7 @@ namespace DoAn.View
 
         private async void LoginTap_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new LoginPage());
+            await Navigation.PushAsync(new LoginPage());
         }
     }
 }

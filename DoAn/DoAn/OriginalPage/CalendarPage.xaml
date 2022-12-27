@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DoAn.OrginalPage.CalendarPage"
+    
+   
+    xmlns:xc="clr-namespace:XCalendar;assembly=XCalendar"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <xc:CalendarView x:Name="calendar" DateSelectionChanged="calendar_DateSelectionChanged"
+                         SelectionType="Single"/>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

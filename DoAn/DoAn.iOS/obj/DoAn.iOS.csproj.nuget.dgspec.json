@@ -124,13 +124,25 @@
               "version": "[2.0.3, )",
               "autoReferenced": true
             },
+            "Plugin.XCalendar": {
+              "target": "Package",
+              "version": "[2.1.0, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
-              "version": "[1.7.0, )"
+              "version": "[1.7.4, )"
             },
             "Xamarin.Forms": {
               "target": "Package",
-              "version": "[5.0.0.2196, )"
+              "version": "[5.0.0.2545, )"
+            },
+            "Xamarin.Forms.PancakeView": {
+              "target": "Package",
+              "version": "[2.3.0.759, )"
+            },
+            "Xamarin.Plugin.SharedTransitions": {
+              "target": "Package",
+              "version": "[2.4.0, )"
             }
           },
           "imports": [

@@ -1,13 +1,10 @@
-﻿using Firebase.Auth;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using DoAn.OriginalPage;
+
 
 namespace DoAn.View
 {
@@ -26,7 +23,7 @@ namespace DoAn.View
                 string token = Preferences.Get("token", "");
                 if(!string.IsNullOrEmpty(token))
                 {
-                    Navigation.PushAsync(new HomePage());
+                    Navigation.PushAsync(new SecondPage());
                 }
             }
         }
@@ -52,7 +49,7 @@ namespace DoAn.View
                 {
                     Preferences.Set("token", token);
                     Preferences.Set("userEmail", email);
-                    await Navigation.PushAsync(new HomePage());
+                    await Navigation.PushAsync(new SecondPage());
                 }
                 else
                 {

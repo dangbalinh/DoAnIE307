@@ -1,6 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+
 using DoAn.View;
 using DoAn.OriginalPage;
 namespace DoAn
@@ -11,7 +11,7 @@ namespace DoAn
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new TabbedPage1());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

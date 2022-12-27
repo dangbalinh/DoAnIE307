@@ -13,15 +13,24 @@
   <ItemGroup>
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.1.0" />
     <PackageReference Include="FirebaseAuthentication.net" Version="3.7.2" />
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Plugin.XCalendar" Version="2.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.4" />
+    <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
+    <PackageReference Include="Xamarin.Plugin.SharedTransitions" Version="2.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="OriginalPage\Page1.xaml">
+    <EmbeddedResource Update="OriginalPage\BlogPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="OriginalPage\TabbedPage1.xaml">
+    <EmbeddedResource Update="OriginalPage\CalendarPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="OriginalPage\HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="OriginalPage\TaskPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\BeginningPage.xaml">
@@ -31,9 +40,6 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\ForgotPasswordPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\HomePage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\LoginPage.xaml">

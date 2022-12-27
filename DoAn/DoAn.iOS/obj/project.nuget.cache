@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yMd1ZNx+boL8VHH9EA+0lY2roh9Fhb1r1hHiZHO8O3MXi5mMtZXHDCWrjDJgDlUm576kB+QjUzv9n9VWvdVt4w==",
+  "dgSpecHash": "frKWfShFzCyjNiU7ybj+2xbCU4RBPiJxO4+5TZW5N3p6nRAiIyvbbJDGc9kbNK1F6o41SA+7K4P3kbTNZMX7rw==",
   "success": true,
   "projectFilePath": "D:\\IE307\\DoAn\\DoAn\\DoAn.iOS\\DoAn.iOS.csproj",
   "expectedPackageFiles": [
@@ -11,9 +11,11 @@
     "C:\\Users\\linh\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\linh\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\linh\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\linh\\.nuget\\packages\\plugin.xcalendar\\2.1.0\\plugin.xcalendar.2.1.0.nupkg.sha512",
     "C:\\Users\\linh\\.nuget\\packages\\system.appcontext\\4.3.0\\system.appcontext.4.3.0.nupkg.sha512",
     "C:\\Users\\linh\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\linh\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
+    "C:\\Users\\linh\\.nuget\\packages\\system.componentmodel\\4.3.0\\system.componentmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\linh\\.nuget\\packages\\system.console\\4.3.0\\system.console.4.3.0.nupkg.sha512",
     "C:\\Users\\linh\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
     "C:\\Users\\linh\\.nuget\\packages\\system.diagnostics.tools\\4.3.0\\system.diagnostics.tools.4.3.0.nupkg.sha512",
@@ -54,8 +56,38 @@
     "C:\\Users\\linh\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\linh\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\linh\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\linh\\.nuget\\packages\\xamarin.communitytoolkit\\1.3.0\\xamarin.communitytoolkit.1.3.0.nupkg.sha512",
     "C:\\Users\\linh\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
-    "C:\\Users\\linh\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+    "C:\\Users\\linh\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
+    "C:\\Users\\linh\\.nuget\\packages\\xamarin.forms.pancakeview\\2.3.0.759\\xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512",
+    "C:\\Users\\linh\\.nuget\\packages\\xamarin.plugin.sharedtransitions\\2.4.0\\xamarin.plugin.sharedtransitions.2.4.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Essentials from 1.7.4 to 1.7.0. Reference the package directly from the project to select a different version. \r\n DoAn.iOS -> DoAn -> Xamarin.Essentials (>= 1.7.4) \r\n DoAn.iOS -> Xamarin.Essentials (>= 1.7.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2545 to 5.0.0.2196. Reference the package directly from the project to select a different version. \r\n DoAn.iOS -> DoAn -> Xamarin.Forms (>= 5.0.0.2545) \r\n DoAn.iOS -> Xamarin.Forms (>= 5.0.0.2196)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }
