@@ -4,9 +4,19 @@
              x:Class="DoAn.OriginalPage.TaskPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <SearchBar
+                       x:Name="SearchBarHotel"
+                       HorizontalOptions="Fill"
+                       VerticalOptions="CenterAndExpand"
+                       Placeholder="Search tasks..."
+             ></SearchBar>
+            <ListView>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -2,7 +2,7 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DoAn.OriginalPage.HomePage"
-             xmlns:view="clr-namespace:DoAn.OrginalPage"
+             xmlns:view="clr-namespace:DoAn.OriginalPage"
              xmlns:viewBookings="clr-namespace:DoAn.OriginalPage.Booking"
              NavigationPage.HasNavigationBar="False"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
@@ -12,10 +12,10 @@
              BarBackgroundColor="Black"
              >
      <!--<view:TaskPage Title="Task" IconImageSource="home"/>-->
-
-    <view:CalendarPage Title="Calendar" IconImageSource="calendar"/>
-
-       <!-- <view:BlogPage Title="Blog" IconImageSource="newspaper"/>-->
-        <viewBookings:BookingPage Title="Booking" IconImageSource="newspaper"/>
+    <view:TaskPage Title="Tasks"/>
+    <view:Page1 Title="Calendar"/>
+            <view:CalendarPage Title="Calendar"/>
+    <!-- <view:BlogPage Title="Blog" IconImageSource="newspaper"/>-->
+            <viewBookings:BookingPage Title="Booking"/>
 
 </TabbedPage>

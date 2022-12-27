@@ -23,7 +23,7 @@ namespace DoAn.View
                 string token = Preferences.Get("token", "");
                 if(!string.IsNullOrEmpty(token))
                 {
-                    Navigation.PushAsync(new SecondPage());
+                    Navigation.PushAsync(new HomePage());
                 }
             }
         }
@@ -49,7 +49,7 @@ namespace DoAn.View
                 {
                     Preferences.Set("token", token);
                     Preferences.Set("userEmail", email);
-                    await Navigation.PushAsync(new SecondPage());
+                    await Navigation.PushAsync(new HomePage());
                 }
                 else
                 {

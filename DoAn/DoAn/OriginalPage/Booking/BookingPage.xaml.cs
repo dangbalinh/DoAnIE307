@@ -6,8 +6,8 @@ using Xamarin.Forms.Xaml;
 
 namespace DoAn.OriginalPage.Booking
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    [DesignTimeVisible(false)]
+    //[XamlCompilation(XamlCompilationOptions.Compile)]
+   [DesignTimeVisible(false)]
     public partial class BookingPage : ContentPage
     {
         public BookingPage()
@@ -49,7 +49,7 @@ namespace DoAn.OriginalPage.Booking
             await this.Navigation.PushAsync(new DetailPage(property));
 
         }
-
+        /*
         private void SelectType(object sender, EventArgs e)
         {
             var view = sender as ViewCell;
@@ -63,7 +63,7 @@ namespace DoAn.OriginalPage.Booking
 
             //VisualStateManager.GoToState(view, "Selected");
             ChangeTextColor(view, "#FFFFFF");
-        }
+        }*/
 
         private void ChangeTextColor(ViewCell child, string hexColor)
         {

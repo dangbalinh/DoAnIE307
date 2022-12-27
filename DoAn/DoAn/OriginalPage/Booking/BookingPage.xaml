@@ -4,6 +4,7 @@
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="DoAn.OriginalPage.Booking.BookingPage"
              NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
     <Grid BackgroundColor="WhiteSmoke" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -29,14 +30,15 @@
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <pv:PancakeView CornerRadius="15" Margin="5,10,0,10" BackgroundColor="Black">
-                                <pv:PancakeView.GestureRecognizers>
+                                <!--<pv:PancakeView.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="SelectType"/>
                                 </pv:PancakeView.GestureRecognizers>
+                                -->
                                 <VisualStateManager.VisualStateGroups>
                                     <VisualStateGroup x:Name="CommonStates">
                                         <VisualState x:Name="Normal">
                                             <VisualState.Setters>
-                                                <Setter Property="BackgroundGradientStops" Value="{x:Null}"/>
+                                              <!--  <Setter Property="BackgroundGradientStops" Value="{x:Null}"/> -->
                                             </VisualState.Setters>
                                         </VisualState>
                                         <VisualState x:Name="Selected">
@@ -110,4 +112,5 @@
             </StackLayout>
         </ScrollView>
     </Grid>
+</ContentPage.Content>
 </ContentPage>

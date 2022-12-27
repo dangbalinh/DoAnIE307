@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 using Xamarin.Forms;
 
-namespace DoAn.OrginalPage
+namespace DoAn.OriginalPage
 {	
 	public partial class CalendarPage : ContentPage
 	{	
