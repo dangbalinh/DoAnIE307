@@ -717,3 +717,4 @@ D:\IE307\DoAn\DoAn\DoAn.Android\obj\Debug\120\stamp\_ConvertResourcesCases.stamp
 D:\IE307\DoAn\DoAn\DoAn.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 D:\IE307\DoAn\DoAn\DoAn.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 D:\IE307\DoAn\DoAn\DoAn.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+D:\IE307\DoAn\DoAn\DoAn.Android\obj\Debug\120\res\drawable\plus.png

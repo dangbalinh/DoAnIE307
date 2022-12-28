@@ -11,7 +11,7 @@ namespace DoAn
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new HomePage());
+            MainPage = new NavigationPage(new TaskPage());
         }
 
         protected override void OnStart()

@@ -11,11 +11,11 @@
              UnselectedTabColor="White"
              BarBackgroundColor="Black"
              >
-     <!--<view:TaskPage Title="Task" IconImageSource="home"/>-->
-    <view:TaskPage Title="Tasks"/>
-    <view:Page1 Title="Calendar"/>
+    
+            <!--<view:TaskPage Title="Tasks"/>-->
+            <view:Page1 Title="Calendar"/>
             <view:CalendarPage Title="Calendar"/>
-    <!-- <view:BlogPage Title="Blog" IconImageSource="newspaper"/>-->
+    
             <viewBookings:BookingPage Title="Booking"/>
 
 </TabbedPage>

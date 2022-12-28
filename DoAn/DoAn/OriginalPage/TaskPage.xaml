@@ -1,22 +1,76 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="DoAn.OriginalPage.TaskPage">
+             x:Class="DoAn.OriginalPage.TaskPage"
+             NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="White">
             <SearchBar
                        x:Name="SearchBarHotel"
                        HorizontalOptions="Fill"
                        VerticalOptions="CenterAndExpand"
                        Placeholder="Search tasks..."
              ></SearchBar>
-            <ListView>
-                <ListView.ItemTemplate>
+            <CollectionView x:Name="LtsTask" Margin="20,30,20,0">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                           ItemSpacing="20" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        
+                        <SwipeView  HeightRequest="50" Margin="10,20,0,0">
+                            <SwipeView.RightItems>
+                                <SwipeItems SwipeBehaviorOnInvoked="RemainOpen">
+                                    <SwipeItem Text="Delete"
+                                               BackgroundColor="Red"
+                                               x:Name="SWDelete"
+                                               IconImageSource="phone.png"
+                                               CommandParameter="{Binding .}"
+                                               Invoked="SWDelete_Invoked"></SwipeItem>
+                                    <SwipeItem Text="Update"
+                                               BackgroundColor="Blue"
+                                               x:Name="SWEdit"
+                                               IconImageSource="phone.png"
+                                               CommandParameter="{Binding .}"
+                                               Invoked="SWEdit_Invoked"></SwipeItem>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <Grid BackgroundColor="#FAFAFA">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                    <RowDefinition Height="*"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Label 
+                                    Text= "{Binding taskName}" 
+                                    Grid.Row = "0" 
+                                    Grid.Column="0">
+                                    
+                                </Label>
+                                <Label Text="{Binding taskType}" 
+                                       Grid.Row = "0"
+                                       Grid.Column="1"
+                                            ></Label>
+                                <Label Text="{Binding taskDate}"
+                                       Grid.Row="1"
+                                       TextColor="Red">
+                                       
+                                </Label>
+                                <Switch x:Name="_switch" IsToggled="True" OnColor="LightPink" 
+                                ThumbColor="Green"/>
+                            </Grid>
+                        </SwipeView>
                     </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button Clicked="Button_Clicked" WidthRequest="100" HeightRequest="100" 
+            CornerRadius="50"
+            Margin="250,10,10,10"
+            BackgroundColor="#FF6666"
+            ImageSource="plus.png"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
