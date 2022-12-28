@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O8siuRhxEavFCTqIU9tCBWCTGjdvdYRf5XuWpCrcaAJ+0lTQWwGXJRiANv7yXC+3hes1PXXgI8Tnku5Ligrtng==",
+  "dgSpecHash": "yd8C4XI5PDMsViJJyNafn50AwL9s6yhFIDrtGtYJb5Cg4X/ulZZ+EB3iVl9Tr0pJbJoUwTD8hdBYk1+eY4dDjQ==",
   "success": true,
-  "projectFilePath": "D:\\IE307\\DoAn\\DoAn\\DoAn.Android\\DoAn.Android.csproj",
+  "projectFilePath": "D:\\IE307\\DoAnIE307\\DoAn\\DoAn.Android\\DoAn.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\linh\\.nuget\\packages\\com.airbnb.android.lottie\\4.2.2\\com.airbnb.android.lottie.4.2.2.nupkg.sha512",
     "C:\\Users\\linh\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\4.1.0\\com.airbnb.xamarin.forms.lottie.4.1.0.nupkg.sha512",

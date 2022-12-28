@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uyIOz5F1/rtred/O17wG6Tar+MzdTuf1jde+R+dN1lrYkjoWOSiLKEMIkFDhJzI+yZISohqpt3nx+F+vW60Nhw==",
+  "dgSpecHash": "OF4zMJpR2EtUTiG/7W036yqunEonz601r18Ao8HStBAwcYfv2l0ckYNMIJyeOPgNxZqayBZ5h2P+81AmdNJZBw==",
   "success": true,
-  "projectFilePath": "D:\\IE307\\DoAn\\DoAn\\DoAn\\DoAn.csproj",
+  "projectFilePath": "D:\\IE307\\DoAnIE307\\DoAn\\DoAn\\DoAn.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\linh\\.nuget\\packages\\com.airbnb.xamarin.forms.lottie\\4.1.0\\com.airbnb.xamarin.forms.lottie.4.1.0.nupkg.sha512",
     "C:\\Users\\linh\\.nuget\\packages\\firebaseauthentication.net\\3.7.2\\firebaseauthentication.net.3.7.2.nupkg.sha512",
