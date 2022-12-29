@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DoAn.OriginalPage.Tips.TipPage">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="5,10,5,10">
+            <Label Text="Great tips for you" FontSize="Title" FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black"/>
+
+            <CarouselView x:Name="TipsCarouselView" IndicatorView="TipsIndicatorView"
+                          CurrentItemChanged="TipsCarouselView_CurrentItemChanged">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Frame HasShadow="True"
+                                   BorderColor="DarkGray"
+                                   CornerRadius="5"
+                                   Margin="20"
+                                   HeightRequest="200"
+                                   HorizontalOptions="Center">
+                                <StackLayout>
+                                    <Label Text="{Binding Title}"
+                                           FontSize="Large"
+                                           FontAttributes="Bold"
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"/>
+
+                                    <Image Source="{Binding Image}"
+                                           Aspect="AspectFill"
+                                           HeightRequest="150"
+                                           WidthRequest="150"
+                                           HorizontalOptions="Center"/>
+
+                                    <Label Text="{Binding Tag}"
+                                           HorizontalOptions="Center"/>
+
+                                </StackLayout>
+                            </Frame>
+
+                        </StackLayout>
+
+                    </DataTemplate>
+
+                </CarouselView.ItemTemplate>
+
+            </CarouselView>
+            <IndicatorView x:Name="TipsIndicatorView"
+                           IndicatorColor="Gray"
+                           SelectedIndicatorColor="Black"
+                           HorizontalOptions="Center"
+                           Margin="0,-500,0,0"/>
+
+            <Label FontSize="Body" x:Name="TipContent"/>
+
+            <Button Text="Get more tips" x:Name="MoreTips" Clicked="MoreTips_Clicked"
+                    Margin="0,100,0,0" CornerRadius="30" Background="#FBC252" HorizontalOptions="Center"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

@@ -13,7 +13,7 @@
 namespace DoAn.OriginalPage {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage\\EntryTaskPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage/EntryTaskPage.xaml")]
     public partial class EntryTaskPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

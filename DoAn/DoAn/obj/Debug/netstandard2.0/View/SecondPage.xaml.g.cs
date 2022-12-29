@@ -13,7 +13,7 @@
 namespace DoAn.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("View\\SecondPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("View/SecondPage.xaml")]
     public partial class SecondPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

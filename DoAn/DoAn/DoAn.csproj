@@ -64,4 +64,20 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="OriginalPage\Tips\" />
+    <None Remove="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OriginalPage\Tips\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="OriginalPage\Tips\TipPage.xaml.cs">
+      <DependentUpon>TipPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="OriginalPage\Tips\MoreTips.xaml.cs">
+      <DependentUpon>MoreTips.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

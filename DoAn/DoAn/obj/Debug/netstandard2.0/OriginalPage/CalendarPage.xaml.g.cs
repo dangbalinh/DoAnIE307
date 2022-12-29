@@ -13,7 +13,7 @@
 namespace DoAn.OriginalPage {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage\\CalendarPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage/CalendarPage.xaml")]
     public partial class CalendarPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

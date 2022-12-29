@@ -626,7 +626,7 @@
           "build/_._": {}
         }
       },
-      "Xamarin.Essentials/1.7.0": {
+      "Xamarin.Essentials/1.7.4": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -647,7 +647,7 @@
           }
         }
       },
-      "Xamarin.Forms/5.0.0.2196": {
+      "Xamarin.Forms/5.0.0.2545": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
@@ -1400,7 +1400,7 @@
           "build/_._": {}
         }
       },
-      "Xamarin.Essentials/1.7.0": {
+      "Xamarin.Essentials/1.7.4": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -1421,7 +1421,7 @@
           }
         }
       },
-      "Xamarin.Forms/5.0.0.2196": {
+      "Xamarin.Forms/5.0.0.2545": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
@@ -2174,7 +2174,7 @@
           "build/_._": {}
         }
       },
-      "Xamarin.Essentials/1.7.0": {
+      "Xamarin.Essentials/1.7.4": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -2195,7 +2195,7 @@
           }
         }
       },
-      "Xamarin.Forms/5.0.0.2196": {
+      "Xamarin.Forms/5.0.0.2545": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
@@ -2948,7 +2948,7 @@
           "build/_._": {}
         }
       },
-      "Xamarin.Essentials/1.7.0": {
+      "Xamarin.Essentials/1.7.4": {
         "type": "package",
         "dependencies": {
           "System.Numerics.Vectors": "4.5.0"
@@ -2969,7 +2969,7 @@
           }
         }
       },
-      "Xamarin.Forms/5.0.0.2196": {
+      "Xamarin.Forms/5.0.0.2545": {
         "type": "package",
         "compile": {
           "lib/Xamarin.iOS10/Xamarin.Forms.Core.dll": {
@@ -6108,10 +6108,10 @@
         "xamarin.communitytoolkit.nuspec"
       ]
     },
-    "Xamarin.Essentials/1.7.0": {
-      "sha512": "xfUJNxtfMC05VBej7fVUg6Zd9VwM2kqW9LH0tcrSA6IsBTl0EsIGkYUOz1BoKT2rseWW8o3kTi5WH/yZV4GgJw==",
+    "Xamarin.Essentials/1.7.4": {
+      "sha512": "oYCnkjzooqWdI1VnOOt1gyUF+s1Nbi6OYy7HlltzHrfNyh8MMKgMTO30UGe3kcj9YmD7IeT5clh3xCDmfTfZSw==",
       "type": "package",
-      "path": "xamarin.essentials/1.7.0",
+      "path": "xamarin.essentials/1.7.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6146,14 +6146,14 @@
         "lib/xamarinwatchos10/Xamarin.Essentials.pdb",
         "lib/xamarinwatchos10/Xamarin.Essentials.xml",
         "readme.txt",
-        "xamarin.essentials.1.7.0.nupkg.sha512",
+        "xamarin.essentials.1.7.4.nupkg.sha512",
         "xamarin.essentials.nuspec"
       ]
     },
-    "Xamarin.Forms/5.0.0.2196": {
-      "sha512": "zSXDiZukojtEBmZKUUG1yYBwlB9tI8JLPkc6n+Sm1PAX01QyzErWE9AaFJgP7usyoGHn92l4HnQF7A+/MPI6VA==",
+    "Xamarin.Forms/5.0.0.2545": {
+      "sha512": "mjfNx4Y/RD0FYjrBfETT2iNdFD1WCXN5wNHPhQaXm3k0u5XYJaOx5K83EZ8nVun+FPi7Wo3rQPIN0DLCs5PG4A==",
       "type": "package",
-      "path": "xamarin.forms/5.0.0.2196",
+      "path": "xamarin.forms/5.0.0.2545",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6362,7 +6362,7 @@
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.dll",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.pdb",
         "lib/uap10.0.16299/Xamarin.Forms.Xaml.xml",
-        "xamarin.forms.5.0.0.2196.nupkg.sha512",
+        "xamarin.forms.5.0.0.2545.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
     },
@@ -6431,44 +6431,37 @@
     "Xamarin.iOS,Version=v1.0": [
       "DoAn >= 1.0.0",
       "FirebaseAuthentication.net >= 3.7.2",
-      "Xamarin.Essentials >= 1.7.0",
-      "Xamarin.Forms >= 5.0.0.2196"
+      "Xamarin.Essentials >= 1.7.4",
+      "Xamarin.Forms >= 5.0.0.2545"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\linh\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/cuhoangng/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\IE307\\DoAn\\DoAn\\DoAn.iOS\\DoAn.iOS.csproj",
+      "projectUniqueName": "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn.iOS/DoAn.iOS.csproj",
       "projectName": "DoAn.iOS",
-      "projectPath": "D:\\IE307\\DoAn\\DoAn\\DoAn.iOS\\DoAn.iOS.csproj",
-      "packagesPath": "C:\\Users\\linh\\.nuget\\packages\\",
-      "outputPath": "D:\\IE307\\DoAn\\DoAn\\DoAn.iOS\\obj\\",
+      "projectPath": "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn.iOS/DoAn.iOS.csproj",
+      "packagesPath": "/Users/cuhoangng/.nuget/packages/",
+      "outputPath": "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\linh\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/cuhoangng/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "D:\\IE307\\DoAn\\DoAn\\DoAn\\DoAn.csproj": {
-              "projectPath": "D:\\IE307\\DoAn\\DoAn\\DoAn\\DoAn.csproj"
+            "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/DoAn.csproj": {
+              "projectPath": "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/DoAn.csproj"
             }
           }
         }
@@ -6483,11 +6476,11 @@
           },
           "Xamarin.Essentials": {
             "target": "Package",
-            "version": "[1.7.0, )"
+            "version": "[1.7.4, )"
           },
           "Xamarin.Forms": {
             "target": "Package",
-            "version": "[5.0.0.2196, )"
+            "version": "[5.0.0.2545, )"
           }
         }
       }
@@ -6503,33 +6496,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Essentials from 1.7.4 to 1.7.0. Reference the package directly from the project to select a different version. \r\n DoAn.iOS -> DoAn -> Xamarin.Essentials (>= 1.7.4) \r\n DoAn.iOS -> Xamarin.Essentials (>= 1.7.0)",
-      "libraryId": "Xamarin.Essentials",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0",
-        "Xamarin.iOS,Version=v1.0/win",
-        "Xamarin.iOS,Version=v1.0/win-x64",
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Xamarin.Forms from 5.0.0.2545 to 5.0.0.2196. Reference the package directly from the project to select a different version. \r\n DoAn.iOS -> DoAn -> Xamarin.Forms (>= 5.0.0.2545) \r\n DoAn.iOS -> Xamarin.Forms (>= 5.0.0.2196)",
-      "libraryId": "Xamarin.Forms",
-      "targetGraphs": [
-        "Xamarin.iOS,Version=v1.0",
-        "Xamarin.iOS,Version=v1.0/win",
-        "Xamarin.iOS,Version=v1.0/win-x64",
-        "Xamarin.iOS,Version=v1.0/win-x86"
-      ]
-    }
-  ]
+  }
 }

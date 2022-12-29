@@ -6,21 +6,51 @@
     <ContentPage.Content>
         <StackLayout Padding="15">
             <Label Text="Register new user"
-                VerticalOptions="Center" 
-                HorizontalOptions="Center"
-                   FontSize="Large"/>
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   FontSize="Large"
+                   TextColor="Black"/>
 
-            <Entry Placeholder="Name"
-                   x:Name="TxtName"></Entry>
-            <Entry Placeholder="Email" 
-                   x:Name="TxtEmail"></Entry>
-            <Entry Placeholder="Password"
+            <Image Source="todolista.png" HeightRequest="200"
+                   HorizontalOptions="CenterAndExpand"/>
+
+            <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False">
+                <Entry Placeholder="Name"
+                       x:Name="TxtName" />
+            </Frame>
+
+            <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False" Margin="0,10,0,10">
+                <Entry Placeholder="Email" 
+                   x:Name="TxtEmail"/>
+            </Frame>
+
+            <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False" Margin="0,0,0,10">
+                <Entry Placeholder="Password"
                    IsPassword="True"
-                   x:Name="TxtPassword"></Entry>
-            <Entry IsPassword="True" Placeholder="Re-Type Password"
-                   x:Name="TxtConfirmPass"></Entry>
+                   x:Name="TxtPassword"/>
+            </Frame>
+
+            <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False" Margin="0,0,0,10">
+                <Entry IsPassword="True" Placeholder="Retype Password"
+                   x:Name="TxtConfirmPass"/>
+            </Frame>
+
             <Button Text="Register" x:Name="ButtonRegister"
-                    Clicked="ButtonRegister_Clicked"></Button>
+                    Clicked="ButtonRegister_Clicked"
+                    CornerRadius="30"
+                    HorizontalOptions="Center"
+                    Background="#A6BB8D"
+                    Margin="0,0,0,10"/>
+
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Already have a account?" />
+                <Label Text="Login.">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LoginCommand}" NumberOfTapsRequired="1"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
