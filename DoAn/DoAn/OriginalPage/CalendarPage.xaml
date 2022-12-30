@@ -9,9 +9,9 @@
         <StackLayout>
 
             <xc:CalendarView x:Name="calendar" DateSelectionChanged="calendar_DateSelectionChanged"
-                         SelectionType="Single"/>
+                             SelectionType="Single" />
 
-
+            <Label x:Name="date" FontSize="Large"/>
 
         </StackLayout>
     </ContentPage.Content>

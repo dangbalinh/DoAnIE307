@@ -14,8 +14,7 @@ namespace DoAn.OriginalPage
 
         void calendar_DateSelectionChanged(System.Object sender, XCalendar.Models.DateSelectionChangedEventArgs e)
         {
-            DisplayAlert("Date changed", calendar.SelectedDates.ToString(), "OK");
-
+			date.Text = calendar.SelectedDates.ToString();
         }
     }
 }

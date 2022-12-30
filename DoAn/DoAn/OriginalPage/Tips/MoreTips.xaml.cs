@@ -3,28 +3,41 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using DoAn.Model;
+using DoAn.Services;
 using Xamarin.Forms;
 
 namespace DoAn.OriginalPage.Tips
 {
     public partial class MoreTips : ContentPage
     {
-        ObservableCollection<Tip> tips;
+        //ObservableCollection<Tip> tips;
+        List<Tip> tips;
+        DBFirebase services = new DBFirebase();
+
         public MoreTips()
         {
             InitializeComponent();
-            tips = new ObservableCollection<Tip>
-            {
-                new Tip{Title="Hot new", Image="teamwork1.png", Tag="Life", Content="Lorem ipsum"},
-                new Tip{Title="Hot new", Image="teamwork2.png", Tag="Life", Content="Lorem ipsum"},
-                new Tip{Title="Hot new", Image="teamwork3.png", Tag="Life", Content="Lorem ipsum"},
-                new Tip{Title="Hot new", Image="teamwork4.png", Tag="Life", Content="Lorem ipsum"},
-                new Tip{Title="Hot new", Image="teamwork5.png", Tag="Life", Content="Lorem ipsum"},
-                new Tip{Title="Team work", Image="teamwork5.png", Tag="Life", Content="Lorem ipsum"},
-            };
+            //tips = new ObservableCollection<Tip>
+            //{
+            //    new Tip{Title="Hot new", Image="teamwork1.png", Tag="Life", Content="Lorem ipsum"},
+            //    new Tip{Title="Hot new", Image="teamwork2.png", Tag="Life", Content="Lorem ipsum"},
+            //    new Tip{Title="Hot new", Image="teamwork3.png", Tag="Life", Content="Lorem ipsum"},
+            //    new Tip{Title="Hot new", Image="teamwork4.png", Tag="Life", Content="Lorem ipsum"},
+            //    new Tip{Title="Hot new", Image="teamwork5.png", Tag="Life", Content="Lorem ipsum"},
+            //    new Tip{Title="Team work", Image="teamwork5.png", Tag="Life", Content="Lorem ipsum"},
+            //};
 
+            //TipsListView.ItemsSource = tips;
+
+        }
+
+        protected override async void OnAppearing()
+        {
+            //base.OnAppearing();
+            //tips = await services.GetAllTips();
+            //TipsCarouselView.ItemsSource = tips;
+            tips = await services.GetAllTips();
             TipsListView.ItemsSource = tips;
-
         }
 
         void TipsListView_ItemSelected(System.Object sender, Xamarin.Forms.SelectedItemChangedEventArgs e)

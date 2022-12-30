@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{10C28325-0D2A-4A1A-BBA6-7EF5F373FEDA}|Default">
+  <Debugger.DebugSourceFolders>
+    <String>/Users/cuhoangng/Library/Caches/VisualStudio/17.0/Symbols/raw.githubusercontent.com/mono/mono/a96bde9730e4c2244536ce5f4250e5e4f4e6780a</String>
+  </Debugger.DebugSourceFolders>
   <MonoDevelop.Ide.ItemProperties.DoAn.Android PreferredExecutionTarget="Android.pixel_5_-_api_32" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="13.1.0.1" />
   <MonoDevelop.Ide.Workbench ActiveDocument="DoAn/DoAn/View/RegisterUser.xaml">
     <Files>
