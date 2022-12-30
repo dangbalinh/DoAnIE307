@@ -1,6 +1,9 @@
 ﻿using System;
 
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Xml.XPath;
+using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,26 +14,27 @@ namespace DoAn.OriginalPage
     public partial class TaskPage : ContentPage
     {
         public ObservableCollection<Task> listTask;
+        public ObservableCollection<TaskType> listTaskType;
         //List<Task> listTask = new List<Task>();
         public TaskPage()
         {
             InitializeComponent();
-            //Device.StartTimer(TimeSpan.FromSeconds(1), ShowNotification);
+            Device.StartTimer(TimeSpan.FromSeconds(1), ShowNotification);
             ListTask();
+            this.BindingContext = this;
         }
         bool ShowNotification()
         {
             foreach (var task in listTask)
             {
-                if (_switch.IsToogled && DateTime.Now.TimeOfDay >= task.taskTime )
-                {
-                    _switch.IsToolged = false;
-                    DisplayAlert("Time alert", "kkkk", "OK");
+                if (DateTime.Now.TimeOfDay >= task.taskTime)
+                {   
+                    DisplayAlert(task.taskType,task.taskName, "5Ting!!!!!");
                 }
             }
+            return true;
             
 
-            return true;
         }
         private void ListTask()
         {
@@ -42,7 +46,12 @@ namespace DoAn.OriginalPage
             listTask.Add(new Task { taskId = 4, taskName = "Do Your Homework", taskType = "Working", taskDate = new DateTime(2012, 6, 12), taskTime = new TimeSpan(23, 23, 23) });
             listTask.Add(new Task { taskId = 5, taskName = "Do Your Homework", taskType = "Working", taskDate = new DateTime(2012, 6, 12), taskTime = new TimeSpan(23, 23, 23) });
 
+            listTaskType = new ObservableCollection<TaskType>();
+            listTaskType.Add(new TaskType { taskTypeId = 1, taskTypeName = "Working"});
+            listTaskType.Add(new TaskType { taskTypeId = 2, taskTypeName = "Playing" });
+
             LtsTask.ItemsSource = listTask;
+            
         }
 
         private void Button_Clicked(object sender, System.EventArgs e)
@@ -71,7 +80,28 @@ namespace DoAn.OriginalPage
         {
             var swipeItem = sender as SwipeItem;
             var item = swipeItem.CommandParameter as Task;
+            Navigation.PushAsync(new EntryTaskPage(item,listTask));
+        }
 
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            
+        }
+
+        private async void LtsTask_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var item = e.CurrentSelection[0] as Task;
+            if (item != null)
+            {
+                await Navigation.ShowPopupAsync(new PopUpPage(item));
+            }
+            
+            
+        }
+
+        private void SearchBarHotel_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            LtsTask.ItemsSource = listTask.Where(index => index.taskName.StartsWith(e.NewTextValue));
         }
     }
 }

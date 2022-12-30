@@ -43,10 +43,10 @@ namespace DoAn.OriginalPage.Booking
             };
         }
         
-        private async void PropertySelected(object sender, EventArgs e)
+        private void PropertySelected(object sender, EventArgs e)
         {
             var property = (sender as ViewCell).BindingContext as Property;
-            await this.Navigation.PushAsync(new DetailPage(property));
+            Navigation.PushAsync(new DetailPage(property));
 
         }
         /*

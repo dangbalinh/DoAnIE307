@@ -12,8 +12,8 @@
              BarBackgroundColor="Black"
              >
     
-            <!--<view:TaskPage Title="Tasks"/>-->
-            <view:Page1 Title="Calendar"/>
+            <view:TaskPage Title="Tasks"/>
+            <!--<view:Page1 Title="Calendar"/>-->
             <view:CalendarPage Title="Calendar"/>
     
             <viewBookings:BookingPage Title="Booking"/>
