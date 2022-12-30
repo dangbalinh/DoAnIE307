@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DoAn.OriginalPage.Tips.TipPage"
+    Title="Great tips for you">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Padding="5,10,5,10">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Great tips for you" FontSize="Title" FontAttributes="Bold"
+                           TextColor="Black" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+
+                    <Button Text="Get more tips" x:Name="MoreTips" Clicked="MoreTips_Clicked"
+                            CornerRadius="30" Background="#FBC252" FontSize="Micro" HorizontalOptions="End"/>
+                </StackLayout>
+
+                <CarouselView x:Name="TipsCarouselView" IndicatorView="TipsIndicatorView"
+                              CurrentItemChanged="TipsCarouselView_CurrentItemChanged"
+                              ItemsSource="{Binding tips}">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Frame HasShadow="True"
+                                       BorderColor="DarkGray"
+                                       CornerRadius="5"
+                                       Margin="20"
+                                       HeightRequest="250"
+                                       HorizontalOptions="Center">
+                                    <StackLayout>
+                                        <Label Text="{Binding Title}"
+                                               FontSize="Large"
+                                               FontAttributes="Bold"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center"/>
+
+                                        <Image Source="{Binding Image}"
+                                               Aspect="AspectFill"
+                                               HeightRequest="150"
+                                               WidthRequest="150"
+                                               HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+
+                                        <Label Text="{Binding Tag}"
+                                               HorizontalOptions="Center"/>
+
+                                    </StackLayout>
+                                </Frame>
+
+                            </StackLayout>
+
+                        </DataTemplate>
+
+                    </CarouselView.ItemTemplate>
+
+                </CarouselView>
+                <IndicatorView x:Name="TipsIndicatorView"
+                               IndicatorColor="Gray"
+                               SelectedIndicatorColor="Black"
+                               HorizontalOptions="Center"
+                               Margin="0,-480,0,0"/>
+
+                <Label FontSize="Body" x:Name="TipContent"/>
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+

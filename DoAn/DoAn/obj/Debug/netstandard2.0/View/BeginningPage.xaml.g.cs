@@ -13,7 +13,7 @@
 namespace DoAn.View {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("View\\BeginningPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("View/BeginningPage.xaml")]
     public partial class BeginningPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

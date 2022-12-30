@@ -4,6 +4,7 @@
              x:Class="DoAn.OriginalPage.HomePage"
              xmlns:view="clr-namespace:DoAn.OriginalPage"
              xmlns:viewBookings="clr-namespace:DoAn.OriginalPage.Booking"
+             xmlns:tipsView="clr-namespace:DoAn.OriginalPage.Tips"
              NavigationPage.HasNavigationBar="False"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              android:TabbedPage.ToolbarPlacement="Bottom"
@@ -12,10 +13,12 @@
              BarBackgroundColor="Black"
              >
     
-            <!--<view:TaskPage Title="Tasks"/>-->
-            <view:Page1 Title="Calendar"/>
-            <view:CalendarPage Title="Calendar"/>
-    
-            <viewBookings:BookingPage Title="Booking"/>
+     <!--<view:TaskPage Title="Task" IconImageSource="home"/>-->
+    <view:TaskPage Title="Tasks"/>
+    <!--<view:Page1 Title="Calendar"/>-->
+    <view:CalendarPage Title="Calendar" IconImageSource="calendar"/>
+    <tipsView:TipPage Title="Tips" IconImageSource="advice"/>
+    <!-- <view:BlogPage Title="Blog" IconImageSource="newspaper"/>-->
+    <viewBookings:BookingPage Title="Booking"/>
 
 </TabbedPage>

@@ -13,7 +13,7 @@
 namespace DoAn.OriginalPage {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage\\Page1.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage/Page1.xaml")]
     public partial class Page1 : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

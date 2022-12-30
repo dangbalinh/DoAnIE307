@@ -22,11 +22,11 @@ namespace DoAn.OriginalPage
         {
             foreach (var task in listTask)
             {
-                if (_switch.IsToogled && DateTime.Now.TimeOfDay >= task.taskTime )
-                {
-                    _switch.IsToolged = false;
-                    DisplayAlert("Time alert", "kkkk", "OK");
-                }
+                //if (_switch.IsToogled && DateTime.Now.TimeOfDay >= task.taskTime )
+                //{
+                //    _switch.IsToolged = false;
+                //    DisplayAlert("Time alert", "kkkk", "OK");
+                //}
             }
             
 

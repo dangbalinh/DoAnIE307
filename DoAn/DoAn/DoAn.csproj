@@ -18,6 +18,7 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.7.4" />
     <PackageReference Include="Xamarin.Forms.PancakeView" Version="2.3.0.759" />
     <PackageReference Include="Xamarin.Plugin.SharedTransitions" Version="2.4.0" />
+    <PackageReference Include="FirebaseDatabase.net" Version="4.1.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -63,5 +64,24 @@
     <EmbeddedResource Update="View\SecondPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="OriginalPage\Tips\" />
+    <None Remove="Model\" />
+    <None Remove="FirebaseDatabase.net" />
+    <None Remove="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="OriginalPage\Tips\" />
+    <Folder Include="Model\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="OriginalPage\Tips\TipPage.xaml.cs">
+      <DependentUpon>TipPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="OriginalPage\Tips\MoreTips.xaml.cs">
+      <DependentUpon>MoreTips.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
 </Project>
