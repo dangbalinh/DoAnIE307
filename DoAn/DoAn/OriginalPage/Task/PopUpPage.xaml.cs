@@ -3,6 +3,8 @@ using System.Xml;
 using Xamarin.CommunityToolkit.UI.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using DoAn.Model;
+
 
 namespace DoAn.OriginalPage
 {

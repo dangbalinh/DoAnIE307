@@ -6,6 +6,8 @@ using System.Xml.XPath;
 using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using DoAn.Model;
+
 
 
 namespace DoAn.OriginalPage

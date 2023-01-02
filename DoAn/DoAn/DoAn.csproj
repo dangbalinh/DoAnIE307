@@ -26,20 +26,8 @@
     <EmbeddedResource Update="OriginalPage\EntryTaskPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="OriginalPage\BlogPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="OriginalPage\CalendarPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="OriginalPage\HomePage.xaml">
       <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="OriginalPage\Page1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="OriginalPage\Page2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="OriginalPage\TaskPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
@@ -65,6 +53,9 @@
     <EmbeddedResource Update="View\SecondPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="OriginalPage\Calendar\CalendarPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Remove="OriginalPage\Tips\" />
@@ -74,6 +65,8 @@
     <None Remove="DevExpress.XamarinForms.Scheduler" />
     <None Remove="OriginalPage\Scheduler\" />
     <None Remove="ViewModels\" />
+    <None Remove="OriginalPage\Task\" />
+    <None Remove="OriginalPage\Calendar\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OriginalPage\Tips\" />
@@ -81,6 +74,8 @@
     <Folder Include="Services\" />
     <Folder Include="OriginalPage\Scheduler\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="OriginalPage\Task\" />
+    <Folder Include="OriginalPage\Calendar\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="OriginalPage\Tips\TipPage.xaml.cs">
