@@ -21,7 +21,9 @@
           "monoandroid12.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/RdrEOD1BxkxkGmizWQSpvT3YhzE5jQEGBpS8GH4fh1YRk9W8OY/api": {},
+          "https://nuget.telerik.com/v3/index.json": {}
         },
         "frameworks": {
           "monoandroid12.0": {
@@ -36,6 +38,10 @@
       "frameworks": {
         "monoandroid12.0": {
           "dependencies": {
+            "DevExpress.XamarinForms.Scheduler": {
+              "target": "Package",
+              "version": "[22.1.7, )"
+            },
             "FirebaseAuthentication.net": {
               "target": "Package",
               "version": "[3.7.2, )"
@@ -72,7 +78,9 @@
           "netstandard2.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.devexpress.com/RdrEOD1BxkxkGmizWQSpvT3YhzE5jQEGBpS8GH4fh1YRk9W8OY/api": {},
+          "https://nuget.telerik.com/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -93,6 +101,10 @@
             "Com.Airbnb.Xamarin.Forms.Lottie": {
               "target": "Package",
               "version": "[4.1.0, )"
+            },
+            "DevExpress.XamarinForms.Scheduler": {
+              "target": "Package",
+              "version": "[22.1.7, )"
             },
             "FirebaseAuthentication.net": {
               "target": "Package",

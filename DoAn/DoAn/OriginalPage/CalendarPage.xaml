@@ -6,12 +6,69 @@
     xmlns:xc="clr-namespace:XCalendar;assembly=XCalendar"
     NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="White">
 
             <xc:CalendarView x:Name="calendar" DateSelectionChanged="calendar_DateSelectionChanged"
-                             SelectionType="Single" />
+                         SelectionType="Single"
+                         NavigationBackgroundColor="Blue"
+                         HeightRequest="800"
+                         Rows="5"/>
+            <CollectionView x:Name="LtTask" Margin="20,0,20,0" SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                           ItemSpacing="20" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <SwipeView  HeightRequest="50" Margin="10,20,0,0">
+                            <SwipeView.RightItems>
+                                <SwipeItems SwipeBehaviorOnInvoked="RemainOpen">
+                                    <SwipeItem Text="Delete"
+                                               BackgroundColor="Red"
+                                               x:Name="SWDelete"
+                                               IconImageSource="phone.png"
+                                               CommandParameter="{Binding .}"
+                                               ></SwipeItem>
+                                    <SwipeItem Text="Update"
+                                               BackgroundColor="Blue"
+                                               x:Name="SWEdit"
+                                               IconImageSource="phone.png"
+                                               CommandParameter="{Binding .}"
+                                               ></SwipeItem>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+                            <Grid BackgroundColor="#FAFAFA" Margin="20,10,0,0">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"></ColumnDefinition>
+                                    <ColumnDefinition Width="210">
+                                    </ColumnDefinition>
+                                    <ColumnDefinition Width="40"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="circleIcon.png">
+                                    
 
-            <Label x:Name="date" FontSize="Large"/>
+                                </Image>
+                                <Label 
+                                    x:Name="taskLabel"
+                                    Text= "{Binding taskName}" 
+                                    Margin="20,0,0,0"
+                                    FontSize="15"
+                                    FontAttributes="Bold"
+                                    TextColor="Black"
+                                    Grid.Column="1">
+
+                                </Label>
+                                <Label 
+                                       x:Name="taskLabelType"
+                                       Text="{Binding taskType}" 
+                                       Margin="20,30,0,0"
+                                       Grid.Column="1"
+                                       ></Label>
+                            </Grid>
+                        </SwipeView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
         </StackLayout>
     </ContentPage.Content>

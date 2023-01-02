@@ -32,6 +32,81 @@
           }
         }
       },
+      "DevExpress.XamarinForms.CollectionView/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.iOS.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Core/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.iOS.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Editors/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.CollectionView": "[22.1.7]",
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.iOS.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Scheduler/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "DevExpress.XamarinForms.Editors": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Scheduler.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Scheduler.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.iOS.dll": {}
+        }
+      },
       "FirebaseAuthentication.net/3.7.2": {
         "type": "package",
         "dependencies": {
@@ -894,6 +969,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Com.Airbnb.Xamarin.Forms.Lottie": "4.1.0",
+          "DevExpress.XamarinForms.Scheduler": "22.1.7",
           "FirebaseAuthentication.net": "3.7.2",
           "FirebaseDatabase.net": "4.1.0",
           "Plugin.XCalendar": "2.1.0",
@@ -941,6 +1017,81 @@
           }
         }
       },
+      "DevExpress.XamarinForms.CollectionView/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.iOS.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Core/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.iOS.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Editors/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.CollectionView": "[22.1.7]",
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.iOS.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Scheduler/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "DevExpress.XamarinForms.Editors": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Scheduler.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Scheduler.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.iOS.dll": {}
+        }
+      },
       "FirebaseAuthentication.net/3.7.2": {
         "type": "package",
         "dependencies": {
@@ -1739,6 +1890,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Com.Airbnb.Xamarin.Forms.Lottie": "4.1.0",
+          "DevExpress.XamarinForms.Scheduler": "22.1.7",
           "FirebaseAuthentication.net": "3.7.2",
           "FirebaseDatabase.net": "4.1.0",
           "Plugin.XCalendar": "2.1.0",
@@ -1786,6 +1938,81 @@
           }
         }
       },
+      "DevExpress.XamarinForms.CollectionView/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.iOS.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Core/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.iOS.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Editors/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.CollectionView": "[22.1.7]",
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.iOS.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Scheduler/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "DevExpress.XamarinForms.Editors": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Scheduler.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Scheduler.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.iOS.dll": {}
+        }
+      },
       "FirebaseAuthentication.net/3.7.2": {
         "type": "package",
         "dependencies": {
@@ -2584,6 +2811,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Com.Airbnb.Xamarin.Forms.Lottie": "4.1.0",
+          "DevExpress.XamarinForms.Scheduler": "22.1.7",
           "FirebaseAuthentication.net": "3.7.2",
           "FirebaseDatabase.net": "4.1.0",
           "Plugin.XCalendar": "2.1.0",
@@ -2631,6 +2859,81 @@
           }
         }
       },
+      "DevExpress.XamarinForms.CollectionView/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.iOS.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Core/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.iOS.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Editors/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.CollectionView": "[22.1.7]",
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.iOS.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Scheduler/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "DevExpress.XamarinForms.Editors": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Scheduler.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Scheduler.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.iOS.dll": {}
+        }
+      },
       "FirebaseAuthentication.net/3.7.2": {
         "type": "package",
         "dependencies": {
@@ -3429,6 +3732,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Com.Airbnb.Xamarin.Forms.Lottie": "4.1.0",
+          "DevExpress.XamarinForms.Scheduler": "22.1.7",
           "FirebaseAuthentication.net": "3.7.2",
           "FirebaseDatabase.net": "4.1.0",
           "Plugin.XCalendar": "2.1.0",
@@ -3507,6 +3811,82 @@
         "lib/xamarinmac20/Lottie.Forms.pdb",
         "lib/xamarinmac20/Lottie.Forms.xml",
         "readme.txt"
+      ]
+    },
+    "DevExpress.XamarinForms.CollectionView/22.1.7": {
+      "sha512": "OLfDQy2+kJnDge5J0N8ZjEzUm7oP8x9eYDxOk/RTF0pIlifJ+obIE8HkOxvPPS5EN4lIagACU5GJSIIocoVDLw==",
+      "type": "package",
+      "path": "devexpress.xamarinforms.collectionview/22.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "devexpress.xamarinforms.collectionview.22.1.7.nupkg.sha512",
+        "devexpress.xamarinforms.collectionview.nuspec",
+        "lib/MonoAndroid10/DevExpress.Xamarin.Android.CollectionView.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.CollectionView.Android.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.CollectionView.dll",
+        "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.CollectionView.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.iOS.dll",
+        "lib/netstandard2.0/DevExpress.XamarinForms.CollectionView.dll"
+      ]
+    },
+    "DevExpress.XamarinForms.Core/22.1.7": {
+      "sha512": "cIm/R5c3RYyicElwzor5K4rGLv/Erq66l0EQFDEywNMSLDBtaiKx1LTzOskeGpzoa1t8Nwqe1ZK5ac0B88O3SA==",
+      "type": "package",
+      "path": "devexpress.xamarinforms.core/22.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "devexpress.xamarinforms.core.22.1.7.nupkg.sha512",
+        "devexpress.xamarinforms.core.nuspec",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Core.Android.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Core.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Core.xml",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.iOS.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.xml",
+        "lib/netstandard2.0/DevExpress.XamarinForms.Core.dll",
+        "lib/netstandard2.0/DevExpress.XamarinForms.Core.xml"
+      ]
+    },
+    "DevExpress.XamarinForms.Editors/22.1.7": {
+      "sha512": "wlnHNVHX+Q6Noqmb+YEsqMdHZI4KwJxfAo72pjZSaBsmjcG6e8OJKekCAS9xe7sFpDVnOPgwpa1mpcOv+wtWQg==",
+      "type": "package",
+      "path": "devexpress.xamarinforms.editors/22.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "devexpress.xamarinforms.editors.22.1.7.nupkg.sha512",
+        "devexpress.xamarinforms.editors.nuspec",
+        "lib/MonoAndroid10/DevExpress.Xamarin.Android.Editors.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Editors.Android.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Editors.dll",
+        "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Editors.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.iOS.dll",
+        "lib/netstandard2.0/DevExpress.XamarinForms.Editors.dll"
+      ]
+    },
+    "DevExpress.XamarinForms.Scheduler/22.1.7": {
+      "sha512": "eWoYz43T8VqOsFWcfJvEgL/Y6UFauQ0M/NmOP1lQiRbIMC2wOXN6rq9Axs7jczsbakemhsheUiOBeTlYlTtzyg==",
+      "type": "package",
+      "path": "devexpress.xamarinforms.scheduler/22.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "devexpress.xamarinforms.scheduler.22.1.7.nupkg.sha512",
+        "devexpress.xamarinforms.scheduler.nuspec",
+        "lib/MonoAndroid10/DevExpress.Xamarin.Android.Scheduler.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Scheduler.Android.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Scheduler.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Scheduler.xml",
+        "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Scheduler.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.iOS.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.xml",
+        "lib/netstandard2.0/DevExpress.XamarinForms.Scheduler.dll",
+        "lib/netstandard2.0/DevExpress.XamarinForms.Scheduler.xml"
       ]
     },
     "FirebaseAuthentication.net/3.7.2": {
@@ -6878,6 +7258,7 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "DevExpress.XamarinForms.Scheduler >= 22.1.7",
       "DoAn >= 1.0.0",
       "FirebaseAuthentication.net >= 3.7.2",
       "FirebaseDatabase.net >= 4.1.0",
@@ -6905,7 +7286,9 @@
         "xamarinios10"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.devexpress.com/RdrEOD1BxkxkGmizWQSpvT3YhzE5jQEGBpS8GH4fh1YRk9W8OY/api": {},
+        "https://nuget.telerik.com/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
@@ -6920,6 +7303,10 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "DevExpress.XamarinForms.Scheduler": {
+            "target": "Package",
+            "version": "[22.1.7, )"
+          },
           "FirebaseAuthentication.net": {
             "target": "Package",
             "version": "[3.7.2, )"

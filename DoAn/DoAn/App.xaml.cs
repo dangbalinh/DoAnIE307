@@ -9,8 +9,8 @@ namespace DoAn
     {
         public App()
         {
+            DevExpress.XamarinForms.Scheduler.Initializer.Init();
             InitializeComponent();
-
             MainPage = new NavigationPage(new HomePage());
         }
 
