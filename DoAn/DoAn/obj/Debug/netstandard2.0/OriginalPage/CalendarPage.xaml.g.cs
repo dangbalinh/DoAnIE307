@@ -20,13 +20,13 @@ namespace DoAn.OriginalPage {
         private global::XCalendar.CalendarView calendar;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Label date;
+        private global::Xamarin.Forms.CollectionView LtTask;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CalendarPage));
             calendar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::XCalendar.CalendarView>(this, "calendar");
-            date = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "date");
+            LtTask = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CollectionView>(this, "LtTask");
         }
     }
 }

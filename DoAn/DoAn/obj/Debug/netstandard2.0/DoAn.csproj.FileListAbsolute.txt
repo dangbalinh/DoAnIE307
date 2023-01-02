@@ -63,3 +63,5 @@ D:/IE307/DoAn/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/EntryTaskPage.xaml
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.dll
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/ref/DoAn.dll
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.pdb
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.csproj.AssemblyReference.cache
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/PopUpPage.xaml.g.cs
