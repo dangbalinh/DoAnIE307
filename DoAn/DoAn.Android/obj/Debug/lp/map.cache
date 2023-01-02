@@ -1,3 +1,10 @@
+DevExpress.Xamarin.Android.CollectionView.dll
+DevExpress.Xamarin.Android.Editors.dll
+DevExpress.Xamarin.Android.Scheduler.dll
+DevExpress.XamarinForms.CollectionView.Android.dll
+DevExpress.XamarinForms.Core.Android.dll
+DevExpress.XamarinForms.Editors.Android.dll
+DevExpress.XamarinForms.Scheduler.Android.dll
 FormsViewGroup.dll
 Lottie.Android.dll
 Lottie.Forms.dll
@@ -11,6 +18,7 @@ Xamarin.AndroidX.AppCompat.dll
 Xamarin.AndroidX.Arch.Core.Common.dll
 Xamarin.AndroidX.Arch.Core.Runtime.dll
 Xamarin.AndroidX.AsyncLayoutInflater.dll
+Xamarin.AndroidX.AutoFill.dll
 Xamarin.AndroidX.Browser.dll
 Xamarin.AndroidX.CardView.dll
 Xamarin.AndroidX.Collection.dll
@@ -62,6 +70,8 @@ Xamarin.Forms.Platform.Android.dll
 Xamarin.Forms.Platform.dll
 Xamarin.Google.Android.Material.dll
 Xamarin.Google.Guava.ListenableFuture.dll
+Xamarin.Jetbrains.Annotations.dll
+Xamarin.Kotlin.StdLib.dll
 androidx.versionedparcelable.versionedparcelable.aar
 androidx.arch.core.core-runtime.aar
 androidx.lifecycle.lifecycle-runtime.aar
@@ -108,3 +118,4 @@ androidx.asynclayoutinflater.asynclayoutinflater.aar
 androidx.legacy.legacy-support-core-ui.aar
 androidx.legacy.legacy-support-v4.aar
 androidx.browser.browser.aar
+androidx.autofill.autofill.aar

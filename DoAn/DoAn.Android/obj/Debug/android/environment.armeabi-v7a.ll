@@ -76,11 +76,11 @@ target triple = "armv7-unknown-linux-android"
 
 ; app_environment_variables
 @__app_environment_variables_n_0.0 = internal constant [15 x i8] c"MONO_GC_PARAMS\00", align 1
-@__app_environment_variables_v_0.1 = internal constant [21 x i8] c"major=marksweep-conc\00", align 1
+@__app_environment_variables_v_0.1 = internal constant [68 x i8] c"bridge-implementation=tarjan,nursery-size=128m,soft-heap-limit=512m\00", align 1
 @__app_environment_variables_n_1.2 = internal constant [15 x i8] c"MONO_LOG_LEVEL\00", align 1
 @__app_environment_variables_v_1.3 = internal constant [5 x i8] c"info\00", align 1
 @__app_environment_variables_n_2.4 = internal constant [17 x i8] c"XAMARIN_BUILD_ID\00", align 1
-@__app_environment_variables_v_2.5 = internal constant [37 x i8] c"e281afa0-2f0c-4613-b522-7e77cab6f995\00", align 1
+@__app_environment_variables_v_2.5 = internal constant [37 x i8] c"b9c2fa04-4373-4a5d-a476-73a2027ddcc3\00", align 1
 @__app_environment_variables_n_3.6 = internal constant [28 x i8] c"XA_HTTP_CLIENT_HANDLER_TYPE\00", align 1
 @__app_environment_variables_v_3.7 = internal constant [41 x i8] c"Xamarin.Android.Net.AndroidClientHandler\00", align 1
 @__app_environment_variables_n_4.8 = internal constant [16 x i8] c"XA_TLS_PROVIDER\00", align 1
@@ -90,7 +90,7 @@ target triple = "armv7-unknown-linux-android"
 
 @app_environment_variables = local_unnamed_addr constant [12 x i8*] [
 	i8* getelementptr inbounds ([15 x i8], [15 x i8]* @__app_environment_variables_n_0.0, i32 0, i32 0),
-	i8* getelementptr inbounds ([21 x i8], [21 x i8]* @__app_environment_variables_v_0.1, i32 0, i32 0),
+	i8* getelementptr inbounds ([68 x i8], [68 x i8]* @__app_environment_variables_v_0.1, i32 0, i32 0),
 	i8* getelementptr inbounds ([15 x i8], [15 x i8]* @__app_environment_variables_n_1.2, i32 0, i32 0),
 	i8* getelementptr inbounds ([5 x i8], [5 x i8]* @__app_environment_variables_v_1.3, i32 0, i32 0),
 	i8* getelementptr inbounds ([17 x i8], [17 x i8]* @__app_environment_variables_n_2.4, i32 0, i32 0),
@@ -123,10 +123,10 @@ target triple = "armv7-unknown-linux-android"
 	i32 3, ; package_naming_policy
 	i32 12, ; environment_variable_count
 	i32 0, ; system_property_count
-	i32 107, ; number_of_assemblies_in_apk
+	i32 124, ; number_of_assemblies_in_apk
 	i32 63, ; bundled_assembly_name_width
 	i32 2, ; number_of_assembly_store_files
-	i32 28, ; number_of_dso_cache_entries
+	i32 40, ; number_of_dso_cache_entries
 	i32 33559868, ; android_runtime_jnienv_class_token
 	i32 100759914, ; jnienv_initialize_method_token
 	i32 100759913, ; jnienv_registerjninatives_method_token
@@ -137,15 +137,18 @@ target triple = "armv7-unknown-linux-android"
 }, align 4
 
 @__DSOCacheEntry_name.1 = internal constant [31 x i8] c"libxamarin-debug-app-helper.so\00", align 1
-@__DSOCacheEntry_name.2 = internal constant [24 x i8] c"libmono-profiler-log.so\00", align 1
-@__DSOCacheEntry_name.3 = internal constant [16 x i8] c"libmonodroid.so\00", align 1
-@__DSOCacheEntry_name.4 = internal constant [22 x i8] c"libxa-internal-api.so\00", align 1
-@__DSOCacheEntry_name.5 = internal constant [23 x i8] c"libmono-btls-shared.so\00", align 1
-@__DSOCacheEntry_name.6 = internal constant [18 x i8] c"libmono-native.so\00", align 1
-@__DSOCacheEntry_name.7 = internal constant [19 x i8] c"libmonosgen-2.0.so\00", align 1
+@__DSOCacheEntry_name.2 = internal constant [22 x i8] c"libDXEditorsNative.so\00", align 1
+@__DSOCacheEntry_name.3 = internal constant [24 x i8] c"libmono-profiler-log.so\00", align 1
+@__DSOCacheEntry_name.4 = internal constant [16 x i8] c"libmonodroid.so\00", align 1
+@__DSOCacheEntry_name.5 = internal constant [22 x i8] c"libxa-internal-api.so\00", align 1
+@__DSOCacheEntry_name.6 = internal constant [23 x i8] c"libDXListViewNative.so\00", align 1
+@__DSOCacheEntry_name.7 = internal constant [23 x i8] c"libmono-btls-shared.so\00", align 1
+@__DSOCacheEntry_name.8 = internal constant [18 x i8] c"libmono-native.so\00", align 1
+@__DSOCacheEntry_name.9 = internal constant [24 x i8] c"libDXSchedulerNative.so\00", align 1
+@__DSOCacheEntry_name.10 = internal constant [19 x i8] c"libmonosgen-2.0.so\00", align 1
 
 ; dso_cache
-@dso_cache = local_unnamed_addr global [28 x %struct.DSOCacheEntry] [
+@dso_cache = local_unnamed_addr global [40 x %struct.DSOCacheEntry] [
 	; 0
 	%struct.DSOCacheEntry {
 		i64 98567696, ; hash 0x5e00610, from name: libxamarin-debug-app-helper.so
@@ -155,191 +158,275 @@ target triple = "armv7-unknown-linux-android"
 	}, 
 	; 1
 	%struct.DSOCacheEntry {
-		i64 134276555, ; hash 0x800e5cb, from name: libmono-profiler-log.so
+		i64 132580380, ; hash 0x7e7041c, from name: DXEditorsNative.so
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([24 x i8], [24 x i8]* @__DSOCacheEntry_name.2, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.2, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 2
 	%struct.DSOCacheEntry {
-		i64 229294244, ; hash 0xdaac0a4, from name: monodroid.so
+		i64 134276555, ; hash 0x800e5cb, from name: libmono-profiler-log.so
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.3, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([24 x i8], [24 x i8]* @__DSOCacheEntry_name.3, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 3
 	%struct.DSOCacheEntry {
-		i64 331988322, ; hash 0x13c9bd62, from name: xa-internal-api
+		i64 229294244, ; hash 0xdaac0a4, from name: monodroid.so
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 4
+	%struct.DSOCacheEntry {
+		i64 331988322, ; hash 0x13c9bd62, from name: xa-internal-api
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 5
+	%struct.DSOCacheEntry {
+		i64 459755663, ; hash 0x1b67508f, from name: DXListViewNative
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.6, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 6
+	%struct.DSOCacheEntry {
+		i64 488337471, ; hash 0x1d1b703f, from name: DXListViewNative.so
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.6, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 7
+	%struct.DSOCacheEntry {
+		i64 552694889, ; hash 0x20f17469, from name: libDXEditorsNative.so
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.2, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 8
 	%struct.DSOCacheEntry {
 		i64 713151617, ; hash 0x2a81d481, from name: libxamarin-debug-app-helper
 		i8 0, ; ignore
 		i8* getelementptr inbounds ([31 x i8], [31 x i8]* @__DSOCacheEntry_name.1, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 5
+	; 9
 	%struct.DSOCacheEntry {
 		i64 748366034, ; hash 0x2c9b28d2, from name: monodroid
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.3, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 6
+	; 10
 	%struct.DSOCacheEntry {
 		i64 862752302, ; hash 0x336c8e2e, from name: xa-internal-api.so
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 7
+	; 11
 	%struct.DSOCacheEntry {
 		i64 1295752231, ; hash 0x4d3b9c27, from name: mono-btls-shared
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.7, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 8
+	; 12
 	%struct.DSOCacheEntry {
 		i64 1342113219, ; hash 0x4fff05c3, from name: mono-native
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([18 x i8], [18 x i8]* @__DSOCacheEntry_name.6, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([18 x i8], [18 x i8]* @__DSOCacheEntry_name.8, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 9
+	; 13
 	%struct.DSOCacheEntry {
 		i64 1516058787, ; hash 0x5a5d38a3, from name: xamarin-debug-app-helper.so
 		i8 0, ; ignore
 		i8* getelementptr inbounds ([31 x i8], [31 x i8]* @__DSOCacheEntry_name.1, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 10
+	; 14
+	%struct.DSOCacheEntry {
+		i64 1588523461, ; hash 0x5eaef1c5, from name: libDXListViewNative.so
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.6, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 15
+	%struct.DSOCacheEntry {
+		i64 1605663965, ; hash 0x5fb47cdd, from name: DXSchedulerNative
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([24 x i8], [24 x i8]* @__DSOCacheEntry_name.9, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 16
+	%struct.DSOCacheEntry {
+		i64 1748168694, ; hash 0x6832eff6, from name: DXEditorsNative
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.2, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 17
 	%struct.DSOCacheEntry {
 		i64 1810752137, ; hash 0x6bede289, from name: mono-profiler-log.so
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([24 x i8], [24 x i8]* @__DSOCacheEntry_name.2, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([24 x i8], [24 x i8]* @__DSOCacheEntry_name.3, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 11
+	; 18
 	%struct.DSOCacheEntry {
 		i64 2072997827, ; hash 0x7b8f6fc3, from name: mono-native.so
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([18 x i8], [18 x i8]* @__DSOCacheEntry_name.6, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([18 x i8], [18 x i8]* @__DSOCacheEntry_name.8, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 12
+	; 19
+	%struct.DSOCacheEntry {
+		i64 2215793993, ; hash 0x84125549, from name: libDXSchedulerNative.so
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([24 x i8], [24 x i8]* @__DSOCacheEntry_name.9, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 20
 	%struct.DSOCacheEntry {
 		i64 2229681966, ; hash 0x84e63f2e, from name: xamarin-debug-app-helper
 		i8 0, ; ignore
 		i8* getelementptr inbounds ([31 x i8], [31 x i8]* @__DSOCacheEntry_name.1, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
-	; 13
+	; 21
 	%struct.DSOCacheEntry {
 		i64 2496112763, ; hash 0x94c7a87b, from name: libmonosgen-2.0
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__DSOCacheEntry_name.7, i32 0, i32 0), ; name
-		i8* null; handle
-	}, 
-	; 14
-	%struct.DSOCacheEntry {
-		i64 2531241668, ; hash 0x96dfaec4, from name: libmono-native
-		i8 0, ; ignore
-		i8* getelementptr inbounds ([18 x i8], [18 x i8]* @__DSOCacheEntry_name.6, i32 0, i32 0), ; name
-		i8* null; handle
-	}, 
-	; 15
-	%struct.DSOCacheEntry {
-		i64 2658598962, ; hash 0x9e770032, from name: monosgen-2.0.so
-		i8 0, ; ignore
-		i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__DSOCacheEntry_name.7, i32 0, i32 0), ; name
-		i8* null; handle
-	}, 
-	; 16
-	%struct.DSOCacheEntry {
-		i64 2843644522, ; hash 0xa97e926a, from name: libxa-internal-api.so
-		i8 0, ; ignore
-		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
-		i8* null; handle
-	}, 
-	; 17
-	%struct.DSOCacheEntry {
-		i64 2882434345, ; hash 0xabce7529, from name: libmono-profiler-log
-		i8 0, ; ignore
-		i8* getelementptr inbounds ([24 x i8], [24 x i8]* @__DSOCacheEntry_name.2, i32 0, i32 0), ; name
-		i8* null; handle
-	}, 
-	; 18
-	%struct.DSOCacheEntry {
-		i64 3056707377, ; hash 0xb631a731, from name: libmono-native.so
-		i8 0, ; ignore
-		i8* getelementptr inbounds ([18 x i8], [18 x i8]* @__DSOCacheEntry_name.6, i32 0, i32 0), ; name
-		i8* null; handle
-	}, 
-	; 19
-	%struct.DSOCacheEntry {
-		i64 3322182132, ; hash 0xc60479f4, from name: libmono-btls-shared
-		i8 0, ; ignore
-		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
-		i8* null; handle
-	}, 
-	; 20
-	%struct.DSOCacheEntry {
-		i64 3422266863, ; hash 0xcbfba5ef, from name: libmonodroid.so
-		i8 0, ; ignore
-		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.3, i32 0, i32 0), ; name
-		i8* null; handle
-	}, 
-	; 21
-	%struct.DSOCacheEntry {
-		i64 3572049353, ; hash 0xd4e925c9, from name: libxa-internal-api
-		i8 0, ; ignore
-		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__DSOCacheEntry_name.10, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 22
 	%struct.DSOCacheEntry {
-		i64 3611850339, ; hash 0xd7487663, from name: mono-profiler-log
+		i64 2531241668, ; hash 0x96dfaec4, from name: libmono-native
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([24 x i8], [24 x i8]* @__DSOCacheEntry_name.2, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([18 x i8], [18 x i8]* @__DSOCacheEntry_name.8, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 23
 	%struct.DSOCacheEntry {
-		i64 3636393175, ; hash 0xd8bef4d7, from name: libmonodroid
+		i64 2658598962, ; hash 0x9e770032, from name: monosgen-2.0.so
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.3, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__DSOCacheEntry_name.10, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 24
 	%struct.DSOCacheEntry {
-		i64 3709087552, ; hash 0xdd142f40, from name: libmono-btls-shared.so
+		i64 2843644522, ; hash 0xa97e926a, from name: libxa-internal-api.so
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 25
 	%struct.DSOCacheEntry {
-		i64 3790421216, ; hash 0xe1ed3ce0, from name: monosgen-2.0
+		i64 2882434345, ; hash 0xabce7529, from name: libmono-profiler-log
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__DSOCacheEntry_name.7, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([24 x i8], [24 x i8]* @__DSOCacheEntry_name.3, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 26
 	%struct.DSOCacheEntry {
-		i64 3797100270, ; hash 0xe25326ee, from name: mono-btls-shared.so
+		i64 2885591781, ; hash 0xabfea2e5, from name: DXSchedulerNative.so
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([24 x i8], [24 x i8]* @__DSOCacheEntry_name.9, i32 0, i32 0), ; name
 		i8* null; handle
 	}, 
 	; 27
 	%struct.DSOCacheEntry {
+		i64 3056707377, ; hash 0xb631a731, from name: libmono-native.so
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([18 x i8], [18 x i8]* @__DSOCacheEntry_name.8, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 28
+	%struct.DSOCacheEntry {
+		i64 3322182132, ; hash 0xc60479f4, from name: libmono-btls-shared
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.7, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 29
+	%struct.DSOCacheEntry {
+		i64 3415244479, ; hash 0xcb907ebf, from name: libDXListViewNative
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.6, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 30
+	%struct.DSOCacheEntry {
+		i64 3422266863, ; hash 0xcbfba5ef, from name: libmonodroid.so
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 31
+	%struct.DSOCacheEntry {
+		i64 3572049353, ; hash 0xd4e925c9, from name: libxa-internal-api
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.5, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 32
+	%struct.DSOCacheEntry {
+		i64 3611850339, ; hash 0xd7487663, from name: mono-profiler-log
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([24 x i8], [24 x i8]* @__DSOCacheEntry_name.3, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 33
+	%struct.DSOCacheEntry {
+		i64 3636393175, ; hash 0xd8bef4d7, from name: libmonodroid
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([16 x i8], [16 x i8]* @__DSOCacheEntry_name.4, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 34
+	%struct.DSOCacheEntry {
+		i64 3709087552, ; hash 0xdd142f40, from name: libmono-btls-shared.so
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.7, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 35
+	%struct.DSOCacheEntry {
+		i64 3790421216, ; hash 0xe1ed3ce0, from name: monosgen-2.0
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__DSOCacheEntry_name.10, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 36
+	%struct.DSOCacheEntry {
+		i64 3797100270, ; hash 0xe25326ee, from name: mono-btls-shared.so
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([23 x i8], [23 x i8]* @__DSOCacheEntry_name.7, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 37
+	%struct.DSOCacheEntry {
 		i64 3817984437, ; hash 0xe391d1b5, from name: libmonosgen-2.0.so
 		i8 0, ; ignore
-		i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__DSOCacheEntry_name.7, i32 0, i32 0), ; name
+		i8* getelementptr inbounds ([19 x i8], [19 x i8]* @__DSOCacheEntry_name.10, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 38
+	%struct.DSOCacheEntry {
+		i64 4060821998, ; hash 0xf20b39ee, from name: libDXSchedulerNative
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([24 x i8], [24 x i8]* @__DSOCacheEntry_name.9, i32 0, i32 0), ; name
+		i8* null; handle
+	}, 
+	; 39
+	%struct.DSOCacheEntry {
+		i64 4080548026, ; hash 0xf33838ba, from name: libDXEditorsNative
+		i8 0, ; ignore
+		i8* getelementptr inbounds ([22 x i8], [22 x i8]* @__DSOCacheEntry_name.2, i32 0, i32 0), ; name
 		i8* null; handle
 	}
 ], align 8; end of 'dso_cache' array
@@ -451,10 +538,27 @@ target triple = "armv7-unknown-linux-android"
 @__XamarinAndroidBundledAssembly_name_104 = internal global [63 x i8] zeroinitializer, align 1
 @__XamarinAndroidBundledAssembly_name_105 = internal global [63 x i8] zeroinitializer, align 1
 @__XamarinAndroidBundledAssembly_name_106 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_107 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_108 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_109 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_110 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_111 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_112 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_113 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_114 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_115 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_116 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_117 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_118 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_119 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_120 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_121 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_122 = internal global [63 x i8] zeroinitializer, align 1
+@__XamarinAndroidBundledAssembly_name_123 = internal global [63 x i8] zeroinitializer, align 1
 
 
 ; Bundled assembly name buffers, all 63 bytes long
-@bundled_assemblies = local_unnamed_addr global [107 x %struct.XamarinAndroidBundledAssembly] [
+@bundled_assemblies = local_unnamed_addr global [124 x %struct.XamarinAndroidBundledAssembly] [
 	; 0
 	%struct.XamarinAndroidBundledAssembly {
 		i32 -1, ; apk_fd
@@ -1417,6 +1521,159 @@ target triple = "armv7-unknown-linux-android"
 		i8* null, ; data
 		i32 63, ; name_length
 		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_106, i32 0, i32 0); name
+	}, 
+	; 107
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_107, i32 0, i32 0); name
+	}, 
+	; 108
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_108, i32 0, i32 0); name
+	}, 
+	; 109
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_109, i32 0, i32 0); name
+	}, 
+	; 110
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_110, i32 0, i32 0); name
+	}, 
+	; 111
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_111, i32 0, i32 0); name
+	}, 
+	; 112
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_112, i32 0, i32 0); name
+	}, 
+	; 113
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_113, i32 0, i32 0); name
+	}, 
+	; 114
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_114, i32 0, i32 0); name
+	}, 
+	; 115
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_115, i32 0, i32 0); name
+	}, 
+	; 116
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_116, i32 0, i32 0); name
+	}, 
+	; 117
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_117, i32 0, i32 0); name
+	}, 
+	; 118
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_118, i32 0, i32 0); name
+	}, 
+	; 119
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_119, i32 0, i32 0); name
+	}, 
+	; 120
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_120, i32 0, i32 0); name
+	}, 
+	; 121
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_121, i32 0, i32 0); name
+	}, 
+	; 122
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_122, i32 0, i32 0); name
+	}, 
+	; 123
+	%struct.XamarinAndroidBundledAssembly {
+		i32 -1, ; apk_fd
+		i32 0, ; data_offset
+		i32 0, ; data_size
+		i8* null, ; data
+		i32 63, ; name_length
+		i8* getelementptr inbounds ([63 x i8], [63 x i8]* @__XamarinAndroidBundledAssembly_name_123, i32 0, i32 0); name
 	}
 ], align 4; end of 'bundled_assemblies' array
 

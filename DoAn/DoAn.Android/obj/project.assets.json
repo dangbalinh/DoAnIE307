@@ -43,6 +43,85 @@
           }
         }
       },
+      "DevExpress.XamarinForms.CollectionView/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012",
+          "Xamarin.Kotlin.StdLib": "1.4.20"
+        },
+        "compile": {
+          "lib/MonoAndroid10/DevExpress.Xamarin.Android.CollectionView.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.CollectionView.Android.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.CollectionView.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/DevExpress.Xamarin.Android.CollectionView.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.CollectionView.Android.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.CollectionView.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Core/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/MonoAndroid10/DevExpress.XamarinForms.Core.Android.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.Core.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/MonoAndroid10/DevExpress.XamarinForms.Core.Android.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.Core.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "DevExpress.XamarinForms.Editors/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.CollectionView": "[22.1.7]",
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.AndroidX.AutoFill": "1.1.0.6",
+          "Xamarin.Forms": "5.0.0.2012",
+          "Xamarin.Kotlin.StdLib": "1.4.20"
+        },
+        "compile": {
+          "lib/MonoAndroid10/DevExpress.Xamarin.Android.Editors.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.Editors.Android.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.Editors.dll": {}
+        },
+        "runtime": {
+          "lib/MonoAndroid10/DevExpress.Xamarin.Android.Editors.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.Editors.Android.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.Editors.dll": {}
+        }
+      },
+      "DevExpress.XamarinForms.Scheduler/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "DevExpress.XamarinForms.Editors": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012",
+          "Xamarin.Kotlin.StdLib": "1.4.20"
+        },
+        "compile": {
+          "lib/MonoAndroid10/DevExpress.Xamarin.Android.Scheduler.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.Scheduler.Android.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.Scheduler.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/MonoAndroid10/DevExpress.Xamarin.Android.Scheduler.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.Scheduler.Android.dll": {},
+          "lib/MonoAndroid10/DevExpress.XamarinForms.Scheduler.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "FirebaseAuthentication.net/3.7.2": {
         "type": "package",
         "dependencies": {
@@ -946,6 +1025,25 @@
         },
         "build": {
           "buildTransitive/monoandroid90/Xamarin.AndroidX.AsyncLayoutInflater.targets": {}
+        }
+      },
+      "Xamarin.AndroidX.AutoFill/1.1.0.6": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid90/Xamarin.AndroidX.AutoFill.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/monoandroid90/Xamarin.AndroidX.AutoFill.dll": {
+            "related": ".pdb"
+          }
+        },
+        "build": {
+          "buildTransitive/monoandroid9.0/Xamarin.AndroidX.AutoFill.targets": {}
         }
       },
       "Xamarin.AndroidX.Browser/1.3.0.6": {
@@ -2504,6 +2602,55 @@
           "buildTransitive/monoandroid50/Xamarin.Google.Guava.ListenableFuture.targets": {}
         }
       },
+      "Xamarin.Jetbrains.Annotations/13.0.0.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/Xamarin.Jetbrains.Annotations.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid10.0/Xamarin.Jetbrains.Annotations.dll": {}
+        },
+        "build": {
+          "build/monoandroid10.0/Xamarin.Jetbrains.Annotations.targets": {}
+        }
+      },
+      "Xamarin.Kotlin.StdLib/1.4.20": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Jetbrains.Annotations": "13.0.0.3",
+          "Xamarin.Kotlin.StdLib.Common": "1.4.20"
+        },
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/Xamarin.Kotlin.StdLib.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid10.0/Xamarin.Kotlin.StdLib.dll": {}
+        },
+        "build": {
+          "build/monoandroid10.0/Xamarin.Kotlin.StdLib.targets": {}
+        }
+      },
+      "Xamarin.Kotlin.StdLib.Common/1.4.20": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Java.Interop"
+        ],
+        "compile": {
+          "lib/monoandroid10.0/Xamarin.Kotlin.StdLib.Common.dll": {}
+        },
+        "runtime": {
+          "lib/monoandroid10.0/Xamarin.Kotlin.StdLib.Common.dll": {}
+        },
+        "build": {
+          "build/monoandroid10.0/Xamarin.Kotlin.StdLib.Common.targets": {}
+        }
+      },
       "Xamarin.Plugin.SharedTransitions/2.4.0": {
         "type": "package",
         "dependencies": {
@@ -2531,6 +2678,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Com.Airbnb.Xamarin.Forms.Lottie": "4.1.0",
+          "DevExpress.XamarinForms.Scheduler": "22.1.7",
           "FirebaseAuthentication.net": "3.7.2",
           "FirebaseDatabase.net": "4.1.0",
           "Plugin.XCalendar": "2.1.0",
@@ -2603,6 +2751,82 @@
         "lib/xamarinmac20/Lottie.Forms.pdb",
         "lib/xamarinmac20/Lottie.Forms.xml",
         "readme.txt"
+      ]
+    },
+    "DevExpress.XamarinForms.CollectionView/22.1.7": {
+      "sha512": "OLfDQy2+kJnDge5J0N8ZjEzUm7oP8x9eYDxOk/RTF0pIlifJ+obIE8HkOxvPPS5EN4lIagACU5GJSIIocoVDLw==",
+      "type": "package",
+      "path": "devexpress.xamarinforms.collectionview/22.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "devexpress.xamarinforms.collectionview.22.1.7.nupkg.sha512",
+        "devexpress.xamarinforms.collectionview.nuspec",
+        "lib/MonoAndroid10/DevExpress.Xamarin.Android.CollectionView.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.CollectionView.Android.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.CollectionView.dll",
+        "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.CollectionView.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.CollectionView.iOS.dll",
+        "lib/netstandard2.0/DevExpress.XamarinForms.CollectionView.dll"
+      ]
+    },
+    "DevExpress.XamarinForms.Core/22.1.7": {
+      "sha512": "cIm/R5c3RYyicElwzor5K4rGLv/Erq66l0EQFDEywNMSLDBtaiKx1LTzOskeGpzoa1t8Nwqe1ZK5ac0B88O3SA==",
+      "type": "package",
+      "path": "devexpress.xamarinforms.core/22.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "devexpress.xamarinforms.core.22.1.7.nupkg.sha512",
+        "devexpress.xamarinforms.core.nuspec",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Core.Android.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Core.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Core.xml",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.iOS.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Core.xml",
+        "lib/netstandard2.0/DevExpress.XamarinForms.Core.dll",
+        "lib/netstandard2.0/DevExpress.XamarinForms.Core.xml"
+      ]
+    },
+    "DevExpress.XamarinForms.Editors/22.1.7": {
+      "sha512": "wlnHNVHX+Q6Noqmb+YEsqMdHZI4KwJxfAo72pjZSaBsmjcG6e8OJKekCAS9xe7sFpDVnOPgwpa1mpcOv+wtWQg==",
+      "type": "package",
+      "path": "devexpress.xamarinforms.editors/22.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "devexpress.xamarinforms.editors.22.1.7.nupkg.sha512",
+        "devexpress.xamarinforms.editors.nuspec",
+        "lib/MonoAndroid10/DevExpress.Xamarin.Android.Editors.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Editors.Android.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Editors.dll",
+        "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Editors.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Editors.iOS.dll",
+        "lib/netstandard2.0/DevExpress.XamarinForms.Editors.dll"
+      ]
+    },
+    "DevExpress.XamarinForms.Scheduler/22.1.7": {
+      "sha512": "eWoYz43T8VqOsFWcfJvEgL/Y6UFauQ0M/NmOP1lQiRbIMC2wOXN6rq9Axs7jczsbakemhsheUiOBeTlYlTtzyg==",
+      "type": "package",
+      "path": "devexpress.xamarinforms.scheduler/22.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "devexpress.xamarinforms.scheduler.22.1.7.nupkg.sha512",
+        "devexpress.xamarinforms.scheduler.nuspec",
+        "lib/MonoAndroid10/DevExpress.Xamarin.Android.Scheduler.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Scheduler.Android.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Scheduler.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Scheduler.xml",
+        "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Scheduler.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.iOS.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Scheduler.xml",
+        "lib/netstandard2.0/DevExpress.XamarinForms.Scheduler.dll",
+        "lib/netstandard2.0/DevExpress.XamarinForms.Scheduler.xml"
       ]
     },
     "FirebaseAuthentication.net/3.7.2": {
@@ -5809,6 +6033,23 @@
         "xamarin.androidx.asynclayoutinflater.nuspec"
       ]
     },
+    "Xamarin.AndroidX.AutoFill/1.1.0.6": {
+      "sha512": "SaykTozzgEdUbCe1gKukL5Tq0JOZwczTwAve5CikcYXxxr4qz6PWJ1fMbNoG4iXG7ae/86uIqURFR4Mku+Ovtg==",
+      "type": "package",
+      "path": "xamarin.androidx.autofill/1.1.0.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "aar/androidx.autofill.autofill.aar",
+        "build/monoandroid9.0/Xamarin.AndroidX.AutoFill.targets",
+        "buildTransitive/monoandroid9.0/Xamarin.AndroidX.AutoFill.targets",
+        "lib/monoandroid90/Xamarin.AndroidX.AutoFill.dll",
+        "lib/monoandroid90/Xamarin.AndroidX.AutoFill.pdb",
+        "xamarin.androidx.autofill.1.1.0.6.nupkg.sha512",
+        "xamarin.androidx.autofill.nuspec"
+      ]
+    },
     "Xamarin.AndroidX.Browser/1.3.0.6": {
       "sha512": "0m1gdlSt+ZP9TnnTr1VjWiAW8Agk7H2cijpdGyTTaspJoPSO/e58Vx8HhlL7Fht7FU+tIcnzC9mzw3FCD5FUlg==",
       "type": "package",
@@ -7255,6 +7496,51 @@
         "xamarin.google.guava.listenablefuture.nuspec"
       ]
     },
+    "Xamarin.Jetbrains.Annotations/13.0.0.3": {
+      "sha512": "YBQJ/J9ClC+7upizNaZH4qjGgM5LsNdygV4MqPMDUopHBulsyv2VPDUHar1xxIvgEzOuGoSjsaENosZWS+lKXA==",
+      "type": "package",
+      "path": "xamarin.jetbrains.annotations/13.0.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "build/monoandroid10.0/Xamarin.Jetbrains.Annotations.targets",
+        "jar/org.jetbrains.annotations.jar",
+        "lib/monoandroid10.0/Xamarin.Jetbrains.Annotations.dll",
+        "xamarin.jetbrains.annotations.13.0.0.3.nupkg.sha512",
+        "xamarin.jetbrains.annotations.nuspec"
+      ]
+    },
+    "Xamarin.Kotlin.StdLib/1.4.20": {
+      "sha512": "pWCb/dO0w7nVPsRmQHFwMOAnA8t9afPEsAflQcAs61XJu/TKNRxjcVjRCeqViQVAd/eKA90Bc4qvTCTMHBDYbw==",
+      "type": "package",
+      "path": "xamarin.kotlin.stdlib/1.4.20",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "build/monoandroid10.0/Xamarin.Kotlin.StdLib.targets",
+        "jar/org.jetbrains.kotlin.kotlin-stdlib.jar",
+        "lib/monoandroid10.0/Xamarin.Kotlin.StdLib.dll",
+        "xamarin.kotlin.stdlib.1.4.20.nupkg.sha512",
+        "xamarin.kotlin.stdlib.nuspec"
+      ]
+    },
+    "Xamarin.Kotlin.StdLib.Common/1.4.20": {
+      "sha512": "o5mv45X1z/LE6Bufm3Zr01TtSFC6z0KAqWwlG8yF2RumSg1a7lb1cNAWSOrE6DEV5uSa06aSq40f/2yMA29sAA==",
+      "type": "package",
+      "path": "xamarin.kotlin.stdlib.common/1.4.20",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "build/monoandroid10.0/Xamarin.Kotlin.StdLib.Common.targets",
+        "jar/org.jetbrains.kotlin.kotlin-stdlib-common.jar",
+        "lib/monoandroid10.0/Xamarin.Kotlin.StdLib.Common.dll",
+        "xamarin.kotlin.stdlib.common.1.4.20.nupkg.sha512",
+        "xamarin.kotlin.stdlib.common.nuspec"
+      ]
+    },
     "Xamarin.Plugin.SharedTransitions/2.4.0": {
       "sha512": "upju4Pst1knGfdLQWWjT4ASuKQk2s7RhK8B4Yw6TILRerPZmhPmqJ/fV8NIR6HuLIsX8CxOg8fR+tNjOC6YwFA==",
       "type": "package",
@@ -7282,6 +7568,7 @@
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v12.0": [
+      "DevExpress.XamarinForms.Scheduler >= 22.1.7",
       "DoAn >= 1.0.0",
       "FirebaseAuthentication.net >= 3.7.2",
       "FirebaseDatabase.net >= 4.1.0",
@@ -7309,7 +7596,9 @@
         "monoandroid12.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.devexpress.com/RdrEOD1BxkxkGmizWQSpvT3YhzE5jQEGBpS8GH4fh1YRk9W8OY/api": {},
+        "https://nuget.telerik.com/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid12.0": {
@@ -7324,6 +7613,10 @@
     "frameworks": {
       "monoandroid12.0": {
         "dependencies": {
+          "DevExpress.XamarinForms.Scheduler": {
+            "target": "Package",
+            "version": "[22.1.7, )"
+          },
           "FirebaseAuthentication.net": {
             "target": "Package",
             "version": "[3.7.2, )"

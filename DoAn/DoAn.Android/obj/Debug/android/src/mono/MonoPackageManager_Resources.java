@@ -3,6 +3,17 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "DoAn.Android.dll" comes first in this list. */
 		"DoAn.Android.dll",
+		"DevExpress.Xamarin.Android.CollectionView.dll",
+		"DevExpress.Xamarin.Android.Editors.dll",
+		"DevExpress.Xamarin.Android.Scheduler.dll",
+		"DevExpress.XamarinForms.CollectionView.Android.dll",
+		"DevExpress.XamarinForms.CollectionView.dll",
+		"DevExpress.XamarinForms.Core.Android.dll",
+		"DevExpress.XamarinForms.Core.dll",
+		"DevExpress.XamarinForms.Editors.Android.dll",
+		"DevExpress.XamarinForms.Editors.dll",
+		"DevExpress.XamarinForms.Scheduler.Android.dll",
+		"DevExpress.XamarinForms.Scheduler.dll",
 		"DoAn.dll",
 		"Firebase.Auth.dll",
 		"Firebase.dll",
@@ -22,6 +33,7 @@ public class MonoPackageManager_Resources {
 		"Xamarin.AndroidX.Arch.Core.Common.dll",
 		"Xamarin.AndroidX.Arch.Core.Runtime.dll",
 		"Xamarin.AndroidX.AsyncLayoutInflater.dll",
+		"Xamarin.AndroidX.AutoFill.dll",
 		"Xamarin.AndroidX.Browser.dll",
 		"Xamarin.AndroidX.CardView.dll",
 		"Xamarin.AndroidX.Collection.dll",
@@ -75,6 +87,9 @@ public class MonoPackageManager_Resources {
 		"Xamarin.Forms.Xaml.dll",
 		"Xamarin.Google.Android.Material.dll",
 		"Xamarin.Google.Guava.ListenableFuture.dll",
+		"Xamarin.Jetbrains.Annotations.dll",
+		"Xamarin.Kotlin.StdLib.Common.dll",
+		"Xamarin.Kotlin.StdLib.dll",
 		"XCalendar.dll",
 	};
 	public static String[] Dependencies = new String[]{

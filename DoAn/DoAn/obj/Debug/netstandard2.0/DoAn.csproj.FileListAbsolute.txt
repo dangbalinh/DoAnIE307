@@ -44,6 +44,7 @@ D:/IE307/DoAn/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/EntryTaskPage.xaml
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/HomePage.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/Page1.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/Page2.xaml.g.cs
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/Scheduler/SchedulerPage.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/TaskPage.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/Tips/MoreTips.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/Tips/TipDetail.xaml.g.cs
