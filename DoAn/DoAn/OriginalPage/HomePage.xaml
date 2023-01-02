@@ -13,13 +13,11 @@
              UnselectedTabColor="White"
              BarBackgroundColor="Black"
              >
-    
-     <!--<view:TaskPage Title="Task" IconImageSource="home"/>-->
-    <view:TaskPage Title="Tasks"/>
-    <!--<view:Page1 Title="Calendar"/>-->
+   
+    <view:TaskPage Title="Tasks" IconImageSource="task"/>
     <view:CalendarPage Title="Calendar" IconImageSource="calendar" />
     <tipsView:TipPage Title="Tips" IconImageSource="advice" />
-    <schedulerView:SchedulerPage Title="Scheduler" IconImageSource="calendar" />
-    <viewBookings:BookingPage Title="Booking" />
+    <schedulerView:SchedulerPage Title="Scheduler" IconImageSource="scheduler" />
+    <viewBookings:BookingPage Title="Booking" IconImageSource="booking" />
 
 </TabbedPage>
