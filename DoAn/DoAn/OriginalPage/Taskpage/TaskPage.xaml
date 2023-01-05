@@ -71,7 +71,7 @@
 
 
             
-                <CollectionView x:Name="LtsTask" Margin="20,10,20,10" SelectionMode="Single" SelectionChanged="LtsTask_SelectionChanged">
+                <CollectionView x:Name="LtsTask" Margin="20,10,20,10" SelectionMode="Single">
                     <CollectionView.ItemsLayout>
                         <LinearItemsLayout Orientation="Vertical"
                            ItemSpacing="8" />
@@ -87,13 +87,20 @@
                                                x:Name="SWDelete"
                                                IconImageSource="delete.png"
                                                CommandParameter="{Binding .}"
+                                               
                                                Invoked="SWDelete_Invoked"></SwipeItem>
                                         <SwipeItem Text="Update"
-                                               BackgroundColor="#FFB6C1"
+                                               BackgroundColor="HotPink"
                                                x:Name="SWEdit"
                                                IconImageSource="update.png"
                                                CommandParameter="{Binding .}"
                                                Invoked="SWEdit_Invoked"></SwipeItem>
+                                    <SwipeItem Text="Detail"
+                                               BackgroundColor="#FFB6C1"
+                                               x:Name="SWDetail"
+                                               IconImageSource="update.png"
+                                               CommandParameter="{Binding .}"
+                                               Invoked="SWDetail_Invoked"></SwipeItem>
                                     </SwipeItems>
                                 </SwipeView.RightItems>
                             
@@ -105,7 +112,9 @@
                                         <ColumnDefinition Width="40"></ColumnDefinition>
                                     </Grid.ColumnDefinitions>
                                     <Image Source="circleIcon.png">
-
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                        </Image.GestureRecognizers>
 
                                     </Image>
                                     <Label 

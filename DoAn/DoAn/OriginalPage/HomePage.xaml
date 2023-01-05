@@ -13,9 +13,8 @@
              android:TabbedPage.ToolbarPlacement="Bottom"
              SelectedTabColor="Red"
              UnselectedTabColor="White"
-             BarBackgroundColor="Black"
+             BarBackgroundColor="HotPink"
              >
-   
     <viewTask:TaskPage Title="Tasks" IconImageSource="task"/>
     <viewCalendar:CalendarPage  Title="Calendar" IconImageSource="calendar" />
     <tipsView:TipPage Title="Tips" IconImageSource="advice" />

@@ -77,11 +77,11 @@ namespace DoAn.OriginalPage.Taskpage
         private async void SWDelete_Invoked(object sender, System.EventArgs e)
         {
             var swipeItem = sender as SwipeItem;
-            var item = swipeItem.CommandParameter as TaskToDo;
+            var item = swipeItem.CommandParameter as TaskDTO;
             bool answer = await DisplayAlert("Thông báo", $"Bạn có muốn xóa không?", "Yes", "No");
             if (answer)
             {
-                listTask.Remove(item);
+                listTaskDTO.Remove(item);
             }
 
 
@@ -107,23 +107,22 @@ namespace DoAn.OriginalPage.Taskpage
             }
 
         }
-
-        private async void LtsTask_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var item = e.CurrentSelection[0] as TaskToDo;
-            if (item != null)
-            {
-                await Navigation.ShowPopupAsync(new PopUpPage(item));
-            }
-
-
-        }
-
         private void SearchBarHotel_TextChanged(object sender, TextChangedEventArgs e)
         {
             LtsTask.ItemsSource = listTask.Where(index => index.taskName.StartsWith(e.NewTextValue));
         }
 
+        private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+             ((Image)sender).Source = ImageSource.FromFile("verified.png");
+             
+        }
 
+        private async void SWDetail_Invoked(object sender, EventArgs e)
+        {
+            var swipeItem = sender as SwipeItem;
+            var item = swipeItem.CommandParameter as TaskToDo;
+            await Navigation.ShowPopupAsync(new PopUpPage(item));
+        }
     }
 }

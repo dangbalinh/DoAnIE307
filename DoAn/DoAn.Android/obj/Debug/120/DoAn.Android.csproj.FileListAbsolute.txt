@@ -1760,3 +1760,8 @@ D:\DoAnIE307\DoAn\DoAn.Android\obj\Debug\120\stamp\_ConvertResourcesCases.stamp
 D:\DoAnIE307\DoAn\DoAn.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 D:\DoAnIE307\DoAn\DoAn.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 D:\DoAnIE307\DoAn\DoAn.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+D:\DoAnIE307\DoAn\DoAn.Android\obj\Debug\120\res\drawable\done.png
+D:\DoAnIE307\DoAn\DoAn.Android\obj\Debug\120\res\drawable\verified.png
+D:\DoAnIE307\DoAn\DoAn.Android\obj\Debug\120\res\drawable\calendar_back.png
+D:\DoAnIE307\DoAn\DoAn.Android\obj\Debug\120\res\drawable\calendarx.jpg
+D:\DoAnIE307\DoAn\DoAn.Android\obj\Debug\120\res\drawable\calendary.jpg

@@ -23,6 +23,7 @@ namespace DoAn.OriginalPage.Taskpage
         {
             InitializeComponent();
             this.listTask = listTask;
+            
         }
         public EntryTaskPage(TaskToDo task, ObservableCollection<TaskToDo> listTask)
         {
