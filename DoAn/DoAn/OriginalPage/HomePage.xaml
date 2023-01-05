@@ -6,6 +6,7 @@
              xmlns:viewBookings="clr-namespace:DoAn.OriginalPage.Booking"
              xmlns:tipsView="clr-namespace:DoAn.OriginalPage.Tips"
              xmlns:schedulerView="clr-namespace:DoAn.OriginalPage.Scheduler"
+             xmlns:user="clr-namespace:DoAn.OriginalPage.User"
              NavigationPage.HasNavigationBar="False"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              android:TabbedPage.ToolbarPlacement="Bottom"
@@ -19,5 +20,6 @@
     <tipsView:TipPage Title="Tips" IconImageSource="advice" />
     <schedulerView:SchedulerPage Title="Scheduler" IconImageSource="scheduler" />
     <viewBookings:BookingPage Title="Booking" IconImageSource="booking" />
+    <user:Profile Title="Profile" IconImageSource="user"/>
 
 </TabbedPage>

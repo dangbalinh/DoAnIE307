@@ -8,7 +8,8 @@
     <ContentPage.BindingContext>
         <viewmodels:ReceptionDeskViewModel/>
     </ContentPage.BindingContext>
-    <dxsch:DayView x:Name="Scheduler" ShowWorkTimeOnly="True" Tap="Scheduler_Tap" WorkTime="8:00:00-23:59:59">
+    <dxsch:DayView x:Name="Scheduler" ShowWorkTimeOnly="True" Tap="Scheduler_Tap"
+                   WorkTime="8:00:00-23:59:59">
         <dxsch:DayView.DataStorage>
             <dxsch:SchedulerDataStorage x:Name="SchedulerDataStorage">
                 <dxsch:SchedulerDataStorage.DataSource>

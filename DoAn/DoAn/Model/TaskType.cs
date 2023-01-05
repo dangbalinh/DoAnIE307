@@ -1,4 +1,5 @@
-﻿namespace DoAn.OriginalPage
+﻿using System;
+namespace DoAn.Model
 {
     public class TaskType
     {
@@ -6,3 +7,4 @@
         public string taskTypeName { get; set; }
     }
 }
+

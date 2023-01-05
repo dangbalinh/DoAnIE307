@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="DoAn.OriginalPage.User.EditProfilePage"
+    xmlns:dxdf="http://schemas.devexpress.com/xamarin/2014/forms/dataform"
+    Title="Edit profile">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Image Source="{Binding img}" HorizontalOptions="CenterAndExpand" HeightRequest="80"/>
+            <!--<Grid ColumnDefinitions="*, 2*" x:Name="UserInfoGrid" Margin="0,20,0,20">
+                <Label Text="Name:" FontAttributes="Bold"
+                       Grid.Row="0" Grid.Column="0"
+                       VerticalOptions="Center" FontSize="Body"/>
+                <Entry Text="{Binding name}" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Email:" FontAttributes="Bold"
+                       Grid.Row="1" Grid.Column="0"
+                       VerticalOptions="Center" FontSize="Body"/>
+                <Entry Text="{Binding email}" Grid.Row="1" Grid.Column="1" />
+
+                <Label Text="Phone:" FontAttributes="Bold"
+                       Grid.Row="2" Grid.Column="0"
+                       VerticalOptions="Center" FontSize="Body" />
+                <Entry Text="{Binding phone}" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="Address:" FontAttributes="Bold"
+                       Grid.Row="3" Grid.Column="0"
+                       VerticalOptions="Center" FontSize="Body"/>
+                <Entry Text="{Binding address}" Grid.Row="3" Grid.Column="1"/>
+            </Grid>-->
+
+            <dxdf:DataFormView x:Name="dataForm" ValidationMode="PropertyChanged"
+                                       ValidateProperty="dataForm_ValidateProperty"
+                                       ContentPadding="12" PropertyChanged="dataForm_PropertyChanged"/>
+            <Button Text="Save" BackgroundColor="#FFC107" TextColor="White"
+                    CornerRadius="20" HeightRequest="40" HorizontalOptions="CenterAndExpand"
+                    Clicked="Save_Clicked"/>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
+

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DoAn.OriginalPage
+namespace DoAn.Model
 {
     public class Task
     {
@@ -15,3 +12,4 @@ namespace DoAn.OriginalPage
         public TimeSpan taskTime { get; set; }
     }
 }
+

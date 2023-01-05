@@ -15,7 +15,7 @@ namespace DoAn.OriginalPage
             InitializeComponent();
             listTaskShow = new ObservableCollection<Task>();
             listTask = new ObservableCollection<Task>();
-            listTaskShow.Add(new Task { taskId = 1, taskName = "Do Your Homework", taskType = "Working", taskDate = new DateTime(2012, 6, 12), taskTime = new TimeSpan(23, 23, 23) });
+            listTaskShow.Add(new DoAn.Model.Task { taskId = 1, taskName = "Do Your Homework", taskType = "Working", taskDate = new DateTime(2012, 6, 12), taskTime = new TimeSpan(23, 23, 23) });
             listTaskShow.Add(new Task { taskId = 2, taskName = "Do Your Homework", taskType = "Working", taskDate = new DateTime(2012, 6, 12), taskTime = new TimeSpan(23, 23, 23) });
             listTaskShow.Add(new Task { taskId = 3, taskName = "Do Your Homework", taskType = "Working", taskDate = new DateTime(2012, 6, 12), taskTime = new TimeSpan(23, 23, 23) });
             listTaskShow.Add(new Task { taskId = 4, taskName = "Do Your Homework", taskType = "Working", taskDate = new DateTime(2012, 6, 12), taskTime = new TimeSpan(23, 23, 23) });

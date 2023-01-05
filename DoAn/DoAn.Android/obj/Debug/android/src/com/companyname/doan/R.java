@@ -10367,7 +10367,8 @@ public final class R {
     public static final int tooltip_frame_dark=0x7f0800fa;
     public static final int tooltip_frame_light=0x7f0800fb;
     public static final int update=0x7f0800fc;
-    public static final int watermark=0x7f0800fd;
+    public static final int user=0x7f0800fd;
+    public static final int watermark=0x7f0800fe;
   }
   public static final class id {
     public static final int ALT=0x7f090000;
