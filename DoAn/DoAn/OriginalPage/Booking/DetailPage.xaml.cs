@@ -26,14 +26,19 @@ namespace DoAn.OriginalPage.Booking
 
         private void CallTap_Tapped(object sender, EventArgs e)
         {
-            PhoneDialer.Open("234832894");
+            PhoneDialer.Open("0906592672");
         }
 
         private async void EmailTap_Tapped(object sender, EventArgs e)
         {
             await Email.ComposeAsync("", "", "hungthinhTour@gmail.com");
         }
-
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            DetailsView.TranslationY = 400;
+            DetailsView.TranslateTo(0, 0, 500, Easing.SinInOut);
+        }
 
     }
 }

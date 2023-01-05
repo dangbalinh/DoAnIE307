@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DoAn.OriginalPage.Taskpage.EntryTaskPage"
+             Title="Add new task"
+             NavigationPage.IconColor="Aqua">
+    <ContentPage.Content>
+        <StackLayout Margin="20,0,20,0">
+            <Label Text="Name"></Label>
+            <Frame CornerRadius="20" HeightRequest="60" Padding="10,0,10,0" Margin="0,0,0,20" IsClippedToBounds="true" BorderColor="Gray" HasShadow="True">
+                <Entry x:Name="nameTask" Placeholder="Enter task name"></Entry>
+            </Frame>
+            <Label Text="List"></Label>
+            <Frame CornerRadius="20" HeightRequest="60" Padding="10,0,10,0" Margin="0,0,0,20" IsClippedToBounds="true" BorderColor="Gray" HasShadow="True">
+            <Entry x:Name="typeTask" Placeholder="Choice to task"></Entry>
+            </Frame>
+            <Label  Text="Date"></Label>
+            <Frame CornerRadius="20" HeightRequest="60" Padding="10,0,10,0" Margin="0,0,0,20" IsClippedToBounds="true" BorderColor="Gray" HasShadow="True">
+            <DatePicker x:Name="datepicker"></DatePicker>
+            </Frame>
+            <Label  Text="Time"></Label>
+            <Frame CornerRadius="20" HeightRequest="60" Padding="10,0,10,0" Margin="0,0,0,20" IsClippedToBounds="true" BorderColor="Gray" HasShadow="True">
+                    <TimePicker x:Name="timepicker"></TimePicker>
+            </Frame>
+            <Button Margin="0,150,0,0" HeightRequest="60"
+                    CornerRadius="50"
+                    BackgroundColor="Black"
+                    TextColor="Aquamarine"
+                    FontSize="22"
+                    Text="Add a new task" Clicked="Button_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

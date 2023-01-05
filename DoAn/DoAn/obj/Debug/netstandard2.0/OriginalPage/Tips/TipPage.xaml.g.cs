@@ -13,7 +13,7 @@
 namespace DoAn.OriginalPage.Tips {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage/Tips/TipPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage\\Tips\\TipPage.xaml")]
     public partial class TipPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

@@ -2,37 +2,42 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="DoAn.OriginalPage.CalendarPage"
+    x:Class="DoAn.OriginalPage.Calendar.CalendarPage"
     xmlns:xc="clr-namespace:XCalendar;assembly=XCalendar"
     NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
-
-            <xc:CalendarView x:Name="calendar" DateSelectionChanged="calendar_DateSelectionChanged"
-                         SelectionType="Single"
-                         NavigationBackgroundColor="Blue"
+           
+                <xc:CalendarView x:Name="calendar" DateSelectionChanged="calendar_DateSelectionChanged"
+                         BackgroundColor="#FFCCE5"
+                         SelectionType="Single"                       
                          HeightRequest="800"
-                         Rows="5"/>
-            <CollectionView x:Name="LtTask" Margin="20,0,20,0" SelectionMode="Single">
+                         Rows="4"
+                         NavigationBackgroundColor="DeepPink"
+                         NavigationArrowCornerRadius="40"
+                         />
+            
+           
+            <CollectionView x:Name="LtTask" Margin="20,10,20,10" SelectionMode="Single">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Vertical"
-                           ItemSpacing="20" />
+                           ItemSpacing="8" />
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <SwipeView  HeightRequest="50" Margin="10,20,0,0">
+                        <SwipeView  HeightRequest="50" Margin="10,20,10,0">
                             <SwipeView.RightItems>
                                 <SwipeItems SwipeBehaviorOnInvoked="RemainOpen">
                                     <SwipeItem Text="Delete"
                                                BackgroundColor="Red"
                                                x:Name="SWDelete"
-                                               IconImageSource="phone.png"
+                                                IconImageSource="delete.png"
                                                CommandParameter="{Binding .}"
                                                ></SwipeItem>
                                     <SwipeItem Text="Update"
-                                               BackgroundColor="Blue"
+                                               BackgroundColor="#FFB6C1"
                                                x:Name="SWEdit"
-                                               IconImageSource="phone.png"
+                                               IconImageSource="update.png"
                                                CommandParameter="{Binding .}"
                                                ></SwipeItem>
                                 </SwipeItems>

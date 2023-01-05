@@ -52,9 +52,6 @@
     <EmbeddedResource Update="View\SecondPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="OriginalPage\Calendar\CalendarPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Remove="OriginalPage\Tips\" />
@@ -71,12 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OriginalPage\Tips\" />
-    <Folder Include="Model\" />
     <Folder Include="Services\" />
     <Folder Include="OriginalPage\Scheduler\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="OriginalPage\Task\" />
-    <Folder Include="OriginalPage\Calendar\" />
     <Folder Include="OriginalPage\User\" />
   </ItemGroup>
   <ItemGroup>

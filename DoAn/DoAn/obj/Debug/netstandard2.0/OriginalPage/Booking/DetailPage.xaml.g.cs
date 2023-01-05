@@ -13,7 +13,7 @@
 namespace DoAn.OriginalPage.Booking {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage/Booking/DetailPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage\\Booking\\DetailPage.xaml")]
     public partial class DetailPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

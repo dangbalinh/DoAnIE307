@@ -13,7 +13,7 @@
 namespace SchedulerExample.AppointmentPages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("SchedulerPages/TimeZoneSelectPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("SchedulerPages\\TimeZoneSelectPage.xaml")]
     public partial class CustomTimeZoneSelectPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

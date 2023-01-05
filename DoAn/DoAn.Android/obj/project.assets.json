@@ -10242,34 +10242,39 @@
     ]
   },
   "packageFolders": {
-    "/Users/cuhoangng/.nuget/packages/": {}
+    "C:\\Users\\linh\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn.Android/DoAn.Android.csproj",
+      "projectUniqueName": "D:\\DoAnIE307\\DoAn\\DoAn.Android\\DoAn.Android.csproj",
       "projectName": "DoAn.Android",
-      "projectPath": "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn.Android/DoAn.Android.csproj",
-      "packagesPath": "/Users/cuhoangng/.nuget/packages/",
-      "outputPath": "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn.Android/obj/",
+      "projectPath": "D:\\DoAnIE307\\DoAn\\DoAn.Android\\DoAn.Android.csproj",
+      "packagesPath": "C:\\Users\\linh\\.nuget\\packages\\",
+      "outputPath": "D:\\DoAnIE307\\DoAn\\DoAn.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/cuhoangng/.config/NuGet/NuGet.Config"
+        "C:\\Users\\linh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid12.0"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/RdrEOD1BxkxkGmizWQSpvT3YhzE5jQEGBpS8GH4fh1YRk9W8OY/api": {},
-        "https://nuget.telerik.com/v3/index.json": {}
+        "https://nuget.devexpress.com/8Vbh3ghahg35aIlCcryjpj9rBCzb38PgWyXAWsIoXVUGYjRsug/api": {}
       },
       "frameworks": {
         "monoandroid12.0": {
           "projectReferences": {
-            "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/DoAn.csproj": {
-              "projectPath": "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/DoAn.csproj"
+            "D:\\DoAnIE307\\DoAn\\DoAn\\DoAn.csproj": {
+              "projectPath": "D:\\DoAnIE307\\DoAn\\DoAn\\DoAn.csproj"
             }
           }
         }
@@ -10323,7 +10328,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Xamarin.Essentials 1.7.4 requires Xamarin.AndroidX.Browser (>= 1.3.0.5 && < 1.4.0.3) but version Xamarin.AndroidX.Browser 1.4.0.3 was resolved.",
+      "message": "Detected package version outside of dependency constraint: Xamarin.Forms 5.0.0.2545 requires Xamarin.AndroidX.Browser (>= 1.3.0.6 && < 1.4.0) but version Xamarin.AndroidX.Browser 1.4.0.3 was resolved.",
       "libraryId": "Xamarin.AndroidX.Browser",
       "targetGraphs": [
         "MonoAndroid,Version=v12.0"
@@ -10333,7 +10338,7 @@
       "code": "NU1608",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: Xamarin.Forms 5.0.0.2545 requires Xamarin.AndroidX.Browser (>= 1.3.0.6 && < 1.4.0) but version Xamarin.AndroidX.Browser 1.4.0.3 was resolved.",
+      "message": "Detected package version outside of dependency constraint: Xamarin.Essentials 1.7.4 requires Xamarin.AndroidX.Browser (>= 1.3.0.5 && < 1.4.0.3) but version Xamarin.AndroidX.Browser 1.4.0.3 was resolved.",
       "libraryId": "Xamarin.AndroidX.Browser",
       "targetGraphs": [
         "MonoAndroid,Version=v12.0"

@@ -13,7 +13,7 @@
 namespace SchedulerExample.AppointmentPages {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("SchedulerPages/AppointmentDetailPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("SchedulerPages\\AppointmentDetailPage.xaml")]
     public partial class CustomAppointmentDetailPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

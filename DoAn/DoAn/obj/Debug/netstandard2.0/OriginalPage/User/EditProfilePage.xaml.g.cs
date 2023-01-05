@@ -13,7 +13,7 @@
 namespace DoAn.OriginalPage.User {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage/User/EditProfilePage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage\\User\\EditProfilePage.xaml")]
     public partial class EditProfilePage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

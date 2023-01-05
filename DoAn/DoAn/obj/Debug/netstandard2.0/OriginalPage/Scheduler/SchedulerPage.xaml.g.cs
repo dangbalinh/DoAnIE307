@@ -13,7 +13,7 @@
 namespace DoAn.OriginalPage.Scheduler {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage/Scheduler/SchedulerPage.xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage\\Scheduler\\SchedulerPage.xaml")]
     public partial class SchedulerPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]

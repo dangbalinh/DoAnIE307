@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -9,39 +10,52 @@ namespace DoAn.OriginalPage.Booking
 
     [DesignTimeVisible(false)]
     public partial class BookingPage : ContentPage
+
     {
+        public List<PropertyType> PropertyTypeList => GetPropertyTypes();
+
+        public List<Property> PropertyList;
         public BookingPage()
         {
             InitializeComponent();
             this.BindingContext = this;
+            PropertyList = new List<Property>();
+            InitProperty();
+            BindableLayout.SetItemsSource(ShowList, PropertyList);
         }
-        public List<PropertyType> PropertyTypeList => GetPropertyTypes();
 
-        public List<Property> PropertyList => GetProperties();
-
+        
         private List<PropertyType> GetPropertyTypes()
         {
             return new List<PropertyType>
             {
                 new PropertyType { TypeName = "All" },
-                new PropertyType { TypeName = "Studio" },
                 new PropertyType { TypeName = "4 Bed" },
                 new PropertyType { TypeName = "3 Bed" },
-                new PropertyType { TypeName = "Office" },
-                new PropertyType { TypeName = "Hotel" }
+                new PropertyType { TypeName = "2 Bed" },
+                new PropertyType { TypeName = "Studio" }
             };
+        }
+        public void InitProperty()
+        {
+            PropertyList.Add(new Property { Image = "apt1.png", Address = "7 District", Location = "Ho Chi Minh", Price = "100$/Night", Bed = "4 Bed", Bath = "3 Bath", Space = "1600 sqft", Details = "Bringing the essence of luxury and sophistication, New World Saigon Hotel is the ideal option for you and your loved ones to experience a truly deluxe getaway in the heart of the city, located only five minutes from Ben Thanh Market. With many tempting incentive programmes running until the end of May, the hotel promises to take you on a journey of exquisite accommodation and gastronomic delights." });
+            PropertyList.Add(new Property { Image = "apt2.png", Address = "Dong Da District", Location = "Ha Noi", Price = "200$/Night", Bed = "3 Bed", Bath = "1 Bath", Space = "1100 sqft", Details = "Canary Hanoi Hotel is a standard 3-star hotel with unique designs combined between traditions and modernity. The hotel has total of 40 bedrooms fully equipped with modern facilities,01 elevators, 01 restaurants and 01café lounge, souvenir stalls, … Canary Hanoi Hotel Hanoi is a perfect match between the unique style and innovative ideas. Keeping the environment green, clean & beautiful is not only our endeavor but the aim of the whole world." });
+            PropertyList.Add(new Property { Image = "apt3.png", Address = "Lien Chieu District", Location = "Da Nang", Price = "300$/Night", Bed = "2 Bed", Bath = "2 Bath", Space = "1200 sqft", Details = "Mitisa hotel is situated in Nguyen Van Linh, the golden street and close to dynamic Danang’s popular attractions such as finance and trade centers, entertainment venues and gastronomic destinations. The hotel is only 0.5km of Danang International Airport and a few-minute walking from Dragon Bridge where the street along romantic Han River is regarded by tourists as Vietnam’s the most beautiful street. It takes only 3 minutes for you to drive from the hotel to My Khe beach, once listed in Forbes Magazine as one of the “World’s Most Luxurious Beaches”." });
+            PropertyList.Add(new Property { Image = "apt1.png", Address = "Nha Trang Center", Location = "Khanh Hoa", Price = "150$/Night", Bed = "4 Bed", Bath = "3 Bath", Space = "1400 sqft", Details = "Canary Khanh Hoa Hotel is a standard 4-star hotel with unique designs combined between traditions and modernity. The hotel has total of 40 bedrooms fully equipped with modern facilities,01 elevators, 01 restaurants and 01café lounge, souvenir stalls, … Canary Hanoi Hotel Hanoi is a perfect match between the unique style and innovative ideas. Keeping the environment green, clean & beautiful is not only our endeavor but the aim of the whole world." });
+            PropertyList.Add(new Property { Image = "apt3.png", Address = "8 District", Location = "Can Tho", Price = "120$/Night", Bed = "2 Bed", Bath = "2 Bath", Space = "1200 sqft", Details = "The hotel is located in the population area luxury hotels and cultural centers, commercial and financial city of Can Tho. Ninh Kieu 2 Hotel - Can Tho has 108 comfortable rooms including 4 categories: VIP Suite, Deluxe, Superior and Standard..All are equipped with modern and luxurious wooden furniture luxury. Bathroom with luxury bath, separate VIP room suite with a bathtub and separate shower." });
+            PropertyList.Add(new Property { Image = "apt1.png", Address = "Dong Hoi Center", Location = "Quang Binh", Price = "140$/Night", Bed = "4 Bed", Bath = "3 Bath", Space = "1700 sqft", Details = "The hotel is located in the population area luxury hotels and cultural centers, commercial and financial city of Can Tho. Ninh Kieu 2 Hotel - Can Tho has 108 comfortable rooms including 4 categories: VIP Suite, Deluxe, Superior and Standard..All are equipped with modern and luxurious wooden furniture luxury. Bathroom with luxury bath, separate VIP room suite with a bathtub and separate shower." });
+            PropertyList.Add(new Property { Image = "apt1.png", Address = "3 District", Location = "Phu Yen", Price = "126$/Night", Bed = "4 Bed", Bath = "3 Bath", Space = "1500 sqft", Details = "The hotel is located in the population area luxury hotels and cultural centers, commercial and financial city of Can Tho. Ninh Kieu 2 Hotel - Can Tho has 108 comfortable rooms including 4 categories: VIP Suite, Deluxe, Superior and Standard..All are equipped with modern and luxurious wooden furniture luxury. Bathroom with luxury bath, separate VIP room suite with a bathtub and separate shower." });
+            PropertyList.Add(new Property { Image = "apt1.png", Address = "Yen Ho District", Location = "Lao Cai", Price = "125$/Night", Bed = "4 Bed", Bath = "3 Bath", Space = "1900 sqft", Details = "The hotel is located in the population area luxury hotels and cultural centers, commercial and financial city of Can Tho. Ninh Kieu 2 Hotel - Can Tho has 108 comfortable rooms including 4 categories: VIP Suite, Deluxe, Superior and Standard..All are equipped with modern and luxurious wooden furniture luxury. Bathroom with luxury bath, separate VIP room suite with a bathtub and separate shower." });
+            PropertyList.Add(new Property { Image = "apt1.png", Address = "Lao Cai City", Location = "Lao Cai", Price = "129$/Night", Bed = "4 Bed", Bath = "3 Bath", Space = "1950 sqft", Details = "The hotel is located in the population area luxury hotels and cultural centers, commercial and financial city of Can Tho. Ninh Kieu 2 Hotel - Can Tho has 108 comfortable rooms including 4 categories: VIP Suite, Deluxe, Superior and Standard..All are equipped with modern and luxurious wooden furniture luxury. Bathroom with luxury bath, separate VIP room suite with a bathtub and separate shower." });
+            PropertyList.Add(new Property { Image = "apt1.png", Address = "Vinh Phuc City", Location = "Vinh Phuc", Price = "140$/Night", Bed = "4 Bed", Bath = "3 Bath", Space = "1500 sqft", Details = "The hotel is located in the population area luxury hotels and cultural centers, commercial and financial city of Can Tho. Ninh Kieu 2 Hotel - Can Tho has 108 comfortable rooms including 4 categories: VIP Suite, Deluxe, Superior and Standard..All are equipped with modern and luxurious wooden furniture luxury. Bathroom with luxury bath, separate VIP room suite with a bathtub and separate shower." });
+            PropertyList.Add(new Property { Image = "apt1.png", Address = "10 District", Location = "Ninh Binh", Price = "145$/Night", Bed = "4 Bed", Bath = "3 Bath", Space = "1400 sqft", Details = "The hotel is located in the population area luxury hotels and cultural centers, commercial and financial city of Can Tho. Ninh Kieu 2 Hotel - Can Tho has 108 comfortable rooms including 4 categories: VIP Suite, Deluxe, Superior and Standard..All are equipped with modern and luxurious wooden furniture luxury. Bathroom with luxury bath, separate VIP room suite with a bathtub and separate shower." });
+            PropertyList.Add(new Property { Image = "apt1.png", Address = "Phan Thiet City", Location = "Binh Thuan", Price = "138$/Night", Bed = "4 Bed", Bath = "3 Bath", Space = "1300 sqft", Details = "The hotel is located in the population area luxury hotels and cultural centers, commercial and financial city of Can Tho. Ninh Kieu 2 Hotel - Can Tho has 108 comfortable rooms including 4 categories: VIP Suite, Deluxe, Superior and Standard..All are equipped with modern and luxurious wooden furniture luxury. Bathroom with luxury bath, separate VIP room suite with a bathtub and separate shower." });
+            PropertyList.Add(new Property { Image = "apt1.png", Address = "7 District", Location = "Ho Chi Minh", Price = "114$/Night", Bed = "4 Bed", Bath = "3 Bath", Space = "1250 sqft", Details = "The hotel is located in the population area luxury hotels and cultural centers, commercial and financial city of Can Tho. Ninh Kieu 2 Hotel - Can Tho has 108 comfortable rooms including 4 categories: VIP Suite, Deluxe, Superior and Standard..All are equipped with modern and luxurious wooden furniture luxury. Bathroom with luxury bath, separate VIP room suite with a bathtub and separate shower." });
+            PropertyList.Add(new Property { Image = "apt1.png", Address = "9 District", Location = "Thu Duc", Price = "129$/Night", Bed = "4 Bed", Bath = "3 Bath", Space = "1890 sqft", Details = "The hotel is located in the population area luxury hotels and cultural centers, commercial and financial city of Can Tho. Ninh Kieu 2 Hotel - Can Tho has 108 comfortable rooms including 4 categories: VIP Suite, Deluxe, Superior and Standard..All are equipped with modern and luxurious wooden furniture luxury. Bathroom with luxury bath, separate VIP room suite with a bathtub and separate shower." });
+            PropertyList.Add(new Property { Image = "apt1.png", Address = "Ho Tay District", Location = "Ha Noi", Price = "160$/Night", Bed = "4 Bed", Bath = "3 Bath", Space = "2000 sqft", Details = "The hotel is located in the population area luxury hotels and cultural centers, commercial and financial city of Can Tho. Ninh Kieu 2 Hotel - Can Tho has 108 comfortable rooms including 4 categories: VIP Suite, Deluxe, Superior and Standard..All are equipped with modern and luxurious wooden furniture luxury. Bathroom with luxury bath, separate VIP room suite with a bathtub and separate shower." });
+
         }
 
-        private List<Property> GetProperties()
-        {
-            return new List<Property>
-            {
-                new Property { Image = "apt1.png", Address = "7 District", Location = "Ho Chi Minh", Price = "1tr2/Night", Bed = "4 Bed", Bath = "3 Bath", Space = "1600 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt2.png", Address = "Dong Da District", Location = "Ha Noi", Price = "1tr3/Night", Bed = "3 Bed", Bath = "1 Bath", Space = "1100 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt3.png", Address = "Lien Chieu District", Location = "Da Nang", Price = "1tr4/Night", Bed = "2 Bed", Bath = "2 Bath", Space = "1200 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-                new Property { Image = "apt3.png", Address = "Lien Chieu District", Location = "Thanh Hoa", Price = "1tr4/Night", Bed = "2 Bed", Bath = "2 Bath", Space = "1200 sqft", Details = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum est ultricies integer quis. Iaculis urna id volutpat lacus laoreet. Mauris vitae ultricies leo integer malesuada. Ac odio tempor orci dapibus ultrices in. Egestas diam in arcu cursus euismod. Dictum fusce ut" },
-            };
-        }
 
         private void PropertySelected(object sender, EventArgs e)
         {
@@ -50,15 +64,29 @@ namespace DoAn.OriginalPage.Booking
 
         }
 
-
-
-
-
-
         private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
         {
-
+            var typeBed = ((Label)sender).Text;
+            if (typeBed == "All")
+            {
+                BindableLayout.SetItemsSource(ShowList, PropertyList);
+            }
+            else
+            {
+                List<Property> list = new List<Property>();
+                foreach (var item in PropertyList)
+                {
+                    if (item.Bed == typeBed)
+                    {
+                        list.Add(item);
+                    }
+                }
+                
+                BindableLayout.SetItemsSource(ShowList, list );
+            }
         }
+
+        
     }
 
     public class PropertyType

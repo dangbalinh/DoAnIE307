@@ -5,25 +5,13 @@
              x:Class="DoAn.OriginalPage.Booking.BookingPage"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-    <Grid BackgroundColor="WhiteSmoke" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Frame HasShadow="True" Margin="0,20" Padding="0" HeightRequest="40" HorizontalOptions="FillAndExpand">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-               
-                <SearchBar x:Name="Search_Destination" Grid.Column="1" Placeholder="Search" TextColor="Black" FontSize="15" FontFamily="ThemeFontRegular" HorizontalOptions="FillAndExpand" VerticalOptions="Center" />
-                
-            </Grid>
-        </Frame>
-        <StackLayout Grid.Row="1">
+    <Grid BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Grid.Row="1">
             <Label Text="Destination Type" TextColor="#515151" FontSize="15" FontFamily="ThemeFontBold"/>
             <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
                 <StackLayout Orientation="Horizontal" Spacing="10" BindableLayout.ItemsSource="{Binding PropertyTypeList}">
@@ -33,33 +21,20 @@
                                 
                                 <VisualStateManager.VisualStateGroups>
                                     <VisualStateGroup x:Name="CommonStates">
-                                        <VisualState x:Name="Normal">
+                                            <VisualState x:Name="Normal">
                                                 <VisualState.Setters>
                                                     <Setter Property="BackgroundGradientStops">
                                                         <Setter.Value>
                                                             <pv:GradientStopCollection>
-                                                                <pv:GradientStop Color="Red" Offset="0" />
-                                                                <pv:GradientStop Color="HotPink" Offset="0.5" />
-                                                                <pv:GradientStop Color="LightPink" Offset="1" />
+                                                                <pv:GradientStop Color="#0066CC" Offset="0" />
+                                                                <pv:GradientStop Color="#0080FF" Offset="0.5" />
+                                                                <pv:GradientStop Color="#99CCFF" Offset="1" />
                                                             </pv:GradientStopCollection>
                                                         </Setter.Value>
                                                     </Setter>
                                                 </VisualState.Setters>
                                             </VisualState>
-                                        <!--<VisualState x:Name="Selected">
-                                            <VisualState.Setters>
-                                                    <Setter Property="BackgroundGradientStops">
-                                                        <Setter.Value>
-                                                            <pv:GradientStopCollection>
-                                                                <pv:GradientStop Color="#005C19" Offset="0" />
-                                                                <pv:GradientStop Color="#009C2A" Offset="0.5" />
-                                                                <pv:GradientStop Color="#00EE40" Offset="1" />
-                                                            </pv:GradientStopCollection>
-                                                        </Setter.Value>
-                                                    </Setter>
-                                                </VisualState.Setters>
-                                        </VisualState>-->
-                                    </VisualStateGroup>
+                                        </VisualStateGroup>
                                 </VisualStateManager.VisualStateGroups>
                                     <Label x:Name="PropertyTypeName" Padding="20,5" Text="{Binding TypeName}" TextColor="White" FontSize="15" FontFamily="ThemeFontRegular">
                                         <Label.GestureRecognizers>
@@ -76,7 +51,7 @@
             <StackLayout x:Name="ShowList" BackgroundColor="Transparent" BindableLayout.ItemsSource="{Binding PropertyList}">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
-                        <pv:PancakeView HeightRequest="190" Margin="5,10" CornerRadius="5"  BackgroundColor="#006666">
+                        <pv:PancakeView HeightRequest="190" Margin="5,10" CornerRadius="5"  BackgroundColor="#FFCCFF">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
@@ -97,19 +72,19 @@
                                     </pv:PancakeView>
                                 </Grid>
                                 <StackLayout Grid.Row="1" Spacing="5" Margin="20,5">
-                                    <Label Text="{Binding Price}" FontSize="15" FontFamily="ThemeFontBold" TextColor="White"/>
+                                    <Label Text="{Binding Price}" FontSize="15" FontFamily="ThemeFontBold" TextColor="Black"/>
                                     <StackLayout Orientation="Horizontal" Spacing="15">
                                         <StackLayout Orientation="Horizontal" Spacing="10">
                                             <Image WidthRequest="16" Source="bed.png"/>
-                                            <Label Text="{Binding Bed}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="White"/>
+                                            <Label Text="{Binding Bed}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="Black"/>
                                         </StackLayout>
                                         <StackLayout Orientation="Horizontal" Spacing="10">
                                             <Image WidthRequest="16" Source="shower.png"/>
-                                            <Label Text="{Binding Bath}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="White"/>
+                                            <Label Text="{Binding Bath}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="Black"/>
                                         </StackLayout>
                                         <StackLayout Orientation="Horizontal" Spacing="10">
                                             <Image WidthRequest="16" Source="square.png"/>
-                                            <Label Text="{Binding Space}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="White"/>
+                                            <Label Text="{Binding Space}" FontSize="12" FontFamily="ThemeFontRegular" TextColor="Black"/>
                                         </StackLayout>
                                     </StackLayout>
                                 </StackLayout>
