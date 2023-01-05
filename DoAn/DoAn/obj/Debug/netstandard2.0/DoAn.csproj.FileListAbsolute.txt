@@ -47,7 +47,14 @@ D:/IE307/DoAn/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/EntryTaskPage.xaml
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/Tips/MoreTips.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/Tips/TipDetail.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/Tips/TipPage.xaml.g.cs
-/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/Task.xaml.g.cs
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/User/Profile.xaml.g.cs
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/SchedulerPages/AppointmentDetailPage.xaml.g.cs
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/SchedulerPages/AppointmentEditPage.xaml.g.cs
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/SchedulerPages/ColorItemSelectPage.xaml.g.cs
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/SchedulerPages/RecurrenceEditPage.xaml.g.cs
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/SchedulerPages/ReminderAddPage.xaml.g.cs
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/SchedulerPages/ReminderEditPage.xaml.g.cs
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/SchedulerPages/TimeZoneSelectPage.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/View/BeginningPage.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/View/ChangePassword.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/View/ForgotPasswordPage.xaml.g.cs
@@ -62,3 +69,5 @@ D:/IE307/DoAn/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/EntryTaskPage.xaml
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/ref/DoAn.dll
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.pdb
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.csproj.AssemblyReference.cache
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/User/EditProfilePage.xaml.g.cs
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/UserSecretsAssemblyInfo.cs

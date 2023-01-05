@@ -134,6 +134,9 @@
     <PackageReference Include="DevExpress.XamarinForms.Scheduler">
       <Version>22.1.7</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.iOS.Auth">
+      <Version>8.10.0.3</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

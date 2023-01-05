@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <UserSecretsId>392e325f-2ef3-4124-8694-5663d85db27c</UserSecretsId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -20,6 +21,7 @@
     <PackageReference Include="Xamarin.Plugin.SharedTransitions" Version="2.4.0" />
     <PackageReference Include="FirebaseDatabase.net" Version="4.1.0" />
     <PackageReference Include="DevExpress.XamarinForms.Scheduler" Version="22.1.7" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="1.1.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,9 +32,6 @@
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="OriginalPage\TaskPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Task.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\BeginningPage.xaml">
@@ -67,6 +66,8 @@
     <None Remove="ViewModels\" />
     <None Remove="OriginalPage\Task\" />
     <None Remove="OriginalPage\Calendar\" />
+    <None Remove="OriginalPage\User\" />
+    <None Remove="Microsoft.Extensions.Configuration.UserSecrets" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OriginalPage\Tips\" />
@@ -76,6 +77,7 @@
     <Folder Include="ViewModels\" />
     <Folder Include="OriginalPage\Task\" />
     <Folder Include="OriginalPage\Calendar\" />
+    <Folder Include="OriginalPage\User\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="OriginalPage\Tips\TipPage.xaml.cs">

@@ -11,6 +11,7 @@ namespace DoAn.Model
         public string Subject { get; set; }
         public int LabelId { get; set; }
         public string Location { get; set; }
+        public string User_email { get; set; }
     }
 
     public class ReceptionDeskData

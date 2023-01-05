@@ -11,7 +11,7 @@ namespace DoAn
         {
             DevExpress.XamarinForms.Scheduler.Initializer.Init();
             InitializeComponent();
-            MainPage = new NavigationPage(new HomePage());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

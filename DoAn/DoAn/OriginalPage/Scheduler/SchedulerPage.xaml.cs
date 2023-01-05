@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DevExpress.XamarinForms.Scheduler;
 using Xamarin.Forms;
 using System.Threading.Tasks;
+using SchedulerExample.AppointmentPages;
 
 namespace DoAn.OriginalPage.Scheduler
 {
@@ -81,15 +82,18 @@ namespace DoAn.OriginalPage.Scheduler
         // Edit appointment
         async void PushEditAppointmentPage(AppointmentItem target)
         {
-            var page = new AppointmentEditPage(target, SchedulerDataStorage);
+            //var page = new AppointmentEditPage(target, SchedulerDataStorage);
+            var page = new CustomAppointmentEditPage(target, SchedulerDataStorage);
             await Navigation.PushAsync(page);
         }
 
         // Create new appointment
         async void PushNewAppointmentPage(IntervalInfo info)
         {
-            var page = new AppointmentEditPage(info.Start, info.End, info.AllDay, SchedulerDataStorage);
+            //var page = new AppointmentEditPage(info.Start, info.End, info.AllDay, SchedulerDataStorage);
+            var page = new CustomAppointmentEditPage(info.Start, info.End, info.AllDay, SchedulerDataStorage);
             await Navigation.PushAsync(page);
+
         }
 
         // Select action
