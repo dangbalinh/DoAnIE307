@@ -68,6 +68,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AuthIOS.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -137,6 +138,9 @@
     <PackageReference Include="Xamarin.Firebase.iOS.Auth">
       <Version>8.10.0.3</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.iOS.Core">
+      <Version>8.10.0.3</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -144,5 +148,8 @@
       <Project>{1CEB1C9B-0EAC-4868-BEE5-C7AA605F8587}</Project>
       <Name>DoAn</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GoogleService-Info.plist" />
   </ItemGroup>
 </Project>

@@ -23,6 +23,7 @@ namespace DoAn.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+            Firebase.Core.App.Configure();
             DevExpress.XamarinForms.Scheduler.iOS.Initializer.Init();
             LoadApplication(new App());
 

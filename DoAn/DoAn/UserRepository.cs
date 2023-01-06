@@ -38,12 +38,6 @@ namespace DoAn
             return "";
         }
 
-        // firebase sign out 
-        //public async Task<bool>SignOut()
-        //{
-        //    return true;
-        //}
-
         public async Task<bool>ResetPassword(string email)
         {
           await authProvider.SendPasswordResetEmailAsync(email);

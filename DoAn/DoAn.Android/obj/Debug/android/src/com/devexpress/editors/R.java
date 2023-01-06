@@ -1075,10 +1075,10 @@ public final class R {
 		public static final int abc_toolbar_collapse_description = 0x7f10001a;
 		public static final int app_name = 0x7f10001b;
 		public static final int autoComplete_noSuggestionsText = 0x7f10001d;
-		public static final int dropDown_pathData__down = 0x7f100039;
-		public static final int dropDown_pathData__up = 0x7f10003a;
-		public static final int search_menu_title = 0x7f100089;
-		public static final int status_bar_notification_info_overflow = 0x7f10008a;
+		public static final int dropDown_pathData__down = 0x7f10003a;
+		public static final int dropDown_pathData__up = 0x7f10003b;
+		public static final int search_menu_title = 0x7f100091;
+		public static final int status_bar_notification_info_overflow = 0x7f100092;
 	}
 	public static final class style {
 		public static final int AlertDialog_AppCompat = 0x7f110000;

@@ -68,6 +68,7 @@
     <None Remove="OriginalPage\Calendar\" />
     <None Remove="OriginalPage\User\" />
     <None Remove="Microsoft.Extensions.Configuration.UserSecrets" />
+    <None Remove="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OriginalPage\Tips\" />
@@ -78,6 +79,7 @@
     <Folder Include="OriginalPage\Task\" />
     <Folder Include="OriginalPage\Calendar\" />
     <Folder Include="OriginalPage\User\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="OriginalPage\Tips\TipPage.xaml.cs">

@@ -29,10 +29,7 @@ D:/IE307/DoAn/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/Page1.xaml.g.cs
 D:/IE307/DoAn/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/Page2.xaml.g.cs
 D:/IE307/DoAn/DoAn/DoAn/obj/Debug/netstandard2.0/Task.xaml.g.cs
 D:/IE307/DoAn/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/EntryTaskPage.xaml.g.cs
-/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/bin/Debug/netstandard2.0/DoAn.deps.json
-/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/bin/Debug/netstandard2.0/DoAn.dll
-/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/bin/Debug/netstandard2.0/ref/DoAn.dll
-/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/bin/Debug/netstandard2.0/DoAn.pdb
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.csproj.AssemblyReference.cache
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.GeneratedMSBuildEditorConfig.editorconfig
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
@@ -47,6 +44,7 @@ D:/IE307/DoAn/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/EntryTaskPage.xaml
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/Tips/MoreTips.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/Tips/TipDetail.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/Tips/TipPage.xaml.g.cs
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/User/EditProfilePage.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/User/Profile.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/SchedulerPages/AppointmentDetailPage.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/SchedulerPages/AppointmentEditPage.xaml.g.cs
@@ -64,10 +62,12 @@ D:/IE307/DoAn/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/EntryTaskPage.xaml
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.AssemblyInfoInputs.cache
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.AssemblyInfo.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.csproj.CoreCompileInputs.cache
-/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/UserSecretsAssemblyInfo.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.dll
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/ref/DoAn.dll
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.pdb
-/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.csproj.AssemblyReference.cache
-/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/User/EditProfilePage.xaml.g.cs
-/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/UserSecretsAssemblyInfo.cs
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/bin/Debug/netstandard2.0/DoAn.deps.json
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/bin/Debug/netstandard2.0/DoAn.dll
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/bin/Debug/netstandard2.0/ref/DoAn.dll
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/bin/Debug/netstandard2.0/DoAn.pdb
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/XamlC.stamp

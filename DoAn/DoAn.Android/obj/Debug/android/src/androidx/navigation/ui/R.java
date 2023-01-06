@@ -1296,19 +1296,19 @@ public final class R {
 		public static final int bottom_sheet_behavior = 0x7f10001e;
 		public static final int character_counter_content_description = 0x7f100020;
 		public static final int character_counter_pattern = 0x7f100022;
-		public static final int fab_transformation_scrim_behavior = 0x7f10003e;
-		public static final int fab_transformation_sheet_behavior = 0x7f10003f;
-		public static final int hide_bottom_view_on_scroll_behavior = 0x7f100044;
-		public static final int mtrl_chip_close_icon_content_description = 0x7f10005d;
-		public static final int nav_app_bar_navigate_up_description = 0x7f10007f;
-		public static final int nav_app_bar_open_drawer_description = 0x7f100080;
-		public static final int password_toggle_content_description = 0x7f100083;
-		public static final int path_password_eye = 0x7f100084;
-		public static final int path_password_eye_mask_strike_through = 0x7f100085;
-		public static final int path_password_eye_mask_visible = 0x7f100086;
-		public static final int path_password_strike_through = 0x7f100087;
-		public static final int search_menu_title = 0x7f100089;
-		public static final int status_bar_notification_info_overflow = 0x7f10008a;
+		public static final int fab_transformation_scrim_behavior = 0x7f10003f;
+		public static final int fab_transformation_sheet_behavior = 0x7f100040;
+		public static final int hide_bottom_view_on_scroll_behavior = 0x7f10004b;
+		public static final int mtrl_chip_close_icon_content_description = 0x7f100064;
+		public static final int nav_app_bar_navigate_up_description = 0x7f100086;
+		public static final int nav_app_bar_open_drawer_description = 0x7f100087;
+		public static final int password_toggle_content_description = 0x7f10008a;
+		public static final int path_password_eye = 0x7f10008b;
+		public static final int path_password_eye_mask_strike_through = 0x7f10008c;
+		public static final int path_password_eye_mask_visible = 0x7f10008d;
+		public static final int path_password_strike_through = 0x7f10008e;
+		public static final int search_menu_title = 0x7f100091;
+		public static final int status_bar_notification_info_overflow = 0x7f100092;
 	}
 	public static final class style {
 		public static final int AlertDialog_AppCompat = 0x7f110000;

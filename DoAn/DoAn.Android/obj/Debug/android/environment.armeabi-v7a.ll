@@ -80,7 +80,7 @@ target triple = "armv7-unknown-linux-android"
 @__app_environment_variables_n_1.2 = internal constant [15 x i8] c"MONO_LOG_LEVEL\00", align 1
 @__app_environment_variables_v_1.3 = internal constant [5 x i8] c"info\00", align 1
 @__app_environment_variables_n_2.4 = internal constant [17 x i8] c"XAMARIN_BUILD_ID\00", align 1
-@__app_environment_variables_v_2.5 = internal constant [37 x i8] c"ed2a082e-dda3-4133-91cd-8a90f8ec2f91\00", align 1
+@__app_environment_variables_v_2.5 = internal constant [37 x i8] c"69ad20f2-8650-4391-bce1-8106dc290f03\00", align 1
 @__app_environment_variables_n_3.6 = internal constant [28 x i8] c"XA_HTTP_CLIENT_HANDLER_TYPE\00", align 1
 @__app_environment_variables_v_3.7 = internal constant [41 x i8] c"Xamarin.Android.Net.AndroidClientHandler\00", align 1
 @__app_environment_variables_n_4.8 = internal constant [16 x i8] c"XA_TLS_PROVIDER\00", align 1
@@ -105,7 +105,7 @@ target triple = "armv7-unknown-linux-android"
 
 ; app_system_properties
 @app_system_properties = local_unnamed_addr constant [0 x i8*] zeroinitializer, align 4
-@__ApplicationConfig_android_package_name.0 = internal constant [21 x i8] c"com.companyname.doan\00", align 1
+@__ApplicationConfig_android_package_name.0 = internal constant [26 x i8] c"com.gheorghedarle.todoapp\00", align 1
 
 ; application_config
 @application_config = local_unnamed_addr constant %struct.ApplicationConfig {
@@ -123,7 +123,7 @@ target triple = "armv7-unknown-linux-android"
 	i32 3, ; package_naming_policy
 	i32 12, ; environment_variable_count
 	i32 0, ; system_property_count
-	i32 181, ; number_of_assemblies_in_apk
+	i32 180, ; number_of_assemblies_in_apk
 	i32 66, ; bundled_assembly_name_width
 	i32 2, ; number_of_assembly_store_files
 	i32 40, ; number_of_dso_cache_entries
@@ -133,7 +133,7 @@ target triple = "armv7-unknown-linux-android"
 	i32 0, ; jni_remapping_replacement_type_count
 	i32 0, ; jni_remapping_replacement_method_index_entry_count
 	i32 0, ; mono_components_mask
-	i8* getelementptr inbounds ([21 x i8], [21 x i8]* @__ApplicationConfig_android_package_name.0, i32 0, i32 0); android_package_name
+	i8* getelementptr inbounds ([26 x i8], [26 x i8]* @__ApplicationConfig_android_package_name.0, i32 0, i32 0); android_package_name
 }, align 4
 
 @__DSOCacheEntry_name.1 = internal constant [31 x i8] c"libxamarin-debug-app-helper.so\00", align 1
@@ -611,11 +611,10 @@ target triple = "armv7-unknown-linux-android"
 @__XamarinAndroidBundledAssembly_name_177 = internal global [66 x i8] zeroinitializer, align 1
 @__XamarinAndroidBundledAssembly_name_178 = internal global [66 x i8] zeroinitializer, align 1
 @__XamarinAndroidBundledAssembly_name_179 = internal global [66 x i8] zeroinitializer, align 1
-@__XamarinAndroidBundledAssembly_name_180 = internal global [66 x i8] zeroinitializer, align 1
 
 
 ; Bundled assembly name buffers, all 66 bytes long
-@bundled_assemblies = local_unnamed_addr global [181 x %struct.XamarinAndroidBundledAssembly] [
+@bundled_assemblies = local_unnamed_addr global [180 x %struct.XamarinAndroidBundledAssembly] [
 	; 0
 	%struct.XamarinAndroidBundledAssembly {
 		i32 -1, ; apk_fd
@@ -2235,15 +2234,6 @@ target triple = "armv7-unknown-linux-android"
 		i8* null, ; data
 		i32 66, ; name_length
 		i8* getelementptr inbounds ([66 x i8], [66 x i8]* @__XamarinAndroidBundledAssembly_name_179, i32 0, i32 0); name
-	}, 
-	; 180
-	%struct.XamarinAndroidBundledAssembly {
-		i32 -1, ; apk_fd
-		i32 0, ; data_offset
-		i32 0, ; data_size
-		i8* null, ; data
-		i32 66, ; name_length
-		i8* getelementptr inbounds ([66 x i8], [66 x i8]* @__XamarinAndroidBundledAssembly_name_180, i32 0, i32 0); name
 	}
 ], align 4; end of 'bundled_assemblies' array
 

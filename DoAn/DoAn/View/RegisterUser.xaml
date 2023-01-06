@@ -47,7 +47,8 @@
                 <Label Text="Already have a account?" />
                 <Label Text="Login.">
                     <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding LoginCommand}" NumberOfTapsRequired="1"/>
+                        <TapGestureRecognizer Command="{Binding LoginCommand}" NumberOfTapsRequired="1"
+                                              Tapped="TapGestureRecognizer_Tapped"/>
                     </Label.GestureRecognizers>
                 </Label>
             </StackLayout>

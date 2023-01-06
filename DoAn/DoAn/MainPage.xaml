@@ -28,7 +28,8 @@
         WidthRequest="400"
         HeightRequest="100"
         FontSize="Large"
-        TextColor="White"></Button>
+        TextColor="White"
+        Clicked="Button_Clicked"/>
     </StackLayout>
 
 </ContentPage>
