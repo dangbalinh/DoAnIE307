@@ -7,6 +7,7 @@
              xmlns:tipsView="clr-namespace:DoAn.OriginalPage.Tips"
              xmlns:schedulerView="clr-namespace:DoAn.OriginalPage.Scheduler"
              xmlns:user="clr-namespace:DoAn.OriginalPage.User"
+             xmlns:local="clr-namespace:DoAn"
              NavigationPage.HasNavigationBar="False"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              android:TabbedPage.ToolbarPlacement="Bottom"

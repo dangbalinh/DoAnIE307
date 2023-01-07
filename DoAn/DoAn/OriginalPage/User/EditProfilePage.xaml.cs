@@ -5,26 +5,40 @@ using DoAn.Services;
 using DoAn.Model;
 
 using Xamarin.Forms;
+using DevExpress.XamarinForms.DataForm;
 
 namespace DoAn.OriginalPage.User
 {
     public partial class EditProfilePage : ContentPage
     {
         readonly IAuth auth;
-        UserService userService = new UserService();
+        readonly UserService userService = new UserService();
         public class UserInfo
         {
+            [DataFormDisplayOptions(LabelPosition = DataFormLabelPosition.Top)]
+            public string Email { get; set; }
+
+            [DataFormDisplayOptions(LabelPosition = DataFormLabelPosition.Top)]
             public string Name { get; set; }
-            //public string Email { get; set; }
+
+            [DataFormMaskedEditor(Keyboard = "Telephone")]
+            [DataFormDisplayOptions(LabelPosition = DataFormLabelPosition.Top)]
             public string Phone { get; set; }
+
+            [DataFormDisplayOptions(LabelPosition = DataFormLabelPosition.Top)]
             public string Address { get; set; }
+
+            [DataFormDisplayOptions(IsLabelVisible = false)]
+            public string Image { get; set; }
+
             // Password;
             public UserInfo(Model.User user)
             {
+                Email = user.email;
                 Name = user.name;
-                //Email = user.email;
                 Phone = user.phone;
                 Address = user.address;
+                Image = user.img;
                 // Password = user.password;
             }
   
@@ -44,7 +58,7 @@ namespace DoAn.OriginalPage.User
         {
             dataForm.DataObject = userInfo;
 
-            DoAn.Model.User user = new DoAn.Model.User()
+            Model.User user = new Model.User()
             {
                 name = userInfo.Name,
                 email = auth.GetEmail(),
@@ -85,14 +99,6 @@ namespace DoAn.OriginalPage.User
                 case "Name":
                     userInfo.Name = e.NewValue.ToString();
                     break;
-                //case "Email":
-                //    if (!System.Text.RegularExpressions.Regex.IsMatch(e.NewValue.ToString(), @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$"))
-                //    {
-                //        e.HasError = true;
-                //        e.ErrorText = "The email is not valid.";
-                //    }
-                //    userInfo.Email = e.NewValue.ToString();
-                //    break;
                 case "Phone":
                     if (!System.Text.RegularExpressions.Regex.IsMatch(e.NewValue.ToString(), @"^(\+84|0)\d{9}$"))
                     {
@@ -106,11 +112,6 @@ namespace DoAn.OriginalPage.User
                     break;
                 
             }
-        }
-
-        void dataForm_PropertyChanged(System.Object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        {
-            // reassign value to dataForm.DataObject on property changed
         }
     }
 

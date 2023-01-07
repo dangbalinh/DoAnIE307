@@ -2,13 +2,14 @@
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dxdf="http://schemas.devexpress.com/xamarin/2014/forms/dataform"
     x:Class="DoAn.OriginalPage.User.Profile"
     Title="User profile">
     <ContentPage.Content>
         <RefreshView Refreshing="RefreshView_Refreshing" x:Name="ProfileRefreshView">
             <ScrollView>
                 <StackLayout Margin="10">
-                    <Image Source="{Binding img}" HorizontalOptions="CenterAndExpand" HeightRequest="80"/>
+                    <!--<Image Source="{Binding img}" HorizontalOptions="CenterAndExpand" HeightRequest="80"/>
 
                     <Grid ColumnDefinitions="*, 2*" x:Name="UserInfoGrid" Margin="0,20,0,20">
                         <Label Text="Name:" FontAttributes="Bold"
@@ -31,20 +32,69 @@
                         <Label Text="{Binding address}" Grid.Row="3" Grid.Column="1"
                                x:Name="UserAddress"/>
 
-                        <!-- Edit profile button -->
+                         Edit profile button 
                         <Button Text="Edit Profile" BackgroundColor="#0081C9" TextColor="White"
                                 CornerRadius="20" HeightRequest="40" HorizontalOptions="CenterAndExpand"
                                 Clicked="EditProfile_Clicked" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2"/>
-                        <!-- Change password button -->
+                         Change password button 
                         <Button Text="Change Password" BackgroundColor="#0081C9" TextColor="White"
                                 CornerRadius="20" HeightRequest="40" HorizontalOptions="CenterAndExpand"
                                 Clicked="ChangePassword_Clicked" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"/>
                 
-                        <!-- Logout button -->
+                         Logout button 
                         <Button Text="Logout" BackgroundColor="#EB455F" TextColor="White"
                                 CornerRadius="20" HeightRequest="40" HorizontalOptions="CenterAndExpand"
                                 Clicked="Logout_Clicked" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"/>
-                    </Grid>
+                    </Grid>-->
+
+                    <Label Text="User profile" FontAttributes="Bold" FontSize="Title" HorizontalOptions="Center"
+                           TextColor="#3C79F5"/>
+
+                    <dxdf:DataFormView x:Name="dataForm" ContentPadding="12"
+                                       BackgroundColor="Transparent">
+                        <dxdf:DataFormCustomItem FieldName="Image" IsLabelVisible="False">
+                            <StackLayout Padding="16">
+                                <Frame Padding="0"
+                                       HorizontalOptions="Center"
+                                       BorderColor="#dadada"
+                                       WidthRequest="100"
+                                       HeightRequest="100"
+                                       CornerRadius="50"
+                                       IsClippedToBounds="True">
+                                    <Image Source="{Binding Image}"
+                                           BackgroundColor="Gray"
+                                           Aspect="AspectFill"/>
+                                </Frame>
+                            </StackLayout>
+
+                        </dxdf:DataFormCustomItem>
+
+                            <!-- all info are readonly and group in "user info" -->
+                            <dxdf:DataFormTextItem FieldName="Email" IsReadOnly="True" LabelPosition="Top" GroupName="User information" />
+                            <dxdf:DataFormTextItem FieldName="Name" IsReadOnly="True" LabelPosition="Top" GroupName="User information"/>
+                            <dxdf:DataFormTextItem FieldName="Phone" IsReadOnly="True" LabelPosition="Top" GroupName="User information"/>
+                            <dxdf:DataFormTextItem FieldName="Address" IsReadOnly="True" LabelPosition="Top" GroupName="User information"/>
+
+                        <dxdf:DataFormCustomItem GroupName="User control" IsLabelVisible="False">
+                            <StackLayout>
+                                <!-- Edit profile button -->
+                                <Button Text="Edit Profile" BackgroundColor="#0081C9" TextColor="White"
+                                        CornerRadius="10" HeightRequest="40"
+                                        Clicked="EditProfile_Clicked"/>
+                                <!-- Change password button -->
+                                <Button Text="Change Password" BackgroundColor="#0081C9" TextColor="White"
+                                        CornerRadius="10" HeightRequest="40"
+                                        Clicked="ChangePassword_Clicked"/>
+                
+                                <!-- Logout button -->
+                                <Button Text="Logout" BackgroundColor="#EB455F" TextColor="White"
+                                        CornerRadius="10" HeightRequest="40"
+                                        Clicked="Logout_Clicked"/>
+
+                            </StackLayout>
+
+                        </dxdf:DataFormCustomItem>
+                    </dxdf:DataFormView>
 
                 </StackLayout>
 

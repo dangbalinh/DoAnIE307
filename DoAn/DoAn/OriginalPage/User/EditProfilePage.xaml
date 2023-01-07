@@ -7,19 +7,19 @@
     Title="Edit profile">
     <ContentPage.Content>
         <StackLayout Margin="10">
-            <Image Source="{Binding img}" HorizontalOptions="CenterAndExpand" HeightRequest="80"/>
-            <Grid ColumnDefinitions="*, 2*" x:Name="UserInfoGrid" Margin="0,20,0,20">
-                <!--<Label Text="Name:" FontAttributes="Bold"
+            <!--<Image Source="{Binding img}" HorizontalOptions="CenterAndExpand" HeightRequest="80"/>-->
+            <!--<Grid ColumnDefinitions="*, 2*" x:Name="UserInfoGrid" Margin="0,20,0,20">
+                <Label Text="Name:" FontAttributes="Bold"
                        Grid.Row="0" Grid.Column="0"
                        VerticalOptions="Center" FontSize="Body"/>
-                <Entry Text="{Binding name}" Grid.Row="0" Grid.Column="1"/>-->
+                <Entry Text="{Binding name}" Grid.Row="0" Grid.Column="1"/>
 
                 <Label Text="Email:" FontAttributes="Bold"
                        Grid.Row="1" Grid.Column="0"
                        VerticalOptions="Center" FontSize="Body"/>
                 <Label Text="{Binding email}" Grid.Row="1" Grid.Column="1" />
 
-                <!--<Label Text="Phone:" FontAttributes="Bold"
+                <Label Text="Phone:" FontAttributes="Bold"
                        Grid.Row="2" Grid.Column="0"
                        VerticalOptions="Center" FontSize="Body" />
                 <Entry Text="{Binding phone}" Grid.Row="2" Grid.Column="1"/>
@@ -27,13 +27,32 @@
                 <Label Text="Address:" FontAttributes="Bold"
                        Grid.Row="3" Grid.Column="0"
                        VerticalOptions="Center" FontSize="Body"/>
-                <Entry Text="{Binding address}" Grid.Row="3" Grid.Column="1"/>-->
-            </Grid>
+                <Entry Text="{Binding address}" Grid.Row="3" Grid.Column="1"/>
+            </Grid>-->
 
             <dxdf:DataFormView x:Name="dataForm" ValidationMode="PropertyChanged"
                                        ValidateProperty="dataForm_ValidateProperty"
-                                       ContentPadding="12" PropertyChanged="dataForm_PropertyChanged"/>
-            <Button Text="Save" BackgroundColor="#FFC107" TextColor="White"
+                                       ContentPadding="12"
+                                       BackgroundColor="Transparent">
+                <dxdf:DataFormCustomItem FieldName="Image" IsLabelVisible="False">
+                    <StackLayout Padding="16">
+                        <Frame Padding="0"
+                               HorizontalOptions="Center"
+                               BorderColor="#dadada"
+                               WidthRequest="100"
+                               HeightRequest="100"
+                               CornerRadius="50"
+                               IsClippedToBounds="True">
+                            <Image Source="{Binding Image}"
+                                   BackgroundColor="Gray"
+                                   Aspect="AspectFill"/>
+                        </Frame>
+                    </StackLayout>
+
+                </dxdf:DataFormCustomItem>
+                <dxdf:DataFormTextItem FieldName="Email" IsReadOnly="True" LabelPosition="Top" />
+            </dxdf:DataFormView>
+            <Button Text="Save" BackgroundColor="#0081C9" TextColor="White"
                     CornerRadius="20" HeightRequest="40" HorizontalOptions="CenterAndExpand"
                     Clicked="Save_Clicked"/>
         </StackLayout>

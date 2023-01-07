@@ -1,57 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dxdf="http://schemas.devexpress.com/xamarin/2014/forms/dataform"
              x:Class="DoAn.View.RegisterUser"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout Padding="15">
-            <Label Text="Register new user"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   FontSize="Large"
-                   TextColor="Black"/>
+        <ScrollView>
+            <StackLayout Padding="15">
+                <Label Text="Register new user"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       FontSize="Large"
+                       TextColor="#5BC0F8"
+                       FontAttributes="Bold"/>
 
-            <Image Source="todolista.png" HeightRequest="200"
-                   HorizontalOptions="CenterAndExpand"/>
+                <Image Source="todolista.png" HeightRequest="200"
+                       HorizontalOptions="CenterAndExpand"/>
 
-            <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False">
-                <Entry Placeholder="Name"
-                       x:Name="TxtName" />
-            </Frame>
+                <dxdf:DataFormView x:Name="dataForm" ValidationMode="PropertyChanged"
+                            ValidateProperty="dataForm_ValidateProperty"
+                            ContentPadding="12" BackgroundColor="Transparent">
+                    <dxdf:DataFormTextItem FieldName="Name" 
+                            x:Name="NameField" LabelPosition="Top"/>
 
-            <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False" Margin="0,10,0,10">
-                <Entry Placeholder="Email" 
-                   x:Name="TxtEmail"/>
-            </Frame>
+                    <dxdf:DataFormTextItem FieldName="Email" 
+                            x:Name="EmailField" LabelPosition="Top" Keyboard="Email"/>
 
-            <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False" Margin="0,0,0,10">
-                <Entry Placeholder="Password"
-                   IsPassword="True"
-                   x:Name="TxtPassword"/>
-            </Frame>
+                    <dxdf:DataFormPasswordItem FieldName="Password" 
+                            x:Name="PasswordField" LabelPosition="Top"/>
 
-            <Frame CornerRadius="30" BackgroundColor="#f2f2f2" HasShadow="False" Margin="0,0,0,10">
-                <Entry IsPassword="True" Placeholder="Retype Password"
-                   x:Name="TxtConfirmPass"/>
-            </Frame>
+                    <dxdf:DataFormPasswordItem FieldName="ConfirmPassword" 
+                            x:Name="ConfirmPasswordField" LabelPosition="Top" LabelText="Confirm password"/>
+                </dxdf:DataFormView>
 
-            <Button Text="Register" x:Name="ButtonRegister"
-                    Clicked="ButtonRegister_Clicked"
-                    CornerRadius="30"
-                    HorizontalOptions="Center"
-                    Background="#A6BB8D"
-                    Margin="0,0,0,10"/>
+
+                <Button Text="Register" x:Name="ButtonRegister"
+                        Clicked="ButtonRegister_Clicked"
+                        CornerRadius="30"
+                        HorizontalOptions="Center"
+                        Background="#A6BB8D"
+                        Margin="0,0,0,10"/>
 
             
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                <Label Text="Already have a account?" />
-                <Label Text="Login.">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding LoginCommand}" NumberOfTapsRequired="1"
-                                              Tapped="TapGestureRecognizer_Tapped"/>
-                    </Label.GestureRecognizers>
-                </Label>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Text="Already have a account?" />
+                    <Label Text="Login.">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LoginCommand}" NumberOfTapsRequired="1"
+                                                  Tapped="TapGestureRecognizer_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
