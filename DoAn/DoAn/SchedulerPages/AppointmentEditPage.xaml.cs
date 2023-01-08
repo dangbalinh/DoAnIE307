@@ -30,16 +30,6 @@ namespace SchedulerExample.AppointmentPages {
             viewModel.DialogService = this;
             this.useThemeableToolbarIcons = useThemeableToolbarIcons;
             UpdateToolbarItems();
-
-            //var appointment = new MedicalAppointment
-            //{
-            //    StartTime = startDate,
-            //    EndTime = endDate,
-            //    LabelId = 1,
-            //    Location = "",
-            //};
-            //client.Child("Tips").PostAsync(JsonConvert.SerializeObject(t));
-
         }
 
         public CustomAppointmentEditPage(AppointmentItem appointment, SchedulerDataStorage storage, bool useThemeableToolbarIcons = false) : this() {

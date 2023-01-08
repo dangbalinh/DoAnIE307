@@ -7,6 +7,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using DevExpress.XamarinForms.Scheduler;
 using DevExpress.XamarinForms.Scheduler.Internal;
+using DoAn.Model;
+using DoAn.Interfaces;
+using Xamarin.Forms;
+using DoAn.Services;
 
 namespace SchedulerExample.AppointmentPages {
     public class CustomAppointmentEditViewModel : NotifyPropertyChangedBase {
@@ -21,6 +25,8 @@ namespace SchedulerExample.AppointmentPages {
         readonly SchedulerDataStorage storage;
         readonly RecurrenceViewModelBase neverRecurrence;
         readonly IDictionary<RecurrenceType, RecurrenceViewModelBase> typeToViewModelMappings;
+        IAuth auth = DependencyService.Get<IAuth>();
+        AppointmentService appointmentService = new AppointmentService();
         AppointmentItem appointment;
         DateTime start, end;
         string subject;
@@ -366,9 +372,29 @@ namespace SchedulerExample.AppointmentPages {
             }
         }
 
-        void CreateNewAppointment() {
+        async void CreateNewAppointment() {
             AppointmentItem appointmentItem = storage.CreateAppointmentItem();
             PopulateAppointmentValues(appointmentItem);
+
+            // create new appointment
+            MedicalAppointment medicalAppointment = new MedicalAppointment
+            {
+                // get the biggest id from firebase realtime database
+                Id = await appointmentService.GetMaxId() + 1,
+                StartTime = appointmentItem.Start,
+                EndTime = appointmentItem.End,
+                Subject = appointmentItem.Subject,
+                LabelId = int.Parse(appointmentItem.LabelId.ToString()),
+                Location = appointmentItem.Location,
+                User_email = auth.GetEmail(),
+            };
+
+            // set id for appointmentItem
+            appointmentItem.Id = medicalAppointment.Id;
+
+            // save new appointment to firebase realtime database
+            await appointmentService.AddAppointment(medicalAppointment);
+
             storage.AppointmentItems.Add(appointmentItem);
         }
 

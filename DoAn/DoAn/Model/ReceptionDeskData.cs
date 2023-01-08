@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using DoAn.Services;
 
 namespace DoAn.Model
 {
@@ -16,6 +17,7 @@ namespace DoAn.Model
 
     public class ReceptionDeskData
     {
+        // AppointmentService appointmentService;
         public static DateTime BaseDate = DateTime.Today;
 
         //public static string[] PatientNames = { "Andrew Glover", "Mark Oliver",
@@ -61,6 +63,8 @@ namespace DoAn.Model
                         patientIndex = 1;
                 }
             MedicalAppointments = result;
+
+            //MedicalAppointments = await appointmentService.GetAppointments();
         }
 
         MedicalAppointment CreateMedicAppointment(int appointmentId, string patientName,
@@ -83,6 +87,7 @@ namespace DoAn.Model
 
         public ReceptionDeskData()
         {
+            //appointmentService = new AppointmentService();
             CreateMedicalAppointments();
         }
     }

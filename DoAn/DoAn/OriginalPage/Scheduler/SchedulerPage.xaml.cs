@@ -4,16 +4,24 @@ using DevExpress.XamarinForms.Scheduler;
 using Xamarin.Forms;
 using System.Threading.Tasks;
 using SchedulerExample.AppointmentPages;
+using DoAn.Services;
 
 namespace DoAn.OriginalPage.Scheduler
 {
     public partial class SchedulerPage : ContentPage
     {
+        readonly UserService userService = new UserService();
+        readonly AppointmentService appointmentService = new AppointmentService();
         public SchedulerPage()
         {
             DevExpress.XamarinForms.Scheduler.Initializer.Init();
             InitializeComponent();
         }
+
+        //protected override async void OnAppearing()
+        //{
+        //    BindingContext = await appointmentService.GetAppointments();
+        //}
 
         //void Scheduler_Tap(System.Object sender, DevExpress.XamarinForms.Scheduler.SchedulerGestureEventArgs e)
         //{
@@ -57,17 +65,29 @@ namespace DoAn.OriginalPage.Scheduler
                 string selectedAction = await DisplaySelectAppointmentEditActionSheet(e.AppointmentInfo.Appointment);
                 switch (selectedAction)
                 {
+                    case "Detail":
+                        PushAppointmentDetailPage(e.AppointmentInfo.Appointment);
+                        break;
+
                     case EditPatternAction:
                         PushEditAppointmentPage(SchedulerDataStorage.GetPattern(e.AppointmentInfo.Appointment));
                         break;
-                    case EditOccurrenceAction:
-                    case EditNormalAction:
-                        PushEditAppointmentPage(e.AppointmentInfo.Appointment);
-                        break;
+
                     case "Delete":
                         bool confirmation = await DisplayAlert("Do you really want to delete the appointment?", null, "Yes", "No");
                         if (confirmation)
+                        {
                             SchedulerDataStorage.RemoveAppointment(e.AppointmentInfo.Appointment);
+                            // delete appointment from database
+                            int id = int.Parse(e.AppointmentInfo.Appointment.Id.ToString());
+                            await appointmentService.DeleteAppointment(id);
+
+                        }
+                        break;
+
+                    case EditOccurrenceAction:
+                    case EditNormalAction:
+                        PushEditAppointmentPage(e.AppointmentInfo.Appointment);
                         break;
                     default:
                         break;
@@ -77,6 +97,12 @@ namespace DoAn.OriginalPage.Scheduler
             {
                 if (e.IntervalInfo != null) { PushNewAppointmentPage(e.IntervalInfo); }
             }
+        }
+
+        async void PushAppointmentDetailPage(AppointmentItem target)
+        {
+            var page = new CustomAppointmentDetailPage(target, SchedulerDataStorage);
+            await Navigation.PushAsync(page);
         }
 
         // Edit appointment
@@ -104,7 +130,8 @@ namespace DoAn.OriginalPage.Scheduler
             switch (target.Type)
             {
                 case AppointmentType.Normal:
-                    actions = new string[] { EditNormalAction, "Delete" };
+                    //actions = new string[] { "Detail", EditNormalAction, "Delete" };
+                    actions = new string[] { "Detail", "Delete" };
                     break;
                 default:
                     actions = new string[] { EditPatternAction, EditOccurrenceAction };
