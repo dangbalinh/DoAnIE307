@@ -18,40 +18,12 @@ namespace DoAn.OriginalPage.Scheduler
             InitializeComponent();
         }
 
-        //protected override async void OnAppearing()
-        //{
-        //    BindingContext = await appointmentService.GetAppointments();
-        //}
-
-        //void Scheduler_Tap(System.Object sender, DevExpress.XamarinForms.Scheduler.SchedulerGestureEventArgs e)
-        //{
-        //    // Get date
-        //    //var today = e.AppointmentInfo.Appointment.Start.Date.ToShortDateString()
-        //    if (e.AppointmentInfo == null)
-        //    {
-        //        ShowNewAppointmentEditPage(e.IntervalInfo);
-        //        return;
-        //    }
-        //    AppointmentItem appointment = e.AppointmentInfo.Appointment;
-        //    ShowAppointmentEditPage(appointment);
-
-        //}
-
-
-        //private void ShowAppointmentEditPage(AppointmentItem appointment)
-        //{
-        //    AppointmentEditPage appEditPage = new AppointmentEditPage(appointment, this.SchedulerDataStorage);
-        //    Navigation.PushAsync(appEditPage);
-        //}
-
-        //private void ShowNewAppointmentEditPage(IntervalInfo info)
-        //{
-        //    AppointmentEditPage appEditPage = new AppointmentEditPage(info.Start, info.End,
-        //                                                             info.AllDay, this.SchedulerDataStorage);
-        //    Navigation.PushAsync(appEditPage);
-        //}
-
-
+        protected override async void OnAppearing()
+        {
+            //BindingContext = DoAn.ViewModels.ReceptionDeskViewModel;
+            base.OnAppearing();
+            SchedulerDataStorage.DataSource.AppointmentsSource = await appointmentService.GetAppointments();
+        }
 
         const string EditPatternAction = "Edit pattern";
         const string EditOccurrenceAction = "Edit occurrence";

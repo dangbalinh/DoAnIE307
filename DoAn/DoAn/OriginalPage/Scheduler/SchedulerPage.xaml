@@ -3,17 +3,14 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:dxsch="http://schemas.devexpress.com/xamarin/2014/forms/scheduler"
-    x:Class="DoAn.OriginalPage.Scheduler.SchedulerPage"
-    xmlns:viewmodels="clr-namespace:DoAn.ViewModels">
-    <ContentPage.BindingContext>
-        <viewmodels:ReceptionDeskViewModel/>
-    </ContentPage.BindingContext>
+    x:Class="DoAn.OriginalPage.Scheduler.SchedulerPage">
+
     <dxsch:DayView x:Name="Scheduler" ShowWorkTimeOnly="True" Tap="Scheduler_Tap"
                    WorkTime="8:00:00-23:59:59">
         <dxsch:DayView.DataStorage>
             <dxsch:SchedulerDataStorage x:Name="SchedulerDataStorage">
                 <dxsch:SchedulerDataStorage.DataSource>
-                    <dxsch:DataSource AppointmentsSource="{Binding MedicalAppointments}">
+                    <dxsch:DataSource>
                         <dxsch:DataSource.AppointmentMappings>
                             <dxsch:AppointmentMappings 
                             Id="Id" 

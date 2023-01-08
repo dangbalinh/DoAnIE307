@@ -46,6 +46,7 @@ namespace DoAn.View
                     await DisplayAlert("Warning", "Enter your email", "Ok");
                     return;
                 }
+
                 if (String.IsNullOrEmpty(loginInfo.Password))
                 {
                     await DisplayAlert("Warning", "Enter your password", "Ok");
@@ -54,24 +55,19 @@ namespace DoAn.View
 
                 string token = await auth.LoginAsync(loginInfo.Email, loginInfo.Password);
                 if (token != string.Empty)
-                {
                     Application.Current.MainPage = new NavigationPage(new HomePage());
-                }
+                else
+                    await DisplayAlert("Error", "Credentials are incorrect", "Ok");
+                
             }
             catch (Exception exception)
             {
                 if (exception.Message.Contains("EMAIL_NOT_FOUND"))
-                {
                     await DisplayAlert("Unauthorized", "Email not found", "ok");
-                }
                 else if (exception.Message.Contains("INVALID_PASSWORD"))
-                {
                     await DisplayAlert("Unauthorized", "Password incorrect", "ok");
-                }
                 else
-                {
                     await DisplayAlert("Error", exception.Message, "ok");
-                }
             }
 
         }
@@ -88,14 +84,6 @@ namespace DoAn.View
 
         void dataForm_ValidateProperty(System.Object sender, DevExpress.XamarinForms.DataForm.DataFormPropertyValidationEventArgs e)
         {
-            //DisplayAlert("t", e.PropertyName + " - " +e.NewValue, "OK");
-            // all fileds are required
-            if (e.NewValue.ToString() == "")
-            {
-                e.HasError = true;
-                e.ErrorText = "This field is required.";
-            }
-
             switch (e.PropertyName)
             {
                 case "Email":

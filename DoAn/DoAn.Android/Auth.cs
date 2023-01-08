@@ -8,6 +8,7 @@ using static Java.Util.Jar.Attributes;
 using DoAn.Droid;
 using System.Collections.Generic;
 using DoAn.Services;
+using DoAn.Model;
 
 [assembly : Dependency(typeof(Auth))]
 namespace DoAn.Droid
@@ -152,7 +153,7 @@ namespace DoAn.Droid
 			}
 		}
 
-		// check if a string matches the user password
+        // check if a string matches the user password
 		public async Task<bool> CheckPasswordAsync(string password)
 		{
 			try

@@ -10,7 +10,6 @@ using Xamarin.Essentials;
 using Newtonsoft.Json;
 using DoAn.OriginalPage.User;
 using Firebase.Database.Query;
-using DoAn.Model;
 using Task = System.Threading.Tasks.Task;
 using DoAn.Interfaces;
 using Xamarin.Forms;

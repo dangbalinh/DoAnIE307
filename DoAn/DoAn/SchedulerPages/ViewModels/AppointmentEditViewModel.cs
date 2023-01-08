@@ -418,7 +418,7 @@ namespace SchedulerExample.AppointmentPages {
             }
         }
 
-        void PopulateAppointmentValues(AppointmentItem model) {
+        async void PopulateAppointmentValues(AppointmentItem model) {
             model.AllDay = AllDay;
             TimeZoneInfo timeZoneInfo = TimeZone?.TimeZone;
             if (model.Type == AppointmentType.Pattern) {
@@ -448,6 +448,19 @@ namespace SchedulerExample.AppointmentPages {
             }
 
             PopulateReminders(model);
+
+            // save updated appointment to firebase realtime database
+            MedicalAppointment updatedAppointment = new MedicalAppointment
+            {
+                Id = (int) model.Id,
+                StartTime = model.Start,
+                EndTime = model.End,
+                Subject = model.Subject,
+                LabelId = int.Parse(model.LabelId.ToString()),
+                Location = model.Location,
+                User_email = auth.GetEmail(),
+            };
+            await appointmentService.UpdateAppointment(updatedAppointment);
         }
 
         DateTime? GetNewStartValueForRecurrenceOf(AppointmentItem model) {
