@@ -27,7 +27,19 @@ namespace DoAn.Services
                 Tag = item.Object.Tag,
                 Content = item.Object.Content,
             }).ToList();
+        }
 
+        // take a list of the first 4 tips for carousel view
+        public async Task<List<Tip>> GetTheFirst4Tips()
+        {
+            return (await client.Child("Tips").OnceAsync<Tip>()).Select(item => new Tip
+            {
+                Id = (int)item.Object.Id,
+                Image = item.Object.Image,
+                Title = item.Object.Title,
+                Tag = item.Object.Tag,
+                Content = item.Object.Content,
+            }).Take(4).ToList();
         }
 
         public async Task<bool> SaveTip(Tip t)
@@ -38,6 +50,8 @@ namespace DoAn.Services
                 return true;
             return false;
         }
+
+        
     }
 }
 

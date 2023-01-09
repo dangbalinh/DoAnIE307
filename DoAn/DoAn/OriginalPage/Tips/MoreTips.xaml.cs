@@ -17,25 +17,11 @@ namespace DoAn.OriginalPage.Tips
         public MoreTips()
         {
             InitializeComponent();
-            //tips = new ObservableCollection<Tip>
-            //{
-            //    new Tip{Title="Hot new", Image="teamwork1.png", Tag="Life", Content="Lorem ipsum"},
-            //    new Tip{Title="Hot new", Image="teamwork2.png", Tag="Life", Content="Lorem ipsum"},
-            //    new Tip{Title="Hot new", Image="teamwork3.png", Tag="Life", Content="Lorem ipsum"},
-            //    new Tip{Title="Hot new", Image="teamwork4.png", Tag="Life", Content="Lorem ipsum"},
-            //    new Tip{Title="Hot new", Image="teamwork5.png", Tag="Life", Content="Lorem ipsum"},
-            //    new Tip{Title="Team work", Image="teamwork5.png", Tag="Life", Content="Lorem ipsum"},
-            //};
-
-            //TipsListView.ItemsSource = tips;
-
+            Init();
         }
 
-        protected override async void OnAppearing()
+        async void Init()
         {
-            //base.OnAppearing();
-            //tips = await services.GetAllTips();
-            //TipsCarouselView.ItemsSource = tips;
             tips = await services.GetAllTips();
             TipsListView.ItemsSource = tips;
         }

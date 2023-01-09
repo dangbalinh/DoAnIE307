@@ -18,7 +18,7 @@ namespace DoAn
             if (auth.IsLoggedInAsync())
                 MainPage = new NavigationPage(new HomePage());
 
-            MainPage = new NavigationPage(new LoginPage());
+            MainPage = new NavigationPage(new BeginningPage());
         }
 
         protected override void OnStart()

@@ -111,6 +111,13 @@ namespace DoAn.OriginalPage.Scheduler
             }
             return await this.DisplayActionSheet("Select the action", "Cancel", null, actions);
         }
+
+
+        void SchedulerView_Refreshing(System.Object sender, System.EventArgs e)
+        {
+            DisplayAlert("t", "t", "ok");
+            SchedulerView.IsRefreshing = false;
+        }
     }
 }
 

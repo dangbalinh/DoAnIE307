@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using DevExpress.XamarinForms.Scheduler;
 using DevExpress.XamarinForms.Scheduler.Internal;
-
+using DoAn.Services;
 namespace SchedulerExample.AppointmentPages {
     public static class AppointmentDetailFormatProvider {
         public static string StatusFormat => "Status: {0}";
@@ -36,6 +36,7 @@ namespace SchedulerExample.AppointmentPages {
         const string AcceptAppointmentRemoveAction = "Yes";
         const string CancelAppointmentRemoveAction = "No";
 
+        AppointmentService appointmentService = new AppointmentService();
 
         string timeText;
         object labelColor;
@@ -168,6 +169,7 @@ namespace SchedulerExample.AppointmentPages {
             bool isConfirmed = await DialogService.DisplayAlertMessage(RemoveAppointmentTitle, null, AcceptAppointmentRemoveAction, CancelAppointmentRemoveAction);
             if (isConfirmed) {
                 this.storage.RemoveAppointment(this.appointment);
+                await appointmentService.DeleteAppointment(int.Parse(this.appointment.Id.ToString()));
             }
             return isConfirmed;
         }

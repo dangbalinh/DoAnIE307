@@ -398,8 +398,26 @@ namespace SchedulerExample.AppointmentPages {
             storage.AppointmentItems.Add(appointmentItem);
         }
 
-        void PopulateActualAppointment() {
+        async void PopulateActualAppointment() {
             PopulateAppointmentValues(appointment);
+            storage.RefreshData();
+
+            MedicalAppointment updatedAppoitment = new MedicalAppointment
+            {
+                // get the biggest id from firebase realtime database
+                Id = int.Parse(appointment.Id.ToString()),
+                StartTime = appointment.Start,
+                EndTime = appointment.End,
+                Subject = appointment.Subject,
+                LabelId = int.Parse(appointment.LabelId.ToString()),
+                Location = appointment.Location,
+                User_email = auth.GetEmail(),
+            };
+
+            // save new appointment to firebase realtime database
+            await appointmentService.UpdateAppointment(updatedAppoitment);
+
+
         }
 
         void PopulateActualAppointmentPattern() {
@@ -418,7 +436,7 @@ namespace SchedulerExample.AppointmentPages {
             }
         }
 
-        async void PopulateAppointmentValues(AppointmentItem model) {
+        void PopulateAppointmentValues(AppointmentItem model) {
             model.AllDay = AllDay;
             TimeZoneInfo timeZoneInfo = TimeZone?.TimeZone;
             if (model.Type == AppointmentType.Pattern) {
@@ -449,18 +467,19 @@ namespace SchedulerExample.AppointmentPages {
 
             PopulateReminders(model);
 
-            // save updated appointment to firebase realtime database
-            MedicalAppointment updatedAppointment = new MedicalAppointment
-            {
-                Id = (int) model.Id,
-                StartTime = model.Start,
-                EndTime = model.End,
-                Subject = model.Subject,
-                LabelId = int.Parse(model.LabelId.ToString()),
-                Location = model.Location,
-                User_email = auth.GetEmail(),
-            };
-            await appointmentService.UpdateAppointment(updatedAppointment);
+            //// save appointment to firebase realtime database
+            //MedicalAppointment medicalAppointment = new MedicalAppointment
+            //{
+            //    Id = (int) model.Id,
+            //    StartTime = model.Start,
+            //    EndTime = model.End,
+            //    Subject = model.Subject,
+            //    LabelId = int.Parse(model.LabelId.ToString()),
+            //    Location = model.Location,
+            //    User_email = auth.GetEmail(),
+            //};
+
+            //return medicalAppointment;
         }
 
         DateTime? GetNewStartValueForRecurrenceOf(AppointmentItem model) {

@@ -28,15 +28,21 @@ namespace DoAn.OriginalPage.Tips
 
             //var tips = services.GetAllTips();
             //TipsCarouselView.ItemsSource = (System.Collections.IEnumerable)tips;
+            Init();
+            BindingContext = tips;
 
         }
 
-        protected override async void OnAppearing()
+        //protected override async void OnAppearing()
+        //{
+        //    base.OnAppearing();
+        //    tips = await services.GetTheFirst4Tips();
+        //    TipsCarouselView.ItemsSource = tips;
+        //}
+
+        async void Init()
         {
-            //base.OnAppearing();
-            //tips = await services.GetAllTips();
-            //TipsCarouselView.ItemsSource = tips;
-            tips = await services.GetAllTips();
+            tips = await services.GetTheFirst4Tips();
             TipsCarouselView.ItemsSource = tips;
         }
 

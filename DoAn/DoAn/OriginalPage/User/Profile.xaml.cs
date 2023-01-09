@@ -38,40 +38,24 @@ namespace DoAn.OriginalPage.User
         {
             InitializeComponent();
             auth = DependencyService.Get<IAuth>();
-            //Init();
-
-            //user = new Model.User
-            //{
-            //    name = "Buck",
-            //    email = auth.GetEmail(),
-            //    phone = "0123456789",
-            //    address = "Ho Chi Minh City",
-            //    img = "user.png"
-            //};
-
-            //BindingContext = user;
-
+            Init();
         }
 
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
-            user = await userService.GetUser(auth.GetEmail());
-            //if (user.phone == "")
-            //{
-            //    UserPhone.Text = "Undefined";
-            //    UserPhone.TextColor = Color.Red;
-            //}
-            //if (user.address == "")
-            //{
-            //    UserAddress.Text = "Undefined";
-            //    UserAddress.TextColor = Color.Red;
-            //}
+        //protected override async void OnAppearing()
+        //{
+        //    base.OnAppearing();
+        //    user = await userService.GetUser(auth.GetEmail());
+        //    displayedInfo = new DisplayedInfo(user);
+        //    dataForm.DataObject = displayedInfo;
+        //    BindingContext = user;
+        //}
 
+        async void Init()
+        {
+            user = await userService.GetUser(auth.GetEmail());
             displayedInfo = new DisplayedInfo(user);
             dataForm.DataObject = displayedInfo;
             BindingContext = user;
-
         }
 
         void EditProfile_Clicked(System.Object sender, System.EventArgs e)
@@ -84,7 +68,7 @@ namespace DoAn.OriginalPage.User
             var signOut = auth.SignOutAsync();
 
             if (signOut)
-                Application.Current.MainPage = new MainPage();
+                Application.Current.MainPage = new BeginningPage();
         }
 
         void ChangePassword_Clicked(System.Object sender, System.EventArgs e)
@@ -92,22 +76,9 @@ namespace DoAn.OriginalPage.User
             Navigation.PushAsync(new ChangePassword());
         }
 
-        async void RefreshView_Refreshing(System.Object sender, System.EventArgs e)
+        void RefreshView_Refreshing(System.Object sender, System.EventArgs e)
         {
-            user = await userService.GetUser(auth.GetEmail());
-            //if (user.phone == "")
-            //{
-            //    UserPhone.Text = "Undefined";
-            //    UserPhone.TextColor = Color.Red;
-            //}
-            //if (user.address == "")
-            //{
-            //    UserAddress.Text = "Undefined";
-            //    UserAddress.TextColor = Color.Red;
-            //}
-
-            BindingContext = user;
-
+            Init();
             ProfileRefreshView.IsRefreshing = false;
         }
     }

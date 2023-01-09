@@ -16,7 +16,7 @@
             />
             <Label Text="Start manage your task with" FontSize="22" HorizontalOptions="Center" 
             TextColor="#363636"></Label>
-            <Label Text="Mtodo" FontSize="25" HorizontalOptions="Center" TextColor="#9BA3EB"></Label>
+            <Label Text="Todolista" FontSize="25" HorizontalOptions="Center" TextColor="#9BA3EB"></Label>
             <Button x:Name="signUpButton" Text="Sign Up" 
                     BackgroundColor="#9BA3EB" 
                     Margin="20,60,20,0"

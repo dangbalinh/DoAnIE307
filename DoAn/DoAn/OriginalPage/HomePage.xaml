@@ -7,7 +7,6 @@
              xmlns:tipsView="clr-namespace:DoAn.OriginalPage.Tips"
              xmlns:schedulerView="clr-namespace:DoAn.OriginalPage.Scheduler"
              xmlns:user="clr-namespace:DoAn.OriginalPage.User"
-             xmlns:local="clr-namespace:DoAn"
              NavigationPage.HasNavigationBar="False"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              android:TabbedPage.ToolbarPlacement="Bottom"
@@ -18,8 +17,8 @@
    
     <view:TaskPage Title="Tasks" IconImageSource="task"/>
     <view:CalendarPage Title="Calendar" IconImageSource="calendar" />
-    <tipsView:TipPage Title="Tips" IconImageSource="advice" />
     <schedulerView:SchedulerPage Title="Scheduler" IconImageSource="scheduler" />
+    <tipsView:TipPage Title="Tips" IconImageSource="advice" />
     <viewBookings:BookingPage Title="Booking" IconImageSource="booking" />
     <user:Profile Title="Profile" IconImageSource="user"/>
 

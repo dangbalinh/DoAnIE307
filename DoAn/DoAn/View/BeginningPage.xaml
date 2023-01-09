@@ -14,7 +14,7 @@
                     RepeatCount="5"
                     RepeatMode="Infinite"
             />
-            <Label Text="Manage your task" HorizontalOptions="Center" FontSize="24" TextColor="#363636"></Label>
+            <Label Text="Manage your task with Todolista" HorizontalOptions="Center" FontSize="24" TextColor="#363636"></Label>
             <Label Text="Organize, plan and collaborate on tasks with me. Your busy life deserve this you can mangage this checklist and your goal"
             HorizontalOptions="EndAndExpand"
             Margin="30,0,30,0"

@@ -36,6 +36,10 @@ namespace DoAn.Services
         {
             var data = await client.Child("Appoiments").OnceAsync<MedicalAppointment>();
             var toUpdate = data.Where(a => a.Object.Id == appointment.Id).FirstOrDefault();
+            // return false if there is no appointment with the same id
+            if (toUpdate == null)
+                return false;
+
             await client.Child("Appoiments").Child(toUpdate.Key).PutAsync(JsonConvert.SerializeObject(appointment));
             return true;
         }

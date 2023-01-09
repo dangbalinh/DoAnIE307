@@ -113,6 +113,10 @@ namespace DoAn.OriginalPage.User
                 
             }
         }
+
+        void ImgTap_Tapped(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 
 
