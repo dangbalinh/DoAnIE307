@@ -6,6 +6,9 @@ using DoAn.Model;
 
 using Xamarin.Forms;
 using DevExpress.XamarinForms.DataForm;
+using Plugin.Media;
+using Plugin.Media.Abstractions;
+using System.IO;
 
 namespace DoAn.OriginalPage.User
 {
@@ -44,6 +47,7 @@ namespace DoAn.OriginalPage.User
   
         }
 
+        MediaFile imgfile;
         UserInfo userInfo;
         public EditProfilePage( Model.User user)
         {
@@ -56,7 +60,14 @@ namespace DoAn.OriginalPage.User
 
         async void Save_Clicked(System.Object sender, System.EventArgs e)
         {
+            if (imgfile != null)
+            {
+                string img = await userService.UploadImage(imgfile.GetStream(), Path.GetFileName(imgfile.Path));
+                userInfo.Image = img;
+            }
+
             dataForm.DataObject = userInfo;
+
 
             Model.User user = new Model.User()
             {
@@ -64,7 +75,7 @@ namespace DoAn.OriginalPage.User
                 email = auth.GetEmail(),
                 phone = userInfo.Phone,
                 address = userInfo.Address,
-                img = "user.png",
+                img = userInfo.Image,
             };
 
             await userService.UpdateUser(user);
@@ -114,8 +125,26 @@ namespace DoAn.OriginalPage.User
             }
         }
 
-        void ImgTap_Tapped(System.Object sender, System.EventArgs e)
+        async void ImgTap_Tapped(System.Object sender, System.EventArgs e)
         {
+            await CrossMedia.Current.Initialize();
+            try
+            {
+                imgfile = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
+                {
+                    PhotoSize = PhotoSize.Medium
+                });
+
+                if (imgfile == null) return;
+
+                UserImg.Source = ImageSource.FromStream(() =>
+                {
+                    return imgfile.GetStream();
+                });
+            } catch (Exception exception)
+            {
+                await DisplayAlert("Error", exception.Message, "OK");
+            }
         }
     }
 

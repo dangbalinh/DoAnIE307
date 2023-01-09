@@ -10,12 +10,15 @@ using Xamarin.Essentials;
 using Newtonsoft.Json;
 using DoAn.OriginalPage.User;
 using Firebase.Database.Query;
+using Firebase.Storage;
+using System.IO;
 
 namespace DoAn.Services
 {
 	public class UserService
 	{
         readonly FirebaseClient client = new FirebaseClient("https://xamarinproject-c7a59-default-rtdb.asia-southeast1.firebasedatabase.app/");
+        readonly FirebaseStorage firebaseStorage = new FirebaseStorage("xamarinproject-c7a59.appspot.com");
 
         // save user to firebase database after register
         public async Task<bool> SaveUser(User user)
@@ -50,6 +53,13 @@ namespace DoAn.Services
             var userUpdate = data.Where(x => x.Object.email == user.email).FirstOrDefault();
             await client.Child("Users").Child(userUpdate.Key).PutAsync(JsonConvert.SerializeObject(user));
             return true;
+        }
+
+        // upload image to firebase storage
+        public async Task<string> UploadImage(Stream img, string filePath)
+        {
+            var image = await firebaseStorage.Child("Images").Child(filePath).PutAsync(img);
+            return image;
         }
     }
 }

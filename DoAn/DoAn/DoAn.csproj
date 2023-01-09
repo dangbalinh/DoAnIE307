@@ -22,6 +22,8 @@
     <PackageReference Include="FirebaseDatabase.net" Version="4.1.0" />
     <PackageReference Include="DevExpress.XamarinForms.Scheduler" Version="22.1.7" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="1.1.2" />
+    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
+    <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -69,6 +71,8 @@
     <None Remove="OriginalPage\User\" />
     <None Remove="Microsoft.Extensions.Configuration.UserSecrets" />
     <None Remove="Interfaces\" />
+    <None Remove="Xam.Plugin.Media" />
+    <None Remove="FirebaseStorage.net" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OriginalPage\Tips\" />

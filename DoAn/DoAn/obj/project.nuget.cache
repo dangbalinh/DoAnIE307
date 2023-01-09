@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "6DwGtWM1DLkYbI0NVdjDX/yifiVMr9qpftnfFbeY4tCwt4oJiNHIuT0ZqaCD+kD0eLj/P+I3BE/j3Eab5dxYtw==",
+  "dgSpecHash": "+1v8fxz+dNZ6ihBeOVlhW+xVLQCg0AidrUHp/ycJGpPCSqbrTba3PPe8D/T3HT5NcFX7xlmZYjFj892cVc9QiA==",
   "success": true,
   "projectFilePath": "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/DoAn.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "/Users/cuhoangng/.nuget/packages/devexpress.xamarinforms.scheduler/22.1.7/devexpress.xamarinforms.scheduler.22.1.7.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/firebaseauthentication.net/3.7.2/firebaseauthentication.net.3.7.2.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/firebasedatabase.net/4.1.0/firebasedatabase.net.4.1.0.nupkg.sha512",
+    "/Users/cuhoangng/.nuget/packages/firebasestorage.net/1.0.3/firebasestorage.net.1.0.3.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/litedb/4.1.4/litedb.4.1.4.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/microsoft.extensions.configuration/1.1.2/microsoft.extensions.configuration.1.1.2.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/microsoft.extensions.configuration.abstractions/1.1.2/microsoft.extensions.configuration.abstractions.1.1.2.nupkg.sha512",
@@ -63,6 +64,7 @@
     "/Users/cuhoangng/.nuget/packages/system.threading.tasks/4.3.0/system.threading.tasks.4.3.0.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/system.threading.thread/4.3.0/system.threading.thread.4.3.0.nupkg.sha512",
+    "/Users/cuhoangng/.nuget/packages/xam.plugin.media/5.0.1/xam.plugin.media.5.0.1.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/xamarin.communitytoolkit/1.3.0/xamarin.communitytoolkit.1.3.0.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/xamarin.essentials/1.7.4/xamarin.essentials.1.7.4.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/xamarin.forms/5.0.0.2545/xamarin.forms.5.0.0.2545.nupkg.sha512",

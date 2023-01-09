@@ -115,7 +115,6 @@ namespace DoAn.OriginalPage.Scheduler
 
         void SchedulerView_Refreshing(System.Object sender, System.EventArgs e)
         {
-            DisplayAlert("t", "t", "ok");
             SchedulerView.IsRefreshing = false;
         }
     }

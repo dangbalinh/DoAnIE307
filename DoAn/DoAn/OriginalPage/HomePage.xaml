@@ -10,9 +10,9 @@
              NavigationPage.HasNavigationBar="False"
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              android:TabbedPage.ToolbarPlacement="Bottom"
-             SelectedTabColor="Red"
+             SelectedTabColor="Black"
              UnselectedTabColor="White"
-             BarBackgroundColor="Black"
+             BarBackgroundColor="#AAC4FF"
              >
    
     <view:TaskPage Title="Tasks" IconImageSource="task"/>

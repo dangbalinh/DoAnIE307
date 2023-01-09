@@ -33,7 +33,6 @@ D:/IE307/DoAn/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/EntryTaskPage.xaml
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/bin/Debug/netstandard2.0/DoAn.dll
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/bin/Debug/netstandard2.0/ref/DoAn.dll
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/bin/Debug/netstandard2.0/DoAn.pdb
-/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.csproj.AssemblyReference.cache
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.GeneratedMSBuildEditorConfig.editorconfig
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/App.xaml.g.cs
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
@@ -71,3 +70,4 @@ D:/IE307/DoAn/DoAn/DoAn/obj/Debug/netstandard2.0/OriginalPage/EntryTaskPage.xaml
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.dll
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/ref/DoAn.dll
 /Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.pdb
+/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/obj/Debug/netstandard2.0/DoAn.csproj.AssemblyReference.cache

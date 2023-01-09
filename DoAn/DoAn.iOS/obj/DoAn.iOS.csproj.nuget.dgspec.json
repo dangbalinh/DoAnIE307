@@ -50,6 +50,14 @@
               "target": "Package",
               "version": "[4.1.0, )"
             },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.4, )"
@@ -133,6 +141,10 @@
               "target": "Package",
               "version": "[4.1.0, )"
             },
+            "FirebaseStorage.net": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "Microsoft.Extensions.Configuration.UserSecrets": {
               "target": "Package",
               "version": "[1.1.2, )"
@@ -146,6 +158,10 @@
             "Plugin.XCalendar": {
               "target": "Package",
               "version": "[2.1.0, )"
+            },
+            "Xam.Plugin.Media": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

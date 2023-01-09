@@ -8,6 +8,7 @@ DevExpress.XamarinForms.Scheduler.Android.dll
 FormsViewGroup.dll
 Lottie.Android.dll
 Lottie.Forms.dll
+Plugin.Media.dll
 Plugin.SharedTransitions.dll
 Square.OkIO.dll
 Xamarin.AndroidX.Activity.dll

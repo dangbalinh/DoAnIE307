@@ -26,6 +26,5 @@
                 </dxsch:SchedulerDataStorage>
             </dxsch:DayView.DataStorage>
         </dxsch:DayView>
-
     </RefreshView>
 </ContentPage>
