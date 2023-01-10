@@ -75,9 +75,11 @@ namespace DoAn.View
                 {
                     var signOut = auth.SignOutAsync();
                     if (signOut)
+                    {
                         Application.Current.MainPage = new NavigationPage(new LoginPage());
-                }
-                else
+                        Navigation.ShowPopup(new SuccessPopup("Sign up new user successfully"));
+                    }
+                } else
                 {
                     Navigation.ShowPopup(new FailedActionPopup("Some thing went wrong!"));
                 }

@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="DoAn.OriginalPage.Taskpage.TaskPage"
+             
+             NavigationPage.HasNavigationBar="False"
+             >
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <Frame CornerRadius="10" HeightRequest="20" Margin="20,20,20,0" BorderColor="Pink" 
+            HasShadow="True"
+            BackgroundColor="Pink">
+                <SearchBar
+                       x:Name="SearchBarHotel"
+                       Placeholder="Search"
+                       BackgroundColor="Transparent"
+                       TextColor="Red"
+                       TextChanged="SearchBarHotel_TextChanged"    
+                       
+             ></SearchBar>
+            </Frame>
+
+            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                <StackLayout x:Name="abc" Orientation="Horizontal" Spacing="10" BindableLayout.ItemsSource="{Binding listTask}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <pv:PancakeView CornerRadius="15" Margin="5,10,0,10" BackgroundColor="Black" HeightRequest="40">
+
+                                <VisualStateManager.VisualStateGroups>
+                                    <VisualStateGroup x:Name="CommonStates">
+                                        <VisualState x:Name="Normal">
+                                            <VisualState.Setters>
+                                                <Setter Property="BackgroundGradientStops">
+                                                    <Setter.Value>
+                                                        <pv:GradientStopCollection>
+                                                            <pv:GradientStop Color="#B1B2FF" Offset="0" />
+                                                            <pv:GradientStop Color="#AAC4FF" Offset="0.5" />
+                                                            <pv:GradientStop Color="#D2DAFF" Offset="1" />
+                                                        </pv:GradientStopCollection>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </VisualState.Setters>
+                                        </VisualState>
+
+                                    </VisualStateGroup>
+                                </VisualStateManager.VisualStateGroups>
+
+                                <Label x:Name="PropertyTypeName" Padding="20,5" Text="{Binding taskTypeName}" TextColor="White" FontSize="15" FontFamily="ThemeFontRegular">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </pv:PancakeView>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </StackLayout>
+            </ScrollView>
+
+
+
+            <CollectionView x:Name="LtsTask" Margin="20,10,20,10" SelectionMode="Single" SelectionChanged="LtsTask_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                           ItemSpacing="15" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <SwipeView HeightRequest="70" Margin="0,0,0,0">
+                            <SwipeView.RightItems>
+                                <SwipeItems SwipeBehaviorOnInvoked="RemainOpen">
+                                    <SwipeItem Text="Delete"
+                                               BackgroundColor="#B1B2FF"
+                                               x:Name="SWDelete"
+                                               IconImageSource="delete.png"
+                                               CommandParameter="{Binding .}"
+                                               
+                                               Invoked="SWDelete_Invoked"></SwipeItem>
+                                    <SwipeItem Text="Update"
+                                               BackgroundColor="#0081B4"
+                                               x:Name="SWEdit"
+                                               IconImageSource="editing.png"
+                                               CommandParameter="{Binding .}"
+                                               Invoked="SWEdit_Invoked"></SwipeItem>
+
+                                    <SwipeItem Text="Done"
+                                               BackgroundColor="#68B984"
+                                               x:Name="SWDone"
+                                               IconImageSource="check.png"
+                                               CommandParameter="{Binding .}"
+                                               Invoked="SWDone_Invoked"></SwipeItem>
+   
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+
+                            <Grid BackgroundColor="#F9F9F9">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"></ColumnDefinition>
+                                    <ColumnDefinition Width="210">
+                                    </ColumnDefinition>
+
+                                </Grid.ColumnDefinitions>
+                                <Image Source="task1.png" Margin="5,0,0,0">
+                                </Image>
+                                <Label 
+                                    x:Name="taskLabel"
+                                    Text= "{Binding taskName}" 
+                                    Margin="20,5,0,0"
+                                    FontSize="15"
+                                    
+                                    TextColor="#444444"
+                                    Grid.Column="1"
+                                    >
+
+                                </Label>
+                                <Label 
+                                       x:Name="taskLabelType"
+                                       Text="{Binding taskDate}" 
+                                       Margin="20,40,0,0"
+                                       Grid.Column="1"
+                                       TextColor="#CC0000"
+                                       FontAttributes="Bold"
+                                       FontSize="18"
+                                       ></Label>
+                            </Grid>
+
+                        </SwipeView>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Label Text="Check all completed tasks"
+            TextDecorations="Underline"
+            Margin="90,50,0,0"
+            Grid.Column="0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+            <Button Clicked="Button_Clicked" HeightRequest="90" 
+            CornerRadius="45"
+            Margin="230,10,40,10"
+            ImageSource="add.png"
+            xct:TouchEffect.AnimationDuration="450"
+            xct:TouchEffect.PressedBackgroundColor="LightPink"
+            xct:TouchEffect.PressedOpacity="0.6"
+            xct:TouchEffect.AnimationEasing=""
+            xct:TouchEffect.PressedScale="0.75"
+            xct:TouchEffect.NormalBackgroundColor="#FF6666"
+            xct:ShadowEffect.Color="Black"
+            xct:VisualFeedbackEffect.FeedbackColor="Blue"
+            ></Button>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

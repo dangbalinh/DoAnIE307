@@ -9,6 +9,7 @@ using DoAn.Droid;
 using System.Collections.Generic;
 using DoAn.Services;
 using DoAn.Model;
+using DoAn.View;
 
 [assembly : Dependency(typeof(Auth))]
 namespace DoAn.Droid
@@ -177,6 +178,40 @@ namespace DoAn.Droid
 				return false;
 			}
 		}
-	}
+
+        // delete account if user want to
+        public async Task<bool> DeleteAccountAsync()
+        {
+            try
+            {
+                var user = Firebase.Auth.FirebaseAuth.Instance.CurrentUser;
+
+				// signout current user
+                if (SignOutAsync())
+                    Application.Current.MainPage = new NavigationPage(new BeginningPage());
+
+                // delete user from firebase realtime database
+                await userService.DeleteAccount(user.Email);
+
+                await user.DeleteAsync();
+                return true;
+            }
+            catch (FirebaseAuthInvalidUserException e)
+            {
+                e.PrintStackTrace();
+                return false;
+            }
+            catch (FirebaseAuthInvalidCredentialsException e)
+            {
+                e.PrintStackTrace();
+                return false;
+            }
+            catch (FirebaseAuthUserCollisionException e)
+            {
+                e.PrintStackTrace();
+                return false;
+            }
+        }
+    }
 }
 

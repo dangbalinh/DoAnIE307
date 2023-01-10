@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DoAn.OriginalPage.DoneTaskPage.Donetaskpage"
+             NavigationPage.HasNavigationBar="True"
+             >
+             
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Label Text="Completed time"
+             FontSize="22"  
+             FontAttributes="Bold"
+             TextColor="DeepPink"
+             Margin="40,10,0,0"/>
+
+            <CollectionView x:Name="LtsTask" Margin="40,10,20,10" SelectionMode="Single" >
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                           ItemSpacing="15" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding taskDate}" TextColor="DeepPink" FontSize="22"></Label>
+                            <Grid BackgroundColor="#F5F5F5" HeightRequest="70">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="30"></ColumnDefinition>
+                                    <ColumnDefinition Width="210">
+                                    </ColumnDefinition>
+
+                                </Grid.ColumnDefinitions>
+                                <Image Source="check.png" Margin="5,0,0,0">
+
+
+                                </Image>
+                                <Label 
+                                    x:Name="taskLabel"
+                                    Text= "{Binding taskName}" 
+                                    Margin="20,5,0,0"
+                                    FontSize="20"
+                                    TextDecorations="Strikethrough"
+                                    FontAttributes="Bold"
+                                    TextColor="#B7B7B7"
+                                    Grid.Column="1">
+
+
+                                </Label>
+                                <Label 
+                                       x:Name="taskLabelType"
+                                       Text="{Binding taskTime}" 
+                                       Margin="20,40,0,0"
+                                       Grid.Column="1"
+                                       TextColor="#B7B7B7"
+                                       TextDecorations="Strikethrough"
+                                       FontSize="15"
+                                       ></Label>
+                            </Grid>
+                        </StackLayout>
+
+
+
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

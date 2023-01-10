@@ -47,19 +47,26 @@
                                             Tapped="ForgotTap_Tapped"></TapGestureRecognizer>
                     </Label.GestureRecognizers>
                 </Label>
-
-                <Label 
-                        Text="New to Todolista? Register now!"
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label 
+                        Text="New to Todolista?"
                         TextColor="Blue"
-                        HorizontalOptions="Center"
-                        FontSize="Medium"
-                        x:Name="LblRegister"
-                    >
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer x:Name="RegisterTap"
-                                                Tapped="RegisterTap_Tapped"></TapGestureRecognizer>
-                </Label.GestureRecognizers>
-                </Label>
+                        FontSize="20"/>
+
+                    <Label 
+                            Text="Register now!"
+                            TextColor="Blue"
+                            FontSize="20"
+                            FontAttributes="Italic"
+                            TextDecorations="Underline"
+                            x:Name="LblRegister"
+                        >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="RegisterTap"
+                                                    Tapped="RegisterTap_Tapped"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
             </StackLayout>
         
         </StackLayout>

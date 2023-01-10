@@ -23,6 +23,9 @@ namespace DoAn.Interfaces
 
 		// check if a string matches the user password
 		Task<bool> CheckPasswordAsync(string password);
+
+		// deleting account if user want to
+		Task<bool> DeleteAccountAsync();
 	}
 }
 

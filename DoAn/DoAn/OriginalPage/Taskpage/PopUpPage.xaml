@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             Size="300,400"
+             
+             x:Class="DoAn.OriginalPage.Taskpage.PopUpPage">
+    <StackLayout>
+        <Image Source="todoList1.png"></Image>
+        
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+                <Image Source="tag.png" Grid.Column="0"></Image>
+                <Label x:Name="nameLabel" TextColor="Red" Grid.Column="1" FontAttributes="20"></Label>
+            </Grid>
+        
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="3*"></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Image Source="name.png" Grid.Column="0"></Image>
+                <Label x:Name="typeLabel" TextColor="Blue" Grid.Column="1" FontAttributes="20" Margin="0,0,10,0"></Label>
+            </Grid>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Image Source="icon_calendar.png" Grid.Column="0"></Image>
+            <Label x:Name="dateLabel" Grid.Column="1" FontAttributes="20" Margin="0,0,10,0"></Label>
+        </Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Image Source="clock.png" Grid.Column="0"></Image>
+            <Label x:Name="timeLabel" Grid.Column="1" FontAttributes="20" Margin="0,0,10,0"></Label>
+        </Grid>
+    </StackLayout>
+</xct:Popup>

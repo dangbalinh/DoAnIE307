@@ -71,6 +71,15 @@ namespace DoAn.Services
                 return true;
             return false;
         }
+
+        // delete account from database 
+        public async Task<bool> DeleteAccount(string email)
+        {
+            var data = await client.Child("Users").OnceAsync<User>();
+            var user = data.Where(x => x.Object.email == email).FirstOrDefault();
+            await client.Child("Users").Child(user.Key).DeleteAsync();
+            return true;
+        }
     }
 }
 

@@ -53,6 +53,11 @@
                                         CornerRadius="10" HeightRequest="40"
                                         Clicked="Logout_Clicked"/>
 
+                                <!-- Delete account button -->
+                                <Button Text="Delete Account" BackgroundColor="#EB455F" TextColor="White"
+                                        CornerRadius="10" HeightRequest="40"
+                                        Clicked="DeleteAccount_Clicked"/>
+
                             </StackLayout>
 
                         </dxdf:DataFormCustomItem>

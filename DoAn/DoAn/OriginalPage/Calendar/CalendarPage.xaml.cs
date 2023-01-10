@@ -1,43 +1,63 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using Xamarin.Forms;
-using DoAn.Model;
 
-namespace DoAn.OriginalPage
+using Xamarin.Forms;
+
+using DoAn.Services1.Implementations;
+using DoAn.ModelDTO;
+using DoAn.OriginalPage.Taskpage;
+using Xamarin.CommunityToolkit.Extensions;
+
+namespace DoAn.OriginalPage.Calendar
 {
     public partial class CalendarPage : ContentPage
     {
-        public ObservableCollection<Task> listTask;
-        public ObservableCollection<Task> listTaskShow;
+        ToDoImplement toDoImplement;
+        
         public CalendarPage()
         {
             InitializeComponent();
-            listTaskShow = new ObservableCollection<Task>();
-            listTask = new ObservableCollection<Task>();
-            listTaskShow.Add(new DoAn.Model.Task { taskId = 1, taskName = "Do Your Homework", taskType = "Working", taskDate = new DateTime(2012, 6, 12), taskTime = new TimeSpan(23, 23, 23) });
-            listTaskShow.Add(new Task { taskId = 2, taskName = "Do Your Homework", taskType = "Working", taskDate = new DateTime(2012, 6, 12), taskTime = new TimeSpan(23, 23, 23) });
-            listTaskShow.Add(new Task { taskId = 3, taskName = "Do Your Homework", taskType = "Working", taskDate = new DateTime(2012, 6, 12), taskTime = new TimeSpan(23, 23, 23) });
-            listTaskShow.Add(new Task { taskId = 4, taskName = "Do Your Homework", taskType = "Working", taskDate = new DateTime(2012, 6, 12), taskTime = new TimeSpan(23, 23, 23) });
-            listTaskShow.Add(new Task { taskId = 5, taskName = "Do Your Homework", taskType = "Working", taskDate = new DateTime(2012, 6, 12), taskTime = new TimeSpan(23, 23, 23) });
-            LtTask.ItemsSource = listTaskShow;
-        }
-        public CalendarPage(ObservableCollection<Task> listTask)
-        {
-            this.listTask = listTask;
+            toDoImplement = new ToDoImplement();
+            
         }
 
-        private void calendar_DateSelectionChanged(object sender, XCalendar.Models.DateSelectionChangedEventArgs e)
+
+        private async void calendar_DateSelectionChanged(object sender, XCalendar.Models.DateSelectionChangedEventArgs e)
         {
-            DisplayAlert("Date Changed", calendar.SelectedDates[0].ToString(), "OK");
-            foreach (var task in listTask)
+            var item = await toDoImplement.GetListTaskByDate(calendar.SelectedDates[0].ToString("MM/dd/yyyy"));
+            LtsTask.ItemsSource = item;
+
+
+        }
+
+        private async void SWDelete_Invoked(object sender, EventArgs e)
+        {
+            var swipeItem = sender as SwipeItem;
+            var item = swipeItem.CommandParameter as TaskDTO;
+            bool answer = await DisplayAlert("Thông báo", $"Bạn có muốn xóa không?", "Yes", "No");
+            if (answer)
             {
-                if (task.taskDate == calendar.SelectedDates[0].Date)
-                {
-                    listTaskShow.Add(task);
-                }
-
+                await toDoImplement.DeleteTodoItem(item.taskId);
             }
+            
+        }
+
+        private async void SWDetail_Invoked(object sender, EventArgs e)
+        {
+            var swipeItem = sender as SwipeItem;
+            var item = swipeItem.CommandParameter as TaskDTO;
+            await Navigation.ShowPopupAsync(new PopUpPage(item));
+        }
+
+        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            ((Image)sender).Source = ImageSource.FromFile("verified.png");
+        }
+
+        private void SWEdit_Invoked(object sender, EventArgs e)
+        {
+            var swipeItem = sender as SwipeItem;
+            var item = swipeItem.CommandParameter as TaskDTO;
+            Navigation.PushAsync(new EntryTaskPage(item.taskId, item));
         }
     }
 }

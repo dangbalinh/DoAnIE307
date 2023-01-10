@@ -6,6 +6,7 @@ using Firebase.Auth;
 using DoAn.iOS;
 using Foundation;
 using DoAn.Services;
+using DoAn.View;
 
 [ assembly : Dependency(typeof(AuthIOS))]
 namespace DoAn.iOS
@@ -121,6 +122,29 @@ namespace DoAn.iOS
 				return false;
 			}
 		}
+
+        // delete user account if user want to
+        public async Task<bool> DeleteAccountAsync()
+        {
+            try
+            {
+                var user = Auth.DefaultInstance.CurrentUser;
+
+                // signout current user and navigate to beginning page
+                if (SignOutAsync())
+					App.Current.MainPage = new NavigationPage(new BeginningPage());
+
+
+                // delete user from firebase realtime database
+                await userService.DeleteAccount(user.Email);
+                await user.DeleteAsync();
+                return true;
+            }
+            catch (Exception e)
+            {
+                return false;
+            }
+        }
     }
 }
 

@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("DoAn.OriginalPage.Calendar.CalendarPage.xaml", "OriginalPage/Calendar/CalendarPage.xaml", typeof(global::DoAn.OriginalPage.CalendarPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("DoAn.OriginalPage.Calendar.CalendarPage.xaml", "OriginalPage/Calendar/CalendarPage.xaml", typeof(global::DoAn.OriginalPage.Calendar.CalendarPage))]
 
-namespace DoAn.OriginalPage {
+namespace DoAn.OriginalPage.Calendar {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("OriginalPage/Calendar/CalendarPage.xaml")]
@@ -20,13 +20,13 @@ namespace DoAn.OriginalPage {
         private global::XCalendar.CalendarView calendar;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.CollectionView LtTask;
+        private global::Xamarin.Forms.CollectionView LtsTask;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(CalendarPage));
             calendar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::XCalendar.CalendarView>(this, "calendar");
-            LtTask = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CollectionView>(this, "LtTask");
+            LtsTask = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CollectionView>(this, "LtsTask");
         }
     }
 }

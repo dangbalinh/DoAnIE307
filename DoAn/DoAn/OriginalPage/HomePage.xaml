@@ -2,7 +2,8 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DoAn.OriginalPage.HomePage"
-             xmlns:view="clr-namespace:DoAn.OriginalPage"
+             xmlns:viewTaskpage="clr-namespace:DoAn.OriginalPage.Taskpage"
+             xmlns:viewCalendar="clr-namespace:DoAn.OriginalPage.Calendar"
              xmlns:viewBookings="clr-namespace:DoAn.OriginalPage.Booking"
              xmlns:tipsView="clr-namespace:DoAn.OriginalPage.Tips"
              xmlns:schedulerView="clr-namespace:DoAn.OriginalPage.Scheduler"
@@ -11,12 +12,12 @@
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              android:TabbedPage.ToolbarPlacement="Bottom"
              SelectedTabColor="Black"
-             UnselectedTabColor="White"
-             BarBackgroundColor="#AAC4FF"
+             UnselectedTabColor="#4B56D2"
+             BarBackgroundColor="#EEF1FF"
              >
    
-    <view:TaskPage Title="Tasks" IconImageSource="task"/>
-    <view:CalendarPage Title="Calendar" IconImageSource="calendar" />
+    <viewTaskpage:TaskPage Title="Tasks" IconImageSource="task"/>
+    <viewCalendar:CalendarPage Title="Calendar" IconImageSource="calendar" />
     <schedulerView:SchedulerPage Title="Scheduler" IconImageSource="scheduler" />
     <tipsView:TipPage Title="Tips" IconImageSource="advice" />
     <viewBookings:BookingPage Title="Booking" IconImageSource="booking" />

@@ -167,5 +167,6 @@
     <BundleResource Include="failed-red.json" />
     <BundleResource Include="scanning-failed.json" />
     <BundleResource Include="not-found-alt.json" />
+    <BundleResource Include="green-bye.json" />
   </ItemGroup>
 </Project>

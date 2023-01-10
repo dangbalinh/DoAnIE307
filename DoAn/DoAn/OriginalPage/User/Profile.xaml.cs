@@ -6,6 +6,8 @@ using DevExpress.XamarinForms.DataForm;
 using Xamarin.Forms;
 using DoAn.Interfaces;
 using DoAn.Services;
+using Xamarin.CommunityToolkit.Extensions;
+using DoAn.PopupPages;
 
 namespace DoAn.OriginalPage.User
 {
@@ -65,6 +67,23 @@ namespace DoAn.OriginalPage.User
         void ChangePassword_Clicked(System.Object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new ChangePassword());
+        }
+
+        async void DeleteAccount_Clicked(System.Object sender, System.EventArgs e)
+        {
+            // display alert to confirm deleting action
+            var result = await DisplayAlert("Delete Account", "Are you sure you want to delete your account?", "Yes", "No");
+            if (!result)
+                return;
+
+            string email = auth.GetEmail();
+
+            if (await auth.DeleteAccountAsync())
+                Navigation.ShowPopup(new GoodByePopup());
+            else
+                Navigation.ShowPopup(new FailedActionPopup("Some thing went wrong! Please try again."));
+
+     
         }
 
         void RefreshView_Refreshing(System.Object sender, System.EventArgs e)

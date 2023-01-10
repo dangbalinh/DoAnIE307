@@ -45,10 +45,10 @@
                         <BoxView HeightRequest="1" VerticalOptions="Start" HorizontalOptions="FillAndExpand" BackgroundColor="#E4E4E4"/>
                         <StackLayout Orientation="Horizontal" Spacing="30" HorizontalOptions="Center">
                             <StackLayout>
-                                <pv:PancakeView BackgroundColor="#E9E9E9" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
+                                <pv:PancakeView BackgroundColor="#FFCCE5" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
                                     <Image WidthRequest="16" HeightRequest="16" Source="phone.png" HorizontalOptions="Center" VerticalOptions="Center"/>
                                 </pv:PancakeView>
-                                <Label Text="Call" TextColor="#8D8D8D" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center">
+                                <Label Text="Call" TextColor="DeepPink" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center">
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer x:Name="CallTap" Tapped="CallTap_Tapped"></TapGestureRecognizer>
                                     </Label.GestureRecognizers>
@@ -56,11 +56,11 @@
 
                             </StackLayout>
                             <StackLayout>
-                                <pv:PancakeView BackgroundColor="#E9E9E9" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
+                                <pv:PancakeView BackgroundColor="#FFCCE5" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
                                     <Image WidthRequest="16" HeightRequest="16" Source="email.png" HorizontalOptions="Center" VerticalOptions="Center"/>
                                 </pv:PancakeView>
 
-                                <Label Text="Email" TextColor="#8D8D8D" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center">
+                                <Label Text="Email" TextColor="DeepPink" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center">
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer x:Name="EmailTap"
                                                  Tapped="EmailTap_Tapped"></TapGestureRecognizer>
@@ -68,10 +68,17 @@
                                 </Label>
                             </StackLayout>
                             <StackLayout>
-                                <pv:PancakeView BackgroundColor="#E9E9E9" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
+                                <pv:PancakeView BackgroundColor="#FFCCE5" HeightRequest="50" WidthRequest="50" CornerRadius="30" HorizontalOptions="Center">
                                     <Image WidthRequest="16" HeightRequest="16" Source="map.png" HorizontalOptions="Center" VerticalOptions="Center"/>
                                 </pv:PancakeView>
-                                <Label Text="Map View" TextColor="#8D8D8D" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center"/>
+
+                                <Label Text="Map View" TextColor="DeepPink" FontSize="14" FontFamily="ThemeFontMedium" HorizontalTextAlignment="Center">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer x:Name="MapTap" Tapped="MapTap_Tapped">
+                                            
+                                        </TapGestureRecognizer>
+                                    </Label.GestureRecognizers>
+                                </Label>
                             </StackLayout>
 
                         </StackLayout>
@@ -89,7 +96,11 @@
                         <pv:GradientStop Color="#FE93C5" Offset="1" />
                     </pv:GradientStopCollection>
                 </pv:PancakeView.BackgroundGradientStops>
-                <Label Text="Book Now" TextColor="White" FontSize="15" FontFamily="ThemeFontBold" VerticalOptions="Center" HorizontalTextAlignment="Center"/>
+                <Label Text="Add To Do List" TextColor="White" FontSize="15" FontFamily="ThemeFontBold" VerticalOptions="Center" HorizontalTextAlignment="Center">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="AddTodoList" Tapped="AddTodoList_Tapped"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
             </pv:PancakeView>
         </Grid>
     </StackLayout>
