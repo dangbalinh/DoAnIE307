@@ -117,6 +117,10 @@ namespace DoAn.OriginalPage.Scheduler
         {
             SchedulerView.IsRefreshing = false;
         }
+
+        void Button_Clicked(System.Object sender, System.EventArgs e)
+        {
+        }
     }
 }
 

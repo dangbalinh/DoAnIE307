@@ -8,6 +8,8 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using DoAn.Interfaces;
+using Xamarin.CommunityToolkit.Extensions;
+using DoAn.PopupPages;
 namespace DoAn.View
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -41,38 +43,47 @@ namespace DoAn.View
 
         private async void BtnChangePassword_Clicked(object sender, EventArgs e)
         {
-            // check if the current password is correct
-            if(!(await auth.CheckPasswordAsync(changePasswordInFo.CurrentPassword)))
+            try
             {
-                await DisplayAlert("Change Password", "Current password is incorrect", "Ok");
-                return;
+                // check if the current password is correct
+                if (!(await auth.CheckPasswordAsync(changePasswordInFo.CurrentPassword)))
+                {
+                    Navigation.ShowPopup(new FailedActionPopup("Current password is incorrect"));
+                    return;
+                }
+
+                // check if the new password is valid
+                if (changePasswordInFo.NewPassword != changePasswordInFo.ConfirmPassword)
+                {
+                    Navigation.ShowPopup(new FailedActionPopup("Confirm password do not match password"));
+                    return;
+                }
+                else if (changePasswordInFo.NewPassword.Length < 6)
+                {
+                    Navigation.ShowPopup(new FailedActionPopup("Password must be at least 6 characters"));
+                    return;
+                }
+                else if (changePasswordInFo.NewPassword == changePasswordInFo.CurrentPassword)
+                {
+                    Navigation.ShowPopup(new FailedActionPopup("New password must be different from current password"));
+                    return;
+                }
+
+                // change password
+                if (await auth.ChangePasswordAsync(auth.GetEmail(), changePasswordInFo.CurrentPassword, changePasswordInFo.NewPassword))
+                {
+                    Navigation.ShowPopup(new SuccessPopup("Password has been changed"));
+                    await Navigation.PopAsync();
+                }
+                else
+                    Navigation.ShowPopup(new FailedActionPopup("Password Change failed"));
+            } catch (Exception ex)
+            {
+                Navigation.ShowPopup(new FailedActionPopup($"Error: {ex.Message}"));
+
             }
 
-            // check if the new password is valid
-            if (changePasswordInFo.NewPassword != changePasswordInFo.ConfirmPassword)
-            {
-                await DisplayAlert("Change Password", "Confirm password not match.", "Ok");
-                return;
-            } else if (changePasswordInFo.NewPassword.Length < 6)
-            {
-                await DisplayAlert("Change Password", "Password must be at least 6 characters", "Ok");
-                return;
-            } else if (changePasswordInFo.NewPassword == changePasswordInFo.CurrentPassword)
-            {
-                await DisplayAlert("Change Password", "New password must be different from current password", "Ok");
-                return;
-            }
 
-            // change password
-            if (await auth.ChangePasswordAsync(auth.GetEmail(), changePasswordInFo.CurrentPassword, changePasswordInFo.NewPassword))
-            {
-                await DisplayAlert("Change Password", "Password has been changed.", "Ok");
-                await Navigation.PopAsync();
-            }
-            else
-            {
-                await DisplayAlert("Change Password", "Password Change failed.", "Ok");
-            }
         }
 
         void dataForm_ValidateProperty(System.Object sender, DevExpress.XamarinForms.DataForm.DataFormPropertyValidationEventArgs e)

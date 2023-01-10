@@ -13,7 +13,8 @@ using Xamarin.Forms;
 using DoAn.Services;
 
 namespace SchedulerExample.AppointmentPages {
-    public class CustomAppointmentEditViewModel : NotifyPropertyChangedBase {
+    public class CustomAppointmentEditViewModel : NotifyPropertyChangedBase, INotifyPropertyChanged
+    {
         const string SelectAppointmentTypeTitle = "This is a recurring appointment.";
         const string EditOccurrenceAction = "Change this appointment only";
         const string EditFutureOccurrencesAction = "Change this and all future appointments";
@@ -400,7 +401,12 @@ namespace SchedulerExample.AppointmentPages {
 
         async void PopulateActualAppointment() {
             PopulateAppointmentValues(appointment);
-            storage.RefreshData();
+            //storage.RefreshData();
+            //// update appointment info that have just been updated from customAppoitmentEditPage
+            //storage.GetAppointmentItemById(appointment.Id);
+            // refresh the information of the updated appointment in the storage
+            
+
 
             MedicalAppointment updatedAppoitment = new MedicalAppointment
             {

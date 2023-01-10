@@ -61,6 +61,16 @@ namespace DoAn.Services
             var image = await firebaseStorage.Child("Images").Child(filePath).PutAsync(img);
             return image;
         }
+
+        // checking if a email is already registered
+        public async Task<bool> CheckEmail(string email)
+        {
+            var data = await client.Child("Users").OnceAsync<User>();
+            var user = data.Where(x => x.Object.email == email).FirstOrDefault();
+            if (user != null)
+                return true;
+            return false;
+        }
     }
 }
 

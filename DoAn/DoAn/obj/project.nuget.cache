@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "+1v8fxz+dNZ6ihBeOVlhW+xVLQCg0AidrUHp/ycJGpPCSqbrTba3PPe8D/T3HT5NcFX7xlmZYjFj892cVc9QiA==",
+  "dgSpecHash": "agnvfh7JBJ+WMxmVy/latwARn9A78NrSYEjnaxPYudlS50ULusiW3/fRCBm21dYQ3Bb3l6IxwVKWmGjBnyEvCg==",
   "success": true,
   "projectFilePath": "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/DoAn.csproj",
   "expectedPackageFiles": [
@@ -65,7 +65,7 @@
     "/Users/cuhoangng/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/system.threading.thread/4.3.0/system.threading.thread.4.3.0.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/xam.plugin.media/5.0.1/xam.plugin.media.5.0.1.nupkg.sha512",
-    "/Users/cuhoangng/.nuget/packages/xamarin.communitytoolkit/1.3.0/xamarin.communitytoolkit.1.3.0.nupkg.sha512",
+    "/Users/cuhoangng/.nuget/packages/xamarin.communitytoolkit/2.0.5/xamarin.communitytoolkit.2.0.5.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/xamarin.essentials/1.7.4/xamarin.essentials.1.7.4.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/xamarin.forms/5.0.0.2545/xamarin.forms.5.0.0.2545.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/xamarin.forms.pancakeview/2.3.0.759/xamarin.forms.pancakeview.2.3.0.759.nupkg.sha512",

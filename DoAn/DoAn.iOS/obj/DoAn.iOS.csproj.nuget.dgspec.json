@@ -58,6 +58,10 @@
               "target": "Package",
               "version": "[5.0.1, )"
             },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[2.0.5, )"
+            },
             "Xamarin.Essentials": {
               "target": "Package",
               "version": "[1.7.4, )"
@@ -162,6 +166,10 @@
             "Xam.Plugin.Media": {
               "target": "Package",
               "version": "[5.0.1, )"
+            },
+            "Xamarin.CommunityToolkit": {
+              "target": "Package",
+              "version": "[2.0.5, )"
             },
             "Xamarin.Essentials": {
               "target": "Package",

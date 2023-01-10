@@ -6,25 +6,27 @@
     x:Class="DoAn.OriginalPage.Scheduler.SchedulerPage">
 
     <RefreshView Refreshing="SchedulerView_Refreshing" x:Name="SchedulerView">
-        <dxsch:DayView x:Name="Scheduler" ShowWorkTimeOnly="True" Tap="Scheduler_Tap"
-                       WorkTime="8:00:00-23:59:59">
-            <dxsch:DayView.DataStorage>
-                <dxsch:SchedulerDataStorage x:Name="SchedulerDataStorage">
-                    <dxsch:SchedulerDataStorage.DataSource>
-                        <dxsch:DataSource>
-                            <dxsch:DataSource.AppointmentMappings>
-                                <dxsch:AppointmentMappings 
-                                Id="Id" 
-                                Start="StartTime" 
-                                End="EndTime" 
-                                Subject="Subject"
-                                LabelId="LabelId"
-                                Location="Location"/>
-                            </dxsch:DataSource.AppointmentMappings>
-                        </dxsch:DataSource>
-                    </dxsch:SchedulerDataStorage.DataSource>
-                </dxsch:SchedulerDataStorage>
-            </dxsch:DayView.DataStorage>
-        </dxsch:DayView>
+        <StackLayout>
+            <dxsch:DayView x:Name="Scheduler" ShowWorkTimeOnly="True" Tap="Scheduler_Tap"
+                           WorkTime="8:00:00-23:59:59">
+                <dxsch:DayView.DataStorage>
+                    <dxsch:SchedulerDataStorage x:Name="SchedulerDataStorage">
+                        <dxsch:SchedulerDataStorage.DataSource>
+                            <dxsch:DataSource>
+                                <dxsch:DataSource.AppointmentMappings>
+                                    <dxsch:AppointmentMappings 
+                                    Id="Id" 
+                                    Start="StartTime" 
+                                    End="EndTime" 
+                                    Subject="Subject"
+                                    LabelId="LabelId"
+                                    Location="Location"/>
+                                </dxsch:DataSource.AppointmentMappings>
+                            </dxsch:DataSource>
+                        </dxsch:SchedulerDataStorage.DataSource>
+                    </dxsch:SchedulerDataStorage>
+                </dxsch:DayView.DataStorage>
+            </dxsch:DayView>
+        </StackLayout>
     </RefreshView>
 </ContentPage>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xct:Popup
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+    Size="300,300"
+    xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms" 
+    BackgroundColor="#EEF1FF"
+    x:Class="DoAn.PopupPages.FailedActionPopup">
+    <StackLayout Padding="20">
+        <Label x:Name="TitleLabel" TextColor="#FF6464"
+               FontAttributes="Bold" FontSize="20"/>
+        <forms:AnimationView
+            x:Name="animationView"
+            Animation="not-found-alt.json"
+            HeightRequest="150"
+            AutoPlay="True"
+            RepeatCount="5"
+            RepeatMode="Infinite"
+            VerticalOptions="CenterAndExpand"
+            Speed="3"
+        />
+
+        <Button Text="Close" x:Name="Dismiss" Clicked="Dismiss_Clicked"
+                CornerRadius="20" BackgroundColor="#FF6464" HorizontalOptions="Center"/>
+
+    </StackLayout>
+</xct:Popup>
+

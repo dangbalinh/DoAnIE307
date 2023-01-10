@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using DoAn.Interfaces;
+using DoAn.PopupPages;
+using Xamarin.CommunityToolkit.Extensions;
+
 
 namespace DoAn.View
 {
@@ -43,51 +46,29 @@ namespace DoAn.View
 
         }
 
-        private async void ButtonRegister_Clicked(object sender, EventArgs e)
+        private void ButtonRegister_Clicked(object sender, EventArgs e)
         {
             try
             {
-                if (String.IsNullOrEmpty(registerInFo.Name))
+                if (String.IsNullOrEmpty(registerInFo.Name) || String.IsNullOrEmpty(registerInFo.Email) ||
+                    String.IsNullOrEmpty(registerInFo.Password) || String.IsNullOrEmpty(registerInFo.ConfirmPassword))
                 {
-                    await DisplayAlert("Warning", "Type name", "Ok");
-                    return;
-                }
-                if (String.IsNullOrEmpty(registerInFo.Email))
-                {
-                    await DisplayAlert("Warning", "Type email", "Ok");
-                    return;
-                }
-                if (registerInFo.Password.Length < 6)
-                {
-                    await DisplayAlert("Warning", "Password should be 6 digit.", "Ok");
-                    return;
-                }
-                if (String.IsNullOrEmpty(registerInFo.Password))
-                {
-                    await DisplayAlert("Warning", "Type password", "Ok");
-                    return;
-                }
-                if (String.IsNullOrEmpty(registerInFo.ConfirmPassword))
-                {
-                    await DisplayAlert("Warning", "Type Confirm password", "Ok");
-                    return;
-                }
-                if (registerInFo.Password != registerInFo.ConfirmPassword)
-                {
-                    await DisplayAlert("Warning", "Password not match.", "Ok");
+                    Navigation.ShowPopup(new FailedActionPopup("All input fields are required"));
                     return;
                 }
 
-                //bool isSave = await _userRepository.Register(email, name, password);
-                //if (isSave)
-                //{
-                //    await DisplayAlert("Register user", "Registration completed", "Ok");
-                //    await Navigation.PopModalAsync();
-                //}
-                //else
-                //{
-                //    await DisplayAlert("Register user", "Registration failed", "Ok");
-                //}
+                if (registerInFo.Password.Length < 6)
+                {
+                    Navigation.ShowPopup(new FailedActionPopup("Password should be >= 6 digit"));
+                    return;
+                }
+
+                if (registerInFo.Password != registerInFo.ConfirmPassword)
+                {
+                    Navigation.ShowPopup(new FailedActionPopup("Password not match."));
+                    return;
+                }
+
 
                 var user = auth.RegisterAsync(registerInFo.Email, registerInFo.Password, registerInFo.Name);
                 if (user != null)
@@ -96,18 +77,17 @@ namespace DoAn.View
                     if (signOut)
                         Application.Current.MainPage = new NavigationPage(new LoginPage());
                 }
+                else
+                {
+                    Navigation.ShowPopup(new FailedActionPopup("Some thing went wrong!"));
+                }
             }
             catch (Exception exception)
             {
                 if (exception.Message.Contains("EMAIL_EXISTS"))
-                {
-                    await DisplayAlert("Warning", "Email exist", "Ok");
-                }
+                    Navigation.ShowPopup(new FailedActionPopup("Email exist"));
                 else
-                {
-                    await DisplayAlert("Error", exception.Message, "Ok");
-                }
-
+                    Navigation.ShowPopup(new FailedActionPopup($"Error: {exception.Message}"));
             }
         }
 

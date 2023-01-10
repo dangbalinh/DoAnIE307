@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using DoAn.Interfaces;
+using Xamarin.CommunityToolkit.Extensions;
+using DoAn.PopupPages;
+using DoAn.Services;
 
 namespace DoAn.View
 {
@@ -14,49 +17,35 @@ namespace DoAn.View
     public partial class ForgotPasswordPage : ContentPage
     {
         IAuth auth;
-        //UserRepository _userRepository = new UserRepository();
+        readonly UserService userService;
 
         public ForgotPasswordPage()
         {
             InitializeComponent();
             auth = DependencyService.Resolve<IAuth>();
-            //auth = DependencyService.Get<IAuth>();
+            userService = new UserService();
         }
-
-        //private async void ButtonSendLink_Clicked(object sender, EventArgs e)
-        //{
-        //    string email = TxtEmail.Text;
-        //    if (string.IsNullOrEmpty(email))
-        //    {
-        //        await DisplayAlert("Warning", "Please enter your email.", "Ok");
-        //        return;
-        //    }
-
-        //    bool isSend = await _userRepository.ResetPassword(email);
-        //    if (isSend)
-        //    {
-        //        await DisplayAlert("Reset Password", "Send link in your email.", "Ok");
-        //        //await Navigation.PopModalAsync();
-        //    }
-        //    else
-        //    {
-        //        await DisplayAlert("Reset Password", "Link send failed.", "Ok");
-        //    }
-        //}
 
         private async void ButtonSendLink_Clicked(object sender, EventArgs e)
         {
             string email = TxtEmail.Text;
-            if (string.IsNullOrEmpty(email))
+            if (!System.Text.RegularExpressions.Regex.IsMatch(email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$")){
+                // email is not valid
+                Navigation.ShowPopup(new FailedActionPopup("Email is not valid"));
+                return;
+            } else if (await userService.CheckEmail(email))
             {
-                await DisplayAlert("Warning", "Please enter your email.", "Ok");
+                // email don't exsist
+                Navigation.ShowPopup(new FailedActionPopup("This email di not exsist"));
                 return;
             }
+            
 
             if (await auth.ResetPasswordAsync(email))
-                await DisplayAlert("Reset Password", "Send link in your email.", "Ok");
+                Navigation.ShowPopup(new SuccessPopup("Send link in your email"));
             else
-                await DisplayAlert("Reset Password", "Link send failed.", "Ok");
+                Navigation.ShowPopup(new FailedActionPopup("Link send failed"));
+
 
         }
     }

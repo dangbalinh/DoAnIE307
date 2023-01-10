@@ -5,7 +5,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using DoAn.OriginalPage;
 using DoAn.Interfaces;
-
+using Xamarin.CommunityToolkit.Extensions;
+using DoAn.PopupPages;
 
 namespace DoAn.View
 {
@@ -41,33 +42,21 @@ namespace DoAn.View
         {
             try
             {
-                if (String.IsNullOrEmpty(loginInfo.Email))
-                {
-                    await DisplayAlert("Warning", "Enter your email", "Ok");
-                    return;
-                }
-
-                if (String.IsNullOrEmpty(loginInfo.Password))
-                {
-                    await DisplayAlert("Warning", "Enter your password", "Ok");
-                    return;
-                }
-
                 string token = await auth.LoginAsync(loginInfo.Email, loginInfo.Password);
                 if (token != string.Empty)
                     Application.Current.MainPage = new NavigationPage(new HomePage());
                 else
-                    await DisplayAlert("Error", "Credentials are incorrect", "Ok");
+                    Navigation.ShowPopup(new LoginFailedPopup());
                 
             }
             catch (Exception exception)
             {
                 if (exception.Message.Contains("EMAIL_NOT_FOUND"))
-                    await DisplayAlert("Unauthorized", "Email not found", "ok");
+                    Navigation.ShowPopup(new FailedActionPopup("Unauthorized: Email not found"));
                 else if (exception.Message.Contains("INVALID_PASSWORD"))
-                    await DisplayAlert("Unauthorized", "Password incorrect", "ok");
+                    Navigation.ShowPopup(new FailedActionPopup("Unauthorized: Password incorrect"));
                 else
-                    await DisplayAlert("Error", exception.Message, "ok");
+                    Navigation.ShowPopup(new FailedActionPopup($"Error: {exception.Message}"));
             }
 
         }

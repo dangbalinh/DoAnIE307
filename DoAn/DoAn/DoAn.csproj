@@ -24,6 +24,7 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="1.1.2" />
     <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
     <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.5" />
   </ItemGroup>
 
   <ItemGroup>
@@ -65,7 +66,6 @@
     <None Remove="Services\" />
     <None Remove="DevExpress.XamarinForms.Scheduler" />
     <None Remove="OriginalPage\Scheduler\" />
-    <None Remove="ViewModels\" />
     <None Remove="OriginalPage\Task\" />
     <None Remove="OriginalPage\Calendar\" />
     <None Remove="OriginalPage\User\" />
@@ -73,17 +73,19 @@
     <None Remove="Interfaces\" />
     <None Remove="Xam.Plugin.Media" />
     <None Remove="FirebaseStorage.net" />
+    <None Remove="Xamarin.CommunityToolkit" />
+    <None Remove="PopupPages\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OriginalPage\Tips\" />
     <Folder Include="Model\" />
     <Folder Include="Services\" />
     <Folder Include="OriginalPage\Scheduler\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="OriginalPage\Task\" />
     <Folder Include="OriginalPage\Calendar\" />
     <Folder Include="OriginalPage\User\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="PopupPages\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="OriginalPage\Tips\TipPage.xaml.cs">

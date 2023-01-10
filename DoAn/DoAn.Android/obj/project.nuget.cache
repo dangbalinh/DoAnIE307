@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gfarXHtIeq+pu6a7e0h4Sjea74255ZBDznGssGD9GPFBbCV9vHF2/IDHiUQVTvDouczDvjbr40/HtkxF3Z/Siw==",
+  "dgSpecHash": "kdk1sKK4N8oEO9XzYJFoqYkTgypPfwoXY+vThrcYYse2YySQsAYY5m9KjDcF1d9bPQr/cbzDSBkEE7fC9ga40w==",
   "success": true,
   "projectFilePath": "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn.Android/DoAn.Android.csproj",
   "expectedPackageFiles": [
@@ -144,7 +144,7 @@
     "/Users/cuhoangng/.nuget/packages/xamarin.androidx.viewpager/1.0.0.14/xamarin.androidx.viewpager.1.0.0.14.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/xamarin.androidx.viewpager2/1.0.0.10/xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/xamarin.build.download/0.11.4/xamarin.build.download.0.11.4.nupkg.sha512",
-    "/Users/cuhoangng/.nuget/packages/xamarin.communitytoolkit/1.3.0/xamarin.communitytoolkit.1.3.0.nupkg.sha512",
+    "/Users/cuhoangng/.nuget/packages/xamarin.communitytoolkit/2.0.5/xamarin.communitytoolkit.2.0.5.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/xamarin.essentials/1.7.4/xamarin.essentials.1.7.4.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/xamarin.firebase.analytics/121.1.1/xamarin.firebase.analytics.121.1.1.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/xamarin.firebase.annotations/116.1.0/xamarin.firebase.annotations.116.1.0.nupkg.sha512",

@@ -41,15 +41,6 @@ namespace DoAn.OriginalPage.User
             Init();
         }
 
-        //protected override async void OnAppearing()
-        //{
-        //    base.OnAppearing();
-        //    user = await userService.GetUser(auth.GetEmail());
-        //    displayedInfo = new DisplayedInfo(user);
-        //    dataForm.DataObject = displayedInfo;
-        //    BindingContext = user;
-        //}
-
         async void Init()
         {
             user = await userService.GetUser(auth.GetEmail());
@@ -68,7 +59,7 @@ namespace DoAn.OriginalPage.User
             var signOut = auth.SignOutAsync();
 
             if (signOut)
-                Application.Current.MainPage = new BeginningPage();
+                Application.Current.MainPage = new NavigationPage(new BeginningPage());
         }
 
         void ChangePassword_Clicked(System.Object sender, System.EventArgs e)

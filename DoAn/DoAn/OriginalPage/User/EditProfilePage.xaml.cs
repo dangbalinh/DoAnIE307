@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using DoAn.Interfaces;
 using DoAn.Services;
 using DoAn.Model;
-
+using DoAn.PopupPages;
 using Xamarin.Forms;
 using DevExpress.XamarinForms.DataForm;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using System.IO;
+using Xamarin.CommunityToolkit.Extensions;
 
 namespace DoAn.OriginalPage.User
 {
@@ -78,9 +79,11 @@ namespace DoAn.OriginalPage.User
                 img = userInfo.Image,
             };
 
-            await userService.UpdateUser(user);
+            if (await userService.UpdateUser(user))
+                Navigation.ShowPopup(new SuccessPopup("Update successfully"));
 
-            await DisplayAlert("Success", "Your profile has been updated", "OK");
+            // reload 
+            
             await Navigation.PopAsync();
         }
 

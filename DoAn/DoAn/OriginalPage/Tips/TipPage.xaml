@@ -7,13 +7,15 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout
-                Padding="5,10,5,10">
+                Padding="15">
                 <StackLayout Orientation="Horizontal">
                     <Label Text="Great tips for you" FontSize="Title" FontAttributes="Bold"
-                           TextColor="Black" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+                           TextColor="#B1B2FF" VerticalOptions="Center"
+                           HorizontalOptions="StartAndExpand"/>
 
-                    <Button Text="Get more tips" x:Name="MoreTips" Clicked="MoreTips_Clicked"
-                            CornerRadius="30" Background="#FBC252" FontSize="Micro" HorizontalOptions="End"/>
+                    <Button Text="More tips" x:Name="MoreTips" Clicked="MoreTips_Clicked"
+                            CornerRadius="30" Background="#D2DAFF" FontSize="Small"
+                            HorizontalOptions="End" TextTransform="None"/>
                 </StackLayout>
 
                 <CarouselView x:Name="TipsCarouselView" IndicatorView="TipsIndicatorView"
@@ -27,7 +29,7 @@
                                        CornerRadius="5"
                                        Margin="20"
                                        HeightRequest="250"
-                                       HorizontalOptions="Center">
+                                       HorizontalOptions="CenterAndExpand">
                                     <StackLayout>
                                         <Label Text="{Binding Title}"
                                                FontSize="Large"
