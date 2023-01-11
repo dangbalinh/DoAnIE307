@@ -27,23 +27,9 @@ namespace DoAn.OriginalPage.Taskpage
             ToDoImplement = new ToDoImplement();
             doneTodoImplement = new DoneTodoImplement();
             InitializeComponent();
-            //Device.StartTimer(TimeSpan.FromSeconds(1), ShowNotification);
             ListTask();
-            //this.BindingContext = this;
         }
-        bool ShowNotification()
-        {
-            foreach (var task in listTask)
-            {
-                if (DateTime.Now.TimeOfDay >= task.taskTime)
-                {
-                    DisplayAlert(task.taskType, task.taskName, "5Ting!!!!!");
-                }
-            }
-            return true;
 
-
-        }
         private void ListTask()
         {
             listTask = new ObservableCollection<TaskToDo>();
@@ -99,7 +85,6 @@ namespace DoAn.OriginalPage.Taskpage
             }
             else
             {
-
                 LtsTask.ItemsSource = await ToDoImplement.GetListTaskByType(typeTask);
             }
 
@@ -133,6 +118,8 @@ namespace DoAn.OriginalPage.Taskpage
             var item = swipeItem.CommandParameter as TaskDTO;
             await doneTodoImplement.AddDoneTodoItem(item);
             await ToDoImplement.DeleteTodoItem(item.taskId);
+            var allItems = await ToDoImplement.GetAllTodoItems();
+            LtsTask.ItemsSource = allItems;
         }
     }
 }

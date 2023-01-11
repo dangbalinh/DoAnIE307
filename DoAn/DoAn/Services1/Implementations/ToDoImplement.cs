@@ -28,7 +28,7 @@ namespace DoAn.Services1.Implementations
                 taskType = f.Object.taskType,
                 taskDate = f.Object.taskDate,
                 taskTime = f.Object.taskTime,
-                user_email = f.Object.user_email,
+                //user_email = f.Object.user_email,
             }).ToList();
         }
 

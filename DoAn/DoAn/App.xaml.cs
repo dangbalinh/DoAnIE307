@@ -4,6 +4,11 @@ using Xamarin.Forms;
 using DoAn.View;
 using DoAn.OriginalPage;
 using DoAn.Interfaces;
+using Plugin.SharedTransitions;
+
+[assembly: ExportFont("KleeOne-Regular.ttf", Alias = "kleeFont")]
+
+[assembly: ExportFont("DancingScript-Regular.ttf", Alias = "dancingFont")]
 namespace DoAn
 {
     public partial class App : Application
@@ -16,9 +21,9 @@ namespace DoAn
             auth = DependencyService.Get<IAuth>();
 
             if (auth.IsLoggedInAsync())
-                MainPage = new NavigationPage(new HomePage());
+                MainPage = new SharedTransitionNavigationPage(new HomePage());
 
-            MainPage = new NavigationPage(new BeginningPage());
+            MainPage = new SharedTransitionNavigationPage(new BeginningPage());
         }
 
         protected override void OnStart()
