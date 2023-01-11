@@ -12,6 +12,7 @@ using DoAn.OriginalPage.User;
 using Firebase.Database.Query;
 using Firebase.Storage;
 using System.IO;
+using DoAn.Model;
 
 namespace DoAn.Services
 {
@@ -78,6 +79,20 @@ namespace DoAn.Services
             var data = await client.Child("Users").OnceAsync<User>();
             var user = data.Where(x => x.Object.email == email).FirstOrDefault();
             await client.Child("Users").Child(user.Key).DeleteAsync();
+
+            // delete all tasks of this user
+            var dataTask = await client.Child("Tasks").OnceAsync<TaskToDo>();
+            var tasks = dataTask.Where(x => x.Object.user_email == email).ToList();
+            foreach (var task in tasks)
+                await client.Child("Tasks").Child(task.Key).DeleteAsync();
+            
+
+            // delete all appointments of this user
+            var dataAppointment = await client.Child("Appointments").OnceAsync<MedicalAppointment>();
+            var appointments = dataAppointment.Where(x => x.Object.User_email == email).ToList();
+            foreach (var appointment in appointments)
+                await client.Child("Appointments").Child(appointment.Key).DeleteAsync();
+
             return true;
         }
     }

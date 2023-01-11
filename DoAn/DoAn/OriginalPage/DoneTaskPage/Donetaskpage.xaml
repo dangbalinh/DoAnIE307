@@ -23,17 +23,15 @@
                     <DataTemplate>
                         <StackLayout>
                             <Label Text="{Binding taskDate}" TextColor="DeepPink" FontSize="22"></Label>
-                            <Grid BackgroundColor="#F5F5F5" HeightRequest="70">
+                            <Grid BackgroundColor="#EEF1FF" HeightRequest="70">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="30"></ColumnDefinition>
                                     <ColumnDefinition Width="210">
                                     </ColumnDefinition>
 
                                 </Grid.ColumnDefinitions>
-                                <Image Source="check.png" Margin="5,0,0,0">
+                                <Image Source="check_mark.png" Margin="5,0,0,0"/>
 
-
-                                </Image>
                                 <Label 
                                     x:Name="taskLabel"
                                     Text= "{Binding taskName}" 

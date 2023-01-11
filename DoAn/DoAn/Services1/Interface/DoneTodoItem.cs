@@ -10,7 +10,7 @@ namespace DoAn.Services1.Interface
     {
         Task AddDoneTodoItem(TaskDTO task);
 
-        Task<List<TaskDTO>> GetAllDoneTodoItems();
+        Task<List<TaskDTO>> GetAllDoneTodoItems(string email);
 
     }
 }

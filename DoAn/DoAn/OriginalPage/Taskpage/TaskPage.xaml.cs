@@ -10,6 +10,8 @@ using DoAn.Model;
 using DoAn.ModelDTO;
 using DoAn.Services1.Implementations;
 using DoAn.OriginalPage.DoneTaskPage;
+using DoAn.Services;
+using DoAn.Interfaces;
 
 namespace DoAn.OriginalPage.Taskpage
 {
@@ -20,14 +22,18 @@ namespace DoAn.OriginalPage.Taskpage
         public DoneTodoImplement doneTodoImplement;
         public ObservableCollection<TaskToDo> listTask;
         public ObservableCollection<TaskDTO> listTaskDTO;
-        public ObservableCollection<TaskType> listTaskType; 
-        
+        public ObservableCollection<TaskType> listTaskType;
+        IAuth auth;
+        List<TaskDTO> itemSource;
+
         public TaskPage()
         {
             ToDoImplement = new ToDoImplement();
             doneTodoImplement = new DoneTodoImplement();
             InitializeComponent();
             ListTask();
+            auth = DependencyService.Get<IAuth>();
+
         }
 
         private void ListTask()
@@ -45,26 +51,25 @@ namespace DoAn.OriginalPage.Taskpage
 
         private void Button_Clicked(object sender, System.EventArgs e)
         {
-            
             Navigation.PushAsync(new EntryTaskPage());
         }
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-            var allItems = await ToDoImplement.GetAllTodoItems();
-            LtsTask.ItemsSource = allItems;
+            itemSource = await ToDoImplement.GetAllTodoItems(auth.GetEmail());
+            LtsTask.ItemsSource = itemSource;
         }
         // Delete task
         private async void SWDelete_Invoked(object sender, System.EventArgs e)
         {
             var swipeItem = sender as SwipeItem;
             var item = swipeItem.CommandParameter as TaskDTO;
-            bool answer = await DisplayAlert("Thông báo", $"Bạn có muốn xóa không?", "Yes", "No");
+            bool answer = await DisplayAlert("Warning", $"Do you want to delete this to-do?", "Yes", "No");
             if (answer)
             {
                 await ToDoImplement.DeleteTodoItem(item.taskId);
             }
-            var allItems = await ToDoImplement.GetAllTodoItems();
+            var allItems = await ToDoImplement.GetAllTodoItems(auth.GetEmail());
             LtsTask.ItemsSource = allItems;
 
         }
@@ -73,7 +78,7 @@ namespace DoAn.OriginalPage.Taskpage
         {
             var swipeItem = sender as SwipeItem;
             var item = swipeItem.CommandParameter as TaskDTO;
-            Navigation.PushAsync(new EntryTaskPage(item.taskId,item));
+            Navigation.PushAsync(new EntryTaskPage(item.taskId, item));
         }
         // Filter task
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
@@ -81,7 +86,7 @@ namespace DoAn.OriginalPage.Taskpage
             var typeTask = ((Label)sender).Text;
             if (typeTask == "All")
             {
-                LtsTask.ItemsSource = await ToDoImplement.GetAllTodoItems();
+                LtsTask.ItemsSource = await ToDoImplement.GetAllTodoItems(auth.GetEmail());
             }
             else
             {
@@ -89,14 +94,6 @@ namespace DoAn.OriginalPage.Taskpage
             }
 
         }
-
-        private async void SearchBarHotel_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            var allItems = await ToDoImplement.GetAllTodoItems();
-            LtsTask.ItemsSource = allItems.Where(index => index.taskName.StartsWith(e.NewTextValue));
-        }
-
-        
 
         private  void TapGestureRecognizer_Tapped_2(object sender, EventArgs e)
         {
@@ -118,8 +115,14 @@ namespace DoAn.OriginalPage.Taskpage
             var item = swipeItem.CommandParameter as TaskDTO;
             await doneTodoImplement.AddDoneTodoItem(item);
             await ToDoImplement.DeleteTodoItem(item.taskId);
-            var allItems = await ToDoImplement.GetAllTodoItems();
+            var allItems = await ToDoImplement.GetAllTodoItems(auth.GetEmail());
             LtsTask.ItemsSource = allItems;
+        }
+
+        void TasksSearchBar_TextChanged(System.Object sender, Xamarin.Forms.TextChangedEventArgs e)
+        {
+            // searching for taskName or taskType
+            LtsTask.ItemsSource = itemSource.Where(item => item.taskName.ToLower().Contains(e.NewTextValue.ToLower()) || item.taskType.ToLower().Contains(e.NewTextValue.ToLower()));
         }
     }
 }

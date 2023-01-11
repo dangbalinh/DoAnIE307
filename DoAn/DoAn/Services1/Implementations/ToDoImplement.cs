@@ -6,30 +6,36 @@ using DoAn.ModelDTO;
 using Firebase.Database;
 using Firebase.Database.Query;
 using System.Linq;
-using DoAn.Services1.Interface;  
+using DoAn.Services1.Interface;
+using DoAn.Interfaces;
+using Xamarin.Forms;
 
 namespace DoAn.Services1.Implementations
 {
     public class ToDoImplement : ToDoInterface
     {
         FirebaseClient firebase = new FirebaseClient("https://xamarinproject-c7a59-default-rtdb.asia-southeast1.firebasedatabase.app/");
+        IAuth auth = DependencyService.Get<IAuth>();
         public async Task AddTodoItem(TaskDTO task)
         {
                 await firebase.Child("Tasks").PostAsync(task);
         }
 
 
-        public async Task<List<TaskDTO>> GetAllTodoItems()
+        public async Task<List<TaskDTO>> GetAllTodoItems(string email)
         {
-            return (await firebase.Child("Tasks").OnceAsync<TaskDTO>()).Select(f => new TaskDTO
-            {
-                taskId = f.Object.taskId,
-                taskName = f.Object.taskName,
-                taskType = f.Object.taskType,
-                taskDate = f.Object.taskDate,
-                taskTime = f.Object.taskTime,
-                //user_email = f.Object.user_email,
-            }).ToList();
+            // get all todo that is not done and belong to the user 
+            return (await firebase
+              .Child("Tasks")
+              .OnceAsync<TaskDTO>()).Where(a => a.Object.user_email == email).Select(item => new TaskDTO
+              {
+                  taskId = item.Object.taskId,
+                  taskName = item.Object.taskName,
+                  taskDate = item.Object.taskDate,
+                  taskTime = item.Object.taskTime,
+                  taskType = item.Object.taskType,
+                  user_email = item.Object.user_email
+              }).ToList();
         }
 
         public async Task UpdateTodoItem(string id, TaskDTO task)
@@ -52,7 +58,7 @@ namespace DoAn.Services1.Implementations
         }
         public async Task<TaskDTO> GetItemTodoById(string id)
         {
-            var allItemTodos = await GetAllTodoItems();
+            var allItemTodos = await GetAllTodoItems(auth.GetEmail());
             await firebase
               .Child("Tasks")
               .OnceAsync<TaskDTO>();
@@ -61,7 +67,7 @@ namespace DoAn.Services1.Implementations
         public async Task<List<TaskDTO>> GetListTaskByDate(string date)
         { 
             List<TaskDTO> tasks = new List<TaskDTO>();
-            var allItemTodos = await GetAllTodoItems();
+            var allItemTodos = await GetAllTodoItems(auth.GetEmail());
             await firebase
               .Child("Tasks")
               .OnceAsync<TaskDTO>();
@@ -78,7 +84,7 @@ namespace DoAn.Services1.Implementations
         public async Task<List<TaskDTO>> GetListTaskByType(string type)
         {
             List<TaskDTO> tasks = new List<TaskDTO>();
-            var allItemTodos = await GetAllTodoItems();
+            var allItemTodos = await GetAllTodoItems(auth.GetEmail());
             await firebase
               .Child("Tasks")
               .OnceAsync<TaskDTO>();

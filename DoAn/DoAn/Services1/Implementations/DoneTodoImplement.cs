@@ -18,16 +18,21 @@ namespace DoAn.Services1.Implementations
         {
             await firebase.Child("TasksDone").PostAsync(task);
         }
-        public async Task<List<TaskDTO>> GetAllDoneTodoItems()
+        public async Task<List<TaskDTO>> GetAllDoneTodoItems(string email)
         {
-            return (await firebase.Child("TasksDone").OnceAsync<TaskDTO>()).Select(f => new TaskDTO
-            {
-                taskId = f.Object.taskId,
-                taskName = f.Object.taskName,
-                taskType = f.Object.taskType,
-                taskDate = f.Object.taskDate,
-                taskTime = f.Object.taskTime,
-            }).ToList();
+            // get all done task that belong to the user
+            return (await firebase
+              .Child("TasksDone")
+              .OnceAsync<TaskDTO>()).Where(a => a.Object.user_email == email).Select(item => new TaskDTO
+              {
+                  taskId = item.Object.taskId,
+                  taskName = item.Object.taskName,
+                  taskDate = item.Object.taskDate,
+                  taskTime = item.Object.taskTime,
+                  taskType = item.Object.taskType,
+                  user_email = item.Object.user_email
+              }).ToList();
+
         }
     }
 }

@@ -23,40 +23,6 @@
                         <ImageCell ImageSource="{Binding Image}"
                                    Text="{Binding Title}"
                                    Detail="{Binding Tag}"/>
-
-                        <!--<ViewCell>
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="2*"/>
-                                </Grid.ColumnDefinitions>
-
-                                    <Image Source="{Binding Image}"
-                                           Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
-                                           Aspect="Fill"/>
-
-                                    <Label Text="{Binding Title}"
-                                           Grid.Row="0" Grid.Column="1"
-                                           TextColor="Black"
-                                           FontSize="20"
-                                           FontAttributes="Bold"
-                                           VerticalOptions="End"/>
-
-                                    <Label Text="{Binding Tag}"
-                                           Grid.Row="1" Grid.Column="1"
-                                           TextColor="DarkGray"
-                                           VerticalOptions="Start"/>
-
-                            </Grid>
-  
-
-                        </ViewCell>-->
-
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

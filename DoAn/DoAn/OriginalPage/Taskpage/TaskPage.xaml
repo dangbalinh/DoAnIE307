@@ -4,20 +4,19 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              xmlns:pv="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              x:Class="DoAn.OriginalPage.Taskpage.TaskPage"
-             
              NavigationPage.HasNavigationBar="False"
              >
     <ContentPage.Content>
         <StackLayout BackgroundColor="White">
-            <Frame CornerRadius="10" HeightRequest="20" Margin="20,20,20,0" BorderColor="Pink" 
+            <Frame CornerRadius="10" HeightRequest="20" Margin="20,20,20,0" 
             HasShadow="True"
-            BackgroundColor="Pink">
+            BackgroundColor="#AAC4FF">
                 <SearchBar
-                       x:Name="SearchBarHotel"
+                       x:Name="TasksSearchBar"
                        Placeholder="Search"
                        BackgroundColor="Transparent"
-                       TextColor="Red"
-                       TextChanged="SearchBarHotel_TextChanged"    
+                       TextColor="Black"
+                       TextChanged="TasksSearchBar_TextChanged"
                        
              ></SearchBar>
             </Frame>
@@ -67,12 +66,11 @@
                 </CollectionView.ItemsLayout>
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-
-                        <SwipeView HeightRequest="70" Margin="0,0,0,0">
+                        <SwipeView>
                             <SwipeView.RightItems>
                                 <SwipeItems SwipeBehaviorOnInvoked="RemainOpen">
                                     <SwipeItem Text="Delete"
-                                               BackgroundColor="#B1B2FF"
+                                               BackgroundColor="#FF0032"
                                                x:Name="SWDelete"
                                                IconImageSource="delete.png"
                                                CommandParameter="{Binding .}"
@@ -81,7 +79,7 @@
                                     <SwipeItem Text="Update"
                                                BackgroundColor="#0081B4"
                                                x:Name="SWEdit"
-                                               IconImageSource="editing.png"
+                                               IconImageSource="edit.png"
                                                CommandParameter="{Binding .}"
                                                Invoked="SWEdit_Invoked"></SwipeItem>
 
@@ -91,68 +89,87 @@
                                                IconImageSource="check.png"
                                                CommandParameter="{Binding .}"
                                                Invoked="SWDone_Invoked"></SwipeItem>
-   
                                 </SwipeItems>
                             </SwipeView.RightItems>
 
-                            <Grid BackgroundColor="#F9F9F9">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="30"></ColumnDefinition>
-                                    <ColumnDefinition Width="210">
-                                    </ColumnDefinition>
+                            <Frame HeightRequest="50" HasShadow="True"
+                                   BackgroundColor="#EEF1FF" CornerRadius="10">
+                                <StackLayout Orientation="Horizontal">
+                               
+                                    <Image Source="task1.png" Margin="5,0,15,0"/>
+                                    <StackLayout>
+                                        <Label 
+                                            x:Name="taskLabel"
+                                            Text= "{Binding taskName}" 
+                                            FontSize="15"
+                                            TextColor="#444444"
+                                            />
 
-                                </Grid.ColumnDefinitions>
-                                <Image Source="task1.png" Margin="5,0,0,0">
-                                </Image>
-                                <Label 
-                                    x:Name="taskLabel"
-                                    Text= "{Binding taskName}" 
-                                    Margin="20,5,0,0"
-                                    FontSize="15"
-                                    
-                                    TextColor="#444444"
-                                    Grid.Column="1"
-                                    >
+                                        <Label 
+                                                x:Name="taskLabelType"
+                                                Text="{Binding taskDate}" 
+                                                TextColor="#CC0000"
+                                                FontAttributes="Bold"
+                                                FontSize="18"
+                                                />
 
-                                </Label>
-                                <Label 
-                                       x:Name="taskLabelType"
-                                       Text="{Binding taskDate}" 
-                                       Margin="20,40,0,0"
-                                       Grid.Column="1"
-                                       TextColor="#CC0000"
-                                       FontAttributes="Bold"
-                                       FontSize="18"
-                                       ></Label>
-                            </Grid>
-
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
                         </SwipeView>
 
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
-            <Label Text="Check all completed tasks"
-            TextDecorations="Underline"
-            Margin="90,50,0,0"
-            Grid.Column="0">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"></TapGestureRecognizer>
-                </Label.GestureRecognizers>
-            </Label>
-            <Button Clicked="Button_Clicked" HeightRequest="90" 
-            CornerRadius="45"
-            Margin="230,10,40,10"
-            ImageSource="add.png"
-            xct:TouchEffect.AnimationDuration="450"
-            xct:TouchEffect.PressedBackgroundColor="LightPink"
-            xct:TouchEffect.PressedOpacity="0.6"
-            xct:TouchEffect.AnimationEasing=""
-            xct:TouchEffect.PressedScale="0.75"
-            xct:TouchEffect.NormalBackgroundColor="#FF6666"
-            xct:ShadowEffect.Color="Black"
-            xct:VisualFeedbackEffect.FeedbackColor="Blue"
-            ></Button>
-            
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Check all completed tasks"
+                    TextDecorations="Underline"
+                    VerticalOptions="Center"
+                    Margin="20,0,0,0"
+                    HorizontalOptions="StartAndExpand">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                </Label>
+
+                <Button Clicked="Button_Clicked"
+                        CornerRadius="50"
+                        Margin="5"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        ImageSource="add.png"
+                        HeightRequest="75"
+                        xct:TouchEffect.AnimationDuration="450"
+                        xct:TouchEffect.PressedBackgroundColor="#B1B2FF"
+                        xct:TouchEffect.PressedOpacity="0.6"
+                        xct:TouchEffect.AnimationEasing=""
+                        xct:TouchEffect.PressedScale="0.75"
+                        xct:TouchEffect.NormalBackgroundColor="#B1B2FF"
+                        xct:ShadowEffect.Color="Black"
+                        xct:VisualFeedbackEffect.FeedbackColor="#AAC4FF"/>
+
+            </StackLayout>
+            <!--<AbsoluteLayout BackgroundColor="Transparent">
+                <Button Clicked="Button_Clicked"
+                    CornerRadius="45"
+                    HorizontalOptions="End"
+                    VerticalOptions="End"
+                    Margin="5"
+                    ImageSource="add.png"
+                    HeightRequest="75"
+                    xct:TouchEffect.AnimationDuration="450"
+                    xct:TouchEffect.PressedBackgroundColor="#B1B2FF"
+                    xct:TouchEffect.PressedOpacity="0.6"
+                    xct:TouchEffect.AnimationEasing=""
+                    xct:TouchEffect.PressedScale="0.75"
+                    xct:TouchEffect.NormalBackgroundColor="#B1B2FF"
+                    xct:ShadowEffect.Color="Black"
+                    xct:VisualFeedbackEffect.FeedbackColor="#AAC4FF"
+                    AbsoluteLayout.LayoutFlags="PositionProportional"
+                    AbsoluteLayout.LayoutBounds="1,1,75,75"/>
+            </AbsoluteLayout>-->
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

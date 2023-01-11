@@ -12,7 +12,7 @@ namespace DoAn.Services1.Interface
         Task UpdateTodoItem(string id, TaskDTO task);
         Task DeleteTodoItem(string id);
 
-        Task<List<TaskDTO>> GetAllTodoItems();
+        Task<List<TaskDTO>> GetAllTodoItems(string email);
 
         Task<List<TaskDTO>> GetListTaskByDate(string date);
 
