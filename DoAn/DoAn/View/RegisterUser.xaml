@@ -43,8 +43,9 @@
 
             
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                    <Label Text="Already have a account?" />
-                    <Label Text="Login.">
+                    <Label Text="Already have a account?" FontSize="Body"/>
+                    <Label Text="Login." TextDecorations="Underline"
+                           FontSize="Body" TextColor="#B1B2FF">
                         <Label.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding LoginCommand}" NumberOfTapsRequired="1"
                                                   Tapped="TapGestureRecognizer_Tapped"/>

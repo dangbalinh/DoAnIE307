@@ -5,34 +5,51 @@
              Title="Add your new task"
              BackgroundColor="WhiteSmoke"
              NavigationPage.HasBackButton="False"
-             
-           >
+             xmlns:dxdf="http://schemas.devexpress.com/xamarin/2014/forms/dataform">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout Margin="20">
-                <Label Text="Name" FontAttributes="Bold" FontSize="22"/>
-                <Frame  Padding="10" Margin="0,0,0,20" IsClippedToBounds="true" BorderColor="#AAC4FF">
-                    <Entry x:Name="nameTask" Placeholder="Enter task name"></Entry>
-                </Frame>
-                <Label Text="Type" FontAttributes="Bold" FontSize="22"></Label>
-                <Frame  Padding="10" Margin="0,0,0,20" IsClippedToBounds="true" BorderColor="#AAC4FF">
-                <Entry x:Name="typeTask" Placeholder="Choice to task"></Entry>
-                </Frame>
-                <Label  Text="Date" FontAttributes="Bold" FontSize="22"></Label>
-                <Frame Padding="10" Margin="0,0,0,20" IsClippedToBounds="true" BorderColor="#AAC4FF">
-                <DatePicker x:Name="datepicker"></DatePicker>
-                </Frame>
-                <Label  Text="Time" FontAttributes="Bold" FontSize="22"></Label>
-                <Frame Padding="10" Margin="0,0,0,20" IsClippedToBounds="true" BorderColor="#AAC4FF">
-                        <TimePicker x:Name="timepicker"></TimePicker>
-                </Frame>
-                <Button Margin="0,30,0,0" HeightRequest="60"
-                        CornerRadius="50"
-                        BackgroundColor="#B1B2FF"
-                        TextColor="White"
-                        FontSize="22"
-                        Text="Add a new task" Clicked="Button_Clicked"></Button>
+            <StackLayout Margin="0,20,0,0">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="10,0,0,30">
+                    <Label Text="Let add a new task"
+                           Margin="0,0,5,0" VerticalOptions="Center"
+                           FontSize="Title" TextColor="#144272" FontAttributes="Bold"/>
+                    <Image Source="to_do_list.png" WidthRequest="40"
+                           VerticalOptions="Center"/>
+                </StackLayout>
+
+                <dxdf:DataFormView x:Name="dataForm" ContentPadding="12"
+                                    BackgroundColor="Transparent" ValidationMode="PropertyChanged"
+                                    ValidateProperty="dataForm_ValidateProperty" EditorHorizontalSpacing="20">
+                    <dxdf:DataFormTextItem FieldName="taskName"
+                                           LabelText="Task name" LabelFontSize="16"
+                                           LabelFontAttributes="Bold"
+                                           LabelColor="#3C79F5" Placeholder="Clean the room"/>
+                    <dxdf:DataFormTextItem FieldName="taskType"
+                                           LabelFontAttributes="Bold"
+                                           LabelText="Task type"
+                                           LabelColor="#3C79F5" Placeholder="Home"/>
+                    <dxdf:DataFormDateItem FieldName="taskDate"
+                                           LabelFontAttributes="Bold"
+                                           LabelText="Date"
+                                           LabelColor="#3C79F5"/>
+                    <dxdf:DataFormTimeItem FieldName="taskTime"
+                                           LabelFontAttributes="Bold"
+                                           LabelText="Time"
+                                           LabelColor="#3C79F5"/>
+                </dxdf:DataFormView>
+
+                <Button Margin="0,30,0,0"
+                    CornerRadius="50"
+                    HorizontalOptions="Center"
+                    BackgroundColor="#A0C3D2"
+                    TextColor="White"
+                    FontSize="22"
+                    TextTransform="None"
+                    Text="Add" Clicked="Button_Clicked"></Button>
+
             </StackLayout>
+
+
 
         </ScrollView>
     </ContentPage.Content>

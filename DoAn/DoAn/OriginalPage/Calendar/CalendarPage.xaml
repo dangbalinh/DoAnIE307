@@ -54,8 +54,7 @@
                             </SwipeView.RightItems>
 
                             <Frame HeightRequest="25" HasShadow="True"
-                                   BackgroundColor="#EEF1FF" CornerRadius="10"
-                                   BorderColor="gray">
+                                   BackgroundColor="#EEF1FF" CornerRadius="10">
                                 <StackLayout Orientation="Horizontal">
                                
                                     <Image Source="task1.png" Margin="5,0,15,0"/>
@@ -68,14 +67,23 @@
                                             Grid.Column="1"
                                             />
 
-                                        <Label 
-                                            x:Name="taskLabelType"
-                                            Text="{Binding taskDate}" 
-                                            Grid.Column="1"
-                                            TextColor="#CC0000"
-                                            FontAttributes="Bold"
-                                            FontSize="18"
-                                            />
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label 
+                                                Text="{Binding taskTime}" 
+                                                TextColor="#CC0000"
+                                                FontAttributes="Bold"
+                                                FontSize="18"
+                                                />
+
+                                            <Label 
+                                                x:Name="taskLabelType"
+                                                Text="{Binding taskDate}" 
+                                                TextColor="#CC0000"
+                                                FontAttributes="Bold"
+                                                FontSize="18"
+                                                />
+
+                                        </StackLayout>
 
                                     </StackLayout>
                                 </StackLayout>

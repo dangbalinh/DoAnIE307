@@ -20,7 +20,6 @@ namespace DoAn.OriginalPage.Scheduler
 
         protected override async void OnAppearing()
         {
-            //BindingContext = DoAn.ViewModels.ReceptionDeskViewModel;
             base.OnAppearing();
             SchedulerDataStorage.DataSource.AppointmentsSource = await appointmentService.GetAppointments();
         }
@@ -37,6 +36,9 @@ namespace DoAn.OriginalPage.Scheduler
                 string selectedAction = await DisplaySelectAppointmentEditActionSheet(e.AppointmentInfo.Appointment);
                 switch (selectedAction)
                 {
+                    case "New appointment on the selected interval":
+                        PushNewAppointmentPage(e.IntervalInfo);
+                        break;
                     case "Detail":
                         PushAppointmentDetailPage(e.AppointmentInfo.Appointment);
                         break;
@@ -103,7 +105,7 @@ namespace DoAn.OriginalPage.Scheduler
             {
                 case AppointmentType.Normal:
                     //actions = new string[] { "Detail", EditNormalAction, "Delete" };
-                    actions = new string[] { "Detail", "Delete" };
+                    actions = new string[] { "Add new appointment on the selected interval", "Detail", "Delete" };
                     break;
                 default:
                     actions = new string[] { EditPatternAction, EditOccurrenceAction };

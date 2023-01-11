@@ -24,7 +24,7 @@ namespace DoAn.OriginalPage.Tips
                         new Label
                         {
                             Text = t.Title,
-                            FontSize = 36,
+                            FontSize = 28,
                             TextColor = Color.Black,
                             FontAttributes = FontAttributes.Bold,
                             HorizontalTextAlignment = TextAlignment.Center,

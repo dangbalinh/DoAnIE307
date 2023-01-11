@@ -26,7 +26,6 @@
                     <BindableLayout.ItemTemplate>
                         <DataTemplate>
                             <pv:PancakeView CornerRadius="15" Margin="5,10,0,10" BackgroundColor="Black" HeightRequest="40">
-
                                 <VisualStateManager.VisualStateGroups>
                                     <VisualStateGroup x:Name="CommonStates">
                                         <VisualState x:Name="Normal">
@@ -59,7 +58,8 @@
 
 
 
-            <CollectionView x:Name="LtsTask" Margin="20,10,20,10" SelectionMode="Single" SelectionChanged="LtsTask_SelectionChanged">
+            <CollectionView x:Name="LtsTask" Margin="20,10,20,10" SelectionMode="Single"
+                            SelectionChanged="LtsTask_SelectionChanged">
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Vertical"
                            ItemSpacing="15" />
@@ -105,13 +105,23 @@
                                             TextColor="#444444"
                                             />
 
-                                        <Label 
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label 
+                                                Text="{Binding taskTime}" 
+                                                TextColor="#CC0000"
+                                                FontAttributes="Bold"
+                                                FontSize="18"
+                                                />
+
+                                            <Label 
                                                 x:Name="taskLabelType"
                                                 Text="{Binding taskDate}" 
                                                 TextColor="#CC0000"
                                                 FontAttributes="Bold"
                                                 FontSize="18"
                                                 />
+
+                                        </StackLayout>
 
                                     </StackLayout>
                                 </StackLayout>
@@ -150,26 +160,6 @@
                         xct:VisualFeedbackEffect.FeedbackColor="#AAC4FF"/>
 
             </StackLayout>
-            <!--<AbsoluteLayout BackgroundColor="Transparent">
-                <Button Clicked="Button_Clicked"
-                    CornerRadius="45"
-                    HorizontalOptions="End"
-                    VerticalOptions="End"
-                    Margin="5"
-                    ImageSource="add.png"
-                    HeightRequest="75"
-                    xct:TouchEffect.AnimationDuration="450"
-                    xct:TouchEffect.PressedBackgroundColor="#B1B2FF"
-                    xct:TouchEffect.PressedOpacity="0.6"
-                    xct:TouchEffect.AnimationEasing=""
-                    xct:TouchEffect.PressedScale="0.75"
-                    xct:TouchEffect.NormalBackgroundColor="#B1B2FF"
-                    xct:ShadowEffect.Color="Black"
-                    xct:VisualFeedbackEffect.FeedbackColor="#AAC4FF"
-                    AbsoluteLayout.LayoutFlags="PositionProportional"
-                    AbsoluteLayout.LayoutBounds="1,1,75,75"/>
-            </AbsoluteLayout>-->
-
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

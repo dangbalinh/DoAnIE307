@@ -13,7 +13,7 @@
                            TextColor="#B1B2FF" VerticalOptions="Center"
                            HorizontalOptions="StartAndExpand"/>
 
-                    <Button Text="More tips" x:Name="MoreTips" Clicked="MoreTips_Clicked"
+                    <Button Text="All tips" x:Name="MoreTips" Clicked="MoreTips_Clicked"
                             CornerRadius="30" Background="#D2DAFF" FontSize="Small"
                             HorizontalOptions="End" TextTransform="None"/>
                 </StackLayout>
@@ -25,7 +25,7 @@
                         <DataTemplate>
                             <StackLayout>
                                 <Frame HasShadow="True"
-                                       BorderColor="DarkGray"
+                                       BorderColor="#AAC4FF"
                                        CornerRadius="5"
                                        Margin="20"
                                        HeightRequest="250"
@@ -62,7 +62,8 @@
                                HorizontalOptions="Center"
                                Margin="0,-480,0,0"/>
 
-                <Label FontSize="Body" x:Name="TipContent"/>
+                <Label FontSize="Body" x:Name="TipContent" FontFamily="kleeFont"
+                       TextColor="Black"/>
 
             </StackLayout>
 
