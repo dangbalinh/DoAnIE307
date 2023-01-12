@@ -212,6 +212,30 @@ namespace DoAn.Droid
                 return false;
             }
         }
+
+		public	bool IsUserExist(string email){
+			// check if a user with the provided email address exists
+			try
+			{
+				// check if the given email exsits in realtime database Users
+				var user = userService.GetUser(email);
+				if (user != null)
+					return true;
+				return false;
+			} catch (FirebaseAuthInvalidUserException e)
+			{
+				e.PrintStackTrace();
+				return false;
+			} catch (FirebaseAuthInvalidCredentialsException e)
+			{
+				e.PrintStackTrace();
+				return false;
+			} catch (FirebaseAuthUserCollisionException e)
+			{
+				e.PrintStackTrace();
+				return false;
+			}
+		}
     }
 }
 

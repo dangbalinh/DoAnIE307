@@ -26,6 +26,10 @@ namespace DoAn.Interfaces
 
 		// deleting account if user want to
 		Task<bool> DeleteAccountAsync();
+
+		// check if email is already registered
+		bool IsUserExist(string email);
+		
 	}
 }
 

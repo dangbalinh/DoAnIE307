@@ -145,6 +145,14 @@ namespace DoAn.iOS
                 return false;
             }
         }
+
+		public	bool IsUserExist(string email){
+			// check if a user with the provided email address exists
+			var user = userService.GetUser(email);
+			if (user != null)
+				return true;
+			return false;
+		}
     }
 }
 

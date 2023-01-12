@@ -57,6 +57,13 @@ namespace DoAn.View
                     return;
                 }
 
+                //if email registered already
+                if (auth.IsUserExist(registerInFo.Email))
+                {
+                    Navigation.ShowPopup(new FailedActionPopup("Email already existed"));
+                    return;
+                }
+
                 if (registerInFo.Password.Length < 6)
                 {
                     Navigation.ShowPopup(new FailedActionPopup("Password should be >= 6 digit"));
