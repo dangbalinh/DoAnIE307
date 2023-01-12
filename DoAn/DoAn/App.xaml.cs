@@ -17,6 +17,7 @@ namespace DoAn
         public App()
         {
             DevExpress.XamarinForms.Scheduler.Initializer.Init();
+            DevExpress.XamarinForms.Charts.Initializer.Init();
             InitializeComponent();
             auth = DependencyService.Get<IAuth>();
 

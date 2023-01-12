@@ -25,6 +25,7 @@
     <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
     <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
     <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.5" />
+    <PackageReference Include="DevExpress.XamarinForms.Charts" Version="22.1.7" />
   </ItemGroup>
 
   <ItemGroup>
@@ -81,6 +82,7 @@
     <None Remove="Fonts\" />
     <None Remove="Fonts\DancingScript-Regular.ttf" />
     <None Remove="Fonts\KleeOne-Regular.ttf" />
+    <None Remove="DevExpress.XamarinForms.Charts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="OriginalPage\Tips\" />

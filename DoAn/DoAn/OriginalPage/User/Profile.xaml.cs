@@ -51,6 +51,13 @@ namespace DoAn.OriginalPage.User
             BindingContext = user;
         }
 
+        protected async override void OnAppearing()
+        {
+            string email = auth.GetEmail();
+            UnfinishedTasks.Text = "Unfinished tasks: " + (await userService.GetNumberOfTasks(email)).ToString();
+            FinishedTasks.Text = "Finished tasks: " + (await userService.GetNumberOfDoneTasks(email)).ToString();
+        }
+
         void EditProfile_Clicked(System.Object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new EditProfilePage(user));
@@ -83,7 +90,12 @@ namespace DoAn.OriginalPage.User
             else
                 Navigation.ShowPopup(new FailedActionPopup("Some thing went wrong! Please try again."));
 
-     
+  
+        }
+
+        void ViewStatistic_Clicked(System.Object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new StatisticPage());
         }
 
         void RefreshView_Refreshing(System.Object sender, System.EventArgs e)

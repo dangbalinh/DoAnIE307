@@ -25,6 +25,7 @@ namespace DoAn.iOS
             global::Xamarin.Forms.Forms.Init();
             Firebase.Core.App.Configure();
             DevExpress.XamarinForms.Scheduler.iOS.Initializer.Init();
+            DevExpress.XamarinForms.Charts.iOS.Initializer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

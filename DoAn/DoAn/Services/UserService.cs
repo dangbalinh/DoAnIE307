@@ -95,6 +95,22 @@ namespace DoAn.Services
 
             return true;
         }
+
+        // get number of tasks that belong to the current user
+        public async Task<int> GetNumberOfTasks(string email)
+        {
+            var data = await client.Child("Tasks").OnceAsync<TaskToDo>();
+            var tasks = data.Where(x => x.Object.user_email == email).ToList();
+            return tasks.Count;
+        }
+
+        // get number of done tasks that belong to the current user
+        public async Task<int> GetNumberOfDoneTasks(string email)
+        {
+            var data = await client.Child("TasksDone").OnceAsync<TaskToDo>();
+            var doneTasks = data.Where(x => x.Object.user_email == email).ToList();
+            return doneTasks.Count;
+        }
     }
 }
 

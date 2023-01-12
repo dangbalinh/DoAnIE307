@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[4.1.0, )"
             },
+            "DevExpress.XamarinForms.Charts": {
+              "target": "Package",
+              "version": "[22.1.7, )"
+            },
             "DevExpress.XamarinForms.Scheduler": {
               "target": "Package",
               "version": "[22.1.7, )"

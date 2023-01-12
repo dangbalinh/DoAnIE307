@@ -32,6 +32,27 @@
           }
         }
       },
+      "DevExpress.XamarinForms.Charts/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Charts.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Charts.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.iOS.dll": {}
+        }
+      },
       "DevExpress.XamarinForms.CollectionView/22.1.7": {
         "type": "package",
         "dependencies": {
@@ -1288,6 +1309,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Com.Airbnb.Xamarin.Forms.Lottie": "4.1.0",
+          "DevExpress.XamarinForms.Charts": "22.1.7",
           "DevExpress.XamarinForms.Scheduler": "22.1.7",
           "FirebaseAuthentication.net": "3.7.2",
           "FirebaseDatabase.net": "4.1.0",
@@ -1340,6 +1362,27 @@
           }
         }
       },
+      "DevExpress.XamarinForms.Charts/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Charts.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Charts.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.iOS.dll": {}
+        }
+      },
       "DevExpress.XamarinForms.CollectionView/22.1.7": {
         "type": "package",
         "dependencies": {
@@ -2518,6 +2561,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Com.Airbnb.Xamarin.Forms.Lottie": "4.1.0",
+          "DevExpress.XamarinForms.Charts": "22.1.7",
           "DevExpress.XamarinForms.Scheduler": "22.1.7",
           "FirebaseAuthentication.net": "3.7.2",
           "FirebaseDatabase.net": "4.1.0",
@@ -2570,6 +2614,27 @@
           }
         }
       },
+      "DevExpress.XamarinForms.Charts/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Charts.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Charts.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.iOS.dll": {}
+        }
+      },
       "DevExpress.XamarinForms.CollectionView/22.1.7": {
         "type": "package",
         "dependencies": {
@@ -3748,6 +3813,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Com.Airbnb.Xamarin.Forms.Lottie": "4.1.0",
+          "DevExpress.XamarinForms.Charts": "22.1.7",
           "DevExpress.XamarinForms.Scheduler": "22.1.7",
           "FirebaseAuthentication.net": "3.7.2",
           "FirebaseDatabase.net": "4.1.0",
@@ -3800,6 +3866,27 @@
           }
         }
       },
+      "DevExpress.XamarinForms.Charts/22.1.7": {
+        "type": "package",
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "[22.1.7]",
+          "Xamarin.Forms": "5.0.0.2012"
+        },
+        "compile": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Charts.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.iOS.dll": {}
+        },
+        "runtime": {
+          "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Charts.dll": {},
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.dll": {
+            "related": ".xml"
+          },
+          "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.iOS.dll": {}
+        }
+      },
       "DevExpress.XamarinForms.CollectionView/22.1.7": {
         "type": "package",
         "dependencies": {
@@ -4978,6 +5065,7 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Com.Airbnb.Xamarin.Forms.Lottie": "4.1.0",
+          "DevExpress.XamarinForms.Charts": "22.1.7",
           "DevExpress.XamarinForms.Scheduler": "22.1.7",
           "FirebaseAuthentication.net": "3.7.2",
           "FirebaseDatabase.net": "4.1.0",
@@ -5061,6 +5149,27 @@
         "lib/xamarinmac20/Lottie.Forms.pdb",
         "lib/xamarinmac20/Lottie.Forms.xml",
         "readme.txt"
+      ]
+    },
+    "DevExpress.XamarinForms.Charts/22.1.7": {
+      "sha512": "TeanKniBjZeJT05r+413ruShT2BEYf3HrSaDrTa/jNxW2VXSx8wS4BaNP8PqR5m0LO6QFj2Y8DUYqkdcoUNGVw==",
+      "type": "package",
+      "path": "devexpress.xamarinforms.charts/22.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "devexpress.xamarinforms.charts.22.1.7.nupkg.sha512",
+        "devexpress.xamarinforms.charts.nuspec",
+        "lib/MonoAndroid10/DevExpress.Xamarin.Android.Charts.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Charts.Android.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Charts.dll",
+        "lib/MonoAndroid10/DevExpress.XamarinForms.Charts.xml",
+        "lib/Xamarin.iOS10/DevExpress.Xamarin.iOS.Charts.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.iOS.dll",
+        "lib/Xamarin.iOS10/DevExpress.XamarinForms.Charts.xml",
+        "lib/netstandard2.0/DevExpress.XamarinForms.Charts.dll",
+        "lib/netstandard2.0/DevExpress.XamarinForms.Charts.xml"
       ]
     },
     "DevExpress.XamarinForms.CollectionView/22.1.7": {
@@ -10135,6 +10244,7 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "DevExpress.XamarinForms.Charts >= 22.1.7",
       "DevExpress.XamarinForms.Scheduler >= 22.1.7",
       "DoAn >= 1.0.0",
       "FirebaseAuthentication.net >= 3.7.2",
@@ -10185,6 +10295,10 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "DevExpress.XamarinForms.Charts": {
+            "target": "Package",
+            "version": "[22.1.7, )"
+          },
           "DevExpress.XamarinForms.Scheduler": {
             "target": "Package",
             "version": "[22.1.7, )"

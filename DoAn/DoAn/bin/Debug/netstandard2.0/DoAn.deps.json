@@ -10,6 +10,7 @@
       "DoAn/1.0.0": {
         "dependencies": {
           "Com.Airbnb.Xamarin.Forms.Lottie": "4.1.0",
+          "DevExpress.XamarinForms.Charts": "22.1.7",
           "DevExpress.XamarinForms.Scheduler": "22.1.7",
           "FirebaseAuthentication.net": "3.7.2",
           "FirebaseDatabase.net": "4.1.0",
@@ -36,6 +37,18 @@
           "lib/netstandard2.0/Lottie.Forms.dll": {
             "assemblyVersion": "4.1.0.0",
             "fileVersion": "4.1.0.0"
+          }
+        }
+      },
+      "DevExpress.XamarinForms.Charts/22.1.7": {
+        "dependencies": {
+          "DevExpress.XamarinForms.Core": "22.1.7",
+          "Xamarin.Forms": "5.0.0.2545"
+        },
+        "runtime": {
+          "lib/netstandard2.0/DevExpress.XamarinForms.Charts.dll": {
+            "assemblyVersion": "22.1.7.0",
+            "fileVersion": "22.1.7.0"
           }
         }
       },
@@ -760,6 +773,13 @@
       "sha512": "sha512-me1BrWHvNPz3UQYXK0K5BZTbBIEYpbE5JbkUsO38tnvacLLMo8vBjmf11A6so2b3sCKtj4P3ixKu9EnZEjGs5g==",
       "path": "com.airbnb.xamarin.forms.lottie/4.1.0",
       "hashPath": "com.airbnb.xamarin.forms.lottie.4.1.0.nupkg.sha512"
+    },
+    "DevExpress.XamarinForms.Charts/22.1.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-TeanKniBjZeJT05r+413ruShT2BEYf3HrSaDrTa/jNxW2VXSx8wS4BaNP8PqR5m0LO6QFj2Y8DUYqkdcoUNGVw==",
+      "path": "devexpress.xamarinforms.charts/22.1.7",
+      "hashPath": "devexpress.xamarinforms.charts.22.1.7.nupkg.sha512"
     },
     "DevExpress.XamarinForms.CollectionView/22.1.7": {
       "type": "package",

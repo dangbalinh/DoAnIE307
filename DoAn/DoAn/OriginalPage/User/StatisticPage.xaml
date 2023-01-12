@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:dxc="http://schemas.devexpress.com/xamarin/2014/forms/charts"
+    xmlns:local="clr-namespace:DoAn"
+    x:Class="DoAn.OriginalPage.User.StatisticPage"
+    Title="My statistics">
+
+    <ContentPage.Content>
+        <dxc:PieChartView SelectionBehavior="Hatch">
+            <dxc:PieChartView.Hint>
+                <dxc:PieHint Enabled="True"/>
+            </dxc:PieChartView.Hint>
+
+            <dxc:PieChartView.Series>
+                <dxc:DonutSeries>
+                    <dxc:DonutSeries.Data>
+                        <dxc:PieSeriesDataAdapter x:Name="ChartDataSource" DataSource="{Binding Statistics}"
+                                                    LabelDataMember="Status"
+                                                    ValueDataMember="Count"/>
+                    </dxc:DonutSeries.Data>
+
+                    <dxc:DonutSeries.Label>
+                        <dxc:PieSeriesLabel Position="TwoColumns" TextPattern="{}{VP}%" Indent="20" />
+                    </dxc:DonutSeries.Label>
+
+                    <dxc:DonutSeries.HintOptions>
+                        <dxc:PieSeriesHintOptions PointTextPattern="{}{L}: {V} tasks"/>
+                    </dxc:DonutSeries.HintOptions>
+                </dxc:DonutSeries>
+            </dxc:PieChartView.Series>
+
+            <dxc:PieChartView.Legend>
+                <dxc:Legend
+                            HorizontalPosition="Center"
+                            VerticalPosition="BottomOutside" Orientation="LeftToRight">
+
+                    <dxc:Legend.Style>
+                        <dxc:LegendStyle MarkerSize="20" TextIndent="10"
+                                            ItemsVerticalIndent="20">
+                            <dxc:LegendStyle.TextStyle>
+                                    <dxc:TextStyle Color="Black" Size="16"/>
+                            </dxc:LegendStyle.TextStyle>
+                        </dxc:LegendStyle>
+                    </dxc:Legend.Style>
+                </dxc:Legend>
+
+            </dxc:PieChartView.Legend>
+        </dxc:PieChartView>
+
+    </ContentPage.Content>
+</ContentPage>
+

@@ -85,6 +85,9 @@
     <PackageReference Include="Xamarin.CommunityToolkit">
       <Version>2.0.5</Version>
     </PackageReference>
+    <PackageReference Include="DevExpress.XamarinForms.Charts">
+      <Version>22.1.7</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -284,6 +287,10 @@
       <Generator></Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\drawable\to_do_list.png">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\statistics.png">
       <SubType></SubType>
       <Generator></Generator>
     </AndroidResource>

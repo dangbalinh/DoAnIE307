@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "agnvfh7JBJ+WMxmVy/latwARn9A78NrSYEjnaxPYudlS50ULusiW3/fRCBm21dYQ3Bb3l6IxwVKWmGjBnyEvCg==",
+  "dgSpecHash": "EBUNfEdhNiYvfQKqFggIOhT8TC29NDrrwFwJj8WOR/nZoD0T7wenWe2gZtb4vt+p85uPjr1bQgfgREGkLQh2Cw==",
   "success": true,
   "projectFilePath": "/Users/cuhoangng/Documents/UIT/HK5/LTDNTCUDDD/DoAnIE307/DoAn/DoAn/DoAn.csproj",
   "expectedPackageFiles": [
     "/Users/cuhoangng/.nuget/packages/com.airbnb.xamarin.forms.lottie/4.1.0/com.airbnb.xamarin.forms.lottie.4.1.0.nupkg.sha512",
+    "/Users/cuhoangng/.nuget/packages/devexpress.xamarinforms.charts/22.1.7/devexpress.xamarinforms.charts.22.1.7.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/devexpress.xamarinforms.collectionview/22.1.7/devexpress.xamarinforms.collectionview.22.1.7.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/devexpress.xamarinforms.core/22.1.7/devexpress.xamarinforms.core.22.1.7.nupkg.sha512",
     "/Users/cuhoangng/.nuget/packages/devexpress.xamarinforms.editors/22.1.7/devexpress.xamarinforms.editors.22.1.7.nupkg.sha512",
